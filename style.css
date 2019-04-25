@@ -1,0 +1,39 @@
+body {
+    background: #e8e8e8;
+}
+.payment {
+    font-family: 'Nunito'
+}
+.payment h3 {
+    margin: 30px 0px 0px 50px;
+}
+.payment li {
+    border: solid 1px #ffffff;
+    display: inline-block;
+    clear: left;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    width: 40%;
+    box-shadow: 2px 2px 4px 2px #dadada;
+}
+.statusNP {
+    font-size: 12px;
+    padding: 2px 5px;
+    background: #ff1515bd;
+    border-radius: 6px;
+    color: white;
+}
+.status {
+    font-size: 12px;
+    padding: 2px 5px;
+    background: #33b70abd;
+    border-radius: 6px;
+    color: white;
+}
+.price {
+    float: right;
+    margin: 11px;
+}
