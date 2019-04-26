@@ -2,9 +2,9 @@ body {
     background: #e8e8e8;
 }
 .payment {
-    font-family: 'Nunito'
+    font-family: 'Nunito';
 }
-.payment h3 {
+.payment h2 {
     margin: 30px 0px 0px 50px;
     color: #3a3a3a;
 }
@@ -44,4 +44,31 @@ body {
     height: 1px;
     margin: 0px 55px;
     background: #c3c3c3;
+}
+
+/*news container*/
+.news{
+    font-family: 'Nunito';
+}
+h2.news{
+    margin: 30px 0px 0px 50px;
+    color: #3a3a3a;
+}
+.container p{
+    font-family: 'Nunito';
+}
+.newscontainer {
+    margin-left: 50px;
+    background: white;
+    display: inline-block;
+    padding: 15px 35px;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 2px #dadada;
+}
+.postdate {
+    float: right;
+    margin: 0;
+    color: #424242;
+    font-size: 13px;
 }
