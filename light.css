@@ -6,6 +6,7 @@ body {
 }
 .payment h3 {
     margin: 30px 0px 0px 50px;
+    color: #3a3a3a;
 }
 .payment li {
     border: solid 1px #ffffff;
@@ -16,8 +17,10 @@ body {
     padding: 10px;
     background: white;
     border-radius: 10px;
-    width: 40%;
+    width: 15%;
+    min-width: 165px;
     box-shadow: 2px 2px 4px 2px #dadada;
+    color: #292929;
 }
 .statusNP {
     font-size: 12px;
@@ -36,4 +39,9 @@ body {
 .price {
     float: right;
     margin: 11px;
+}
+.line {
+    height: 1px;
+    margin: 0px 55px;
+    background: #c3c3c3;
 }
