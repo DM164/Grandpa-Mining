@@ -1,6 +1,16 @@
+*{
+    /*border: 1px solid red;*/
+    box-sizing: border-box;
+}
+
 body {
     background: #1f1f1f;
 }
+h2{
+    font-family: 'Nunito';
+}
+
+/*payment heading*/
 .payment {
     font-family: 'Nunito';
 }
@@ -40,6 +50,8 @@ body {
     float: right;
     margin: 11px;
 }
+
+/*divider*/
 .line {
     height: 1px;
     margin: 0px 55px;
@@ -47,17 +59,15 @@ body {
 }
 
 /*news container*/
-.news{
+.newscontainer {
     font-family: 'Nunito';
+    width: 45%;
 }
-h2.news{
+.newscontainer h2{
     margin: 30px 0px 0px 50px;
     color: #dadada;
 }
-.container p {
-    font-family: 'Nunito';
-}
-.newscontainer {
+.container {
     margin-left: 50px;
     border: solid 1px #2c2c2c;
     background: #2c2c2c;
@@ -73,4 +83,14 @@ h2.news{
     margin: 0;
     color: #9c9c9c;
     font-size: 13px;
+}
+
+/*calendar container*/
+.calendarcontainer {
+    width: 55%;
+    float: right;
+    margin: 10px 0px 0px 0px;
+}
+.calendarcontainer h2{
+    color: #dadada;
 }
