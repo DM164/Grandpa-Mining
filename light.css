@@ -40,6 +40,8 @@ body {
     float: right;
     margin: 11px;
 }
+
+/*divider*/
 .line {
     height: 1px;
     margin: 0px 55px;
@@ -71,4 +73,28 @@ h2.news{
     margin: 0;
     color: #424242;
     font-size: 13px;
+}
+
+/*calendar container*/
+.calendarcontainer {
+    width: 55%;
+    float: right;
+    margin: 10px 0px 0px 0px;
+}
+.calendarcontainer h2 {
+    color: #3a3a3a;
+    margin-left: 50px;
+}
+
+/*calendar*/
+.calendarcontainer li {
+    font-family: 'Nunito';
+    display: inline;
+    margin-right: 6%;
+    color: #dadada;
+}
+.calendarcontainer ul {
+    margin-left: 30px;
+    margin-right: 8%;
+
 }
