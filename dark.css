@@ -108,3 +108,12 @@ h2{
     margin-right: 8%;
 
 }
+
+@media screen and (max-width: 500px){
+  .newscontainer {
+    width: 100%;
+  }
+  .container {
+    margin-right: 50px;
+  }
+}
