@@ -4,10 +4,66 @@
 }
 
 body {
-    background: #1f1f1f;
+    background: #141414;
 }
 h2{
     font-family: 'Nunito';
+}
+.soon {
+    color: #313131;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -162px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 55px;
+}
+
+/* Header */
+.header {
+    border-bottom: 1px solid #212121;
+    background: #1b1b1b;
+}
+.GMLogo {
+    height: 64px;
+    width: 64px;
+    display: inline-block;
+    overflow: hidden;
+    margin: 8px 0px 0px 26px;
+}
+h1.GMLogoText {
+    font-size: 30px;
+    color: #ea0094;
+    font-weight: 700;
+    font-family: 'Source Sans Pro';
+    display: inline-block;
+    position: relative;
+    top: -20px;
+}
+.navDiv {
+    display: inline-block;
+    background: #292929;
+    height: 25px;
+    width: 1px;
+    position: relative;
+    top: 5px;
+}
+.navElements {
+    float: right;
+    color: #d8d8d8;
+    font-family: "Roboto";
+    list-style-type: none;
+    margin: 22px 52px 0px 0px;
+    font-size: 22px;
+}
+.navElements p {
+    margin: 0px 4px;
+    display: inline-block;
+}
+.navSelected {
+    color: #c1c1c1;
+    font-weight: 600;
 }
 
 /*payment heading*/
@@ -62,6 +118,8 @@ h2{
 .newscontainer {
     font-family: 'Nunito';
     width: 45%;
+    margin-top: 100px;
+    display: inline-block;
 }
 .newscontainer h2{
     margin: 30px 0px 0px 50px;
