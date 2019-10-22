@@ -57,18 +57,13 @@ h1.GMLogoText {
     margin: 22px 52px 0px 0px;
     font-size: 22px;
 }
-a {
-    color: #c1c1c1;
-    text-decoration: none;
-}
 .navElements p {
     margin: 0px 4px;
     display: inline-block;
 }
-.navSelected{
+.navSelected {
     color: #c1c1c1;
     font-weight: 600;
-    text-decoration: none;
 }
 
 /*payment heading*/
@@ -112,6 +107,13 @@ a {
     margin: 11px;
 }
 
+/*divider*/
+.line {
+    height: 1px;
+    margin: 0px 55px;
+    background: #3b3b3b;
+}
+
 /*news container*/
 .container {
     margin-left: 50px;
@@ -150,20 +152,6 @@ a {
     font-size: 13px;
     font-family: 'Roboto';
     margin-top: 10px;
-}
-
-/*news container*/
-.platform-container {
-    margin-left: 50px;
-    border: solid 1px #1d1d1d;
-    background: #1d1d1d;
-    display: inline-block;
-    padding: 15px 35px;
-    margin-top: 25px;
-    border-radius: 6px;
-    box-shadow: 2px 2px 4px 2px #00000036;
-    color: #d5d5d5;
-    width: 86%;
 }
 
 /*calendar container*/
