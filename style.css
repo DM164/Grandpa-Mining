@@ -6,18 +6,12 @@
 body {
     background: #141414;
 }
+.body2 {
+    display: grid;
+}
+
 h2{
     font-family: 'Nunito';
-}
-.soon {
-    color: #313131;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -162px;
-    font-family: 'Roboto';
-    font-weight: bold;
-    font-size: 55px;
 }
 
 /* Header */
@@ -124,13 +118,11 @@ a {
     box-shadow: 2px 2px 4px 2px #00000036;
     color: #d5d5d5;
     width: 86%;
+    grid-column: 1;
 }
 .newscontainer {
     font-family: 'Nunito';
-    width: 45%;
     display: inline-block;
-    max-width: 614px;
-    min-width: 400px;
     height: 100%;
 }
 .newscontainer p {
@@ -153,7 +145,15 @@ a {
 }
 
 /*platforms container*/
-.platform-container {
+.platform-container{
+    grid-column: 2;
+}
+.title-platform{
+    margin: 30px 0px 0px 0px;
+    color: #dadada;
+    font-size: 30px;
+}
+.discord-card{
     margin-left: 0px;
     border: solid 1px #1d1d1d;
     background: #1d1d1d;
@@ -162,25 +162,55 @@ a {
     border-radius: 6px;
     box-shadow: 2px 2px 4px 2px #00000036;
     color: #d5d5d5;
-    width: 17.28%;
-    top: -130px;
     position: relative;
 }
-.platform-container {
+.discord-card {
     font-family: 'Nunito';
-    width: 17.28%;
     display: inline-block;
-    height: 100%;
+    height: 75px;
+    width: 325px;
+    margin: 25px 25px 0px 0px;
 }
-.platform-container p {
+.discord-card h2 {
+    color: #dadada;
+    font-size: 27px;
+    margin-left: -17px;
+}
+.discord-card p {
     font-family: 'Nunito';
     line-height: 22px;
-    color: #cecece;
+    color: #969696;
+    display: inline-block;
+    margin-left: -17px;
+    position: relative;
+    top: -9px;
 }
-.platform-container h2 {
-    margin: 30px 0px 0px 50px;
-    color: #dadada;
-    font-size: 30px;
+.join-discord {
+    background: #2d2d2d;
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    top: -23px;
+    right: -50px;
+    border-radius: 6px;
+    transition: 0.3s all;
+}
+.join-discord:hover {
+    background: #7289DA;
+    box-shadow: 0px 3px 9px #000000ad;
+    color: white;
+}
+
+/*platforms container*/
+.calendar-container {
+	border: solid 1px #1d1d1d;
+	background: #1d1d1d;
+	display: inline-block;
+	padding: 8px;
+	border-radius: 6px;
+	box-shadow: 2px 2px 4px 2px #00000036;
+	color: #d5d5d5;
+	grid-column: 3;
 }
 
 /*calendar container*/
