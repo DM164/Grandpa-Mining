@@ -4,7 +4,7 @@
 }
 
 body {
-    background: #141414;
+    background: #2B2E44;
 }
 .body2 {
     display: grid;
@@ -16,8 +16,8 @@ h2{
 
 /* Header */
 .header {
-    border-bottom: 1px solid #212121;
-    background: #1b1b1b;
+    border-bottom: 1px solid #2E3247;
+    background: #2E3247;
 }
 .GMLogo {
     height: 64px;
@@ -37,7 +37,7 @@ h1.GMLogoText {
 }
 .navDiv {
     display: inline-block;
-    background: #292929;
+    background: #00000046;
     height: 25px;
     width: 1px;
     position: relative;
@@ -109,13 +109,13 @@ a {
 /*news container*/
 .container {
     margin-left: 50px;
-    border: solid 1px #1d1d1d;
-    background: #1d1d1d;
+    border: solid 1px #2E3247;
+    background: #2E3247;
     display: inline-block;
-    padding: 15px 35px;
-    margin-top: 25px;
+    padding: 18px 15px 10px 18px;
+    margin-top: 10px;
     border-radius: 6px;
-    box-shadow: 2px 2px 4px 2px #00000036;
+    box-shadow: 2px 2px 4px 2px #00000005;
     color: #d5d5d5;
     width: 86%;
     grid-column: 1;
@@ -138,10 +138,11 @@ a {
 .postdate {
     float: right;
     margin: 0;
-    color: #6b6b6b;
+    color: #474c63;
     font-size: 13px;
     font-family: 'Roboto';
     margin-top: 10px;
+    font-weight: bold;
 }
 
 /*platforms container*/
@@ -155,12 +156,12 @@ a {
 }
 .discord-card{
     margin-left: 0px;
-    border: solid 1px #1d1d1d;
-    background: #1d1d1d;
+    border: solid 1px #2E3247;
+    background: #2E3247;
     display: inline-block;
     padding: 15px 35px;
     border-radius: 6px;
-    box-shadow: 2px 2px 4px 2px #00000036;
+    box-shadow: 2px 2px 4px 2px #00000005;
     color: #d5d5d5;
     position: relative;
 }
@@ -169,7 +170,7 @@ a {
     display: inline-block;
     height: 75px;
     width: 325px;
-    margin: 25px 25px 0px 0px;
+    margin: 10px 25px 0px 0px;
 }
 .discord-card h2 {
     color: #dadada;
@@ -186,31 +187,32 @@ a {
     top: -9px;
 }
 .join-discord {
-    background: #2d2d2d;
+    background: #383c52;
     display: inline-block;
     padding: 10px 20px;
     position: relative;
     top: -23px;
     right: -50px;
     border-radius: 6px;
-    transition: 0.3s all;
+    transition-property: background, color, box-shadow;
+    transition: 0.3s;
 }
 .join-discord:hover {
     background: #7289DA;
-    box-shadow: 0px 3px 9px #000000ad;
+    box-shadow: 0px 3px 9px #0000003d;
     color: white;
 }
 
 /*platforms container*/
 .calendar-container {
-	border: solid 1px #1d1d1d;
-	background: #1d1d1d;
-	display: inline-block;
-	padding: 8px;
-	border-radius: 6px;
-	box-shadow: 2px 2px 4px 2px #00000036;
-	color: #d5d5d5;
-	grid-column: 3;
+    border: solid 1px #2E3247;
+    background: #2E3247;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 4px 2px #00000005;
+    color: #d5d5d5;
+    grid-column: 3;
 }
 
 /*calendar container*/
