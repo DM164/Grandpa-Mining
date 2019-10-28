@@ -184,7 +184,6 @@ a {
     display: inline-block;
     margin-left: -17px;
     position: relative;
-    top: -9px;
 }
 .join-discord {
     background: #383c52;
@@ -192,7 +191,8 @@ a {
     padding: 10px 20px;
     position: relative;
     top: -23px;
-    right: -50px;
+    right: -17px;
+    float: right;
     border-radius: 6px;
     transition-property: background, color, box-shadow;
     transition: 0.3s;
@@ -222,12 +222,11 @@ a {
 }
 .calendarContainer li{
     font-family: 'Nunito';
-    width: 500px;
+    width: 400px;
 }
 .calendarcontainer h2 {
     color: #dadada;
     margin-left: 50px;
-    width: 500px;
 }
 
 /*calendar*/
@@ -247,4 +246,39 @@ h3.date {
   .container {
     margin-right: 50px;
   }
+}
+@media screen and (max-width: 960px){
+    .newscontainer{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .platform-container {
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+    .calendar-container{
+        grid-column: 1;
+        grid-row: 3;
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+    .calendarContainer li{
+        font-family: 'Nunito';
+        min-width: 400px;
+    }
+}
+@media screen and (max-width: 1300px) and (min-width: 960px){
+    .platform-container {
+        grid-column: 3;
+        grid-row: 2;
+    }
+    .discord-card {
+        width: 418px;
+    }
+    .join-discord {
+        right: -14px;
+        float: right;
+    }
 }
