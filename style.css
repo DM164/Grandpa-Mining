@@ -187,6 +187,7 @@ a {
 .calendar-container {
     color: #d5d5d5;
     grid-column: 3;
+    margin-bottom: 20px;
 }
 .calendarContainer li {
     border: solid 1px #2E3247;
