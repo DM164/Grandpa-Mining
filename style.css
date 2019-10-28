@@ -8,6 +8,7 @@ body {
 }
 .body2 {
     display: grid;
+    overflow: hidden;
 }
 
 h2{
