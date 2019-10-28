@@ -136,7 +136,7 @@ a {
 }
 .platform-card h2 {
     color: #dadada;
-    font-size: 27px;
+    font-size: 24px;
     margin-left: -17px;
 }
 .platform-card p {
@@ -152,7 +152,7 @@ a {
     display: inline-block;
     padding: 10px 20px;
     position: relative;
-    top: -23px;
+    top: -21px;
     right: -17px;
     float: right;
     border-radius: 6px;
@@ -168,7 +168,7 @@ a {
     background: #383c52;
     padding: 10px 20px;
     position: relative;
-    top: -23px;
+    top: -21px;
     right: -17px;
     float: right;
     border-radius: 6px;
@@ -188,18 +188,15 @@ a {
     color: #d5d5d5;
     grid-column: 3;
 }
-.calendarContainer {
+.calendarContainer li {
     border: solid 1px #2E3247;
     background: #2E3247;
-    display: inline-block;
     padding: 8px;
     border-radius: 6px;
     box-shadow: 2px 2px 4px 2px #00000005;
     color: #b9b9b9;
     margin: 10px 50px 0px 0px;
     grid-column: 3;
-}
-.calendarContainer li{
     font-family: 'Nunito';
     width: 400px;
     user-select: text;
