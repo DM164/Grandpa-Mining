@@ -13,6 +13,11 @@ body {
 h2{
     font-family: 'Nunito';
 }
+.title{
+    margin: 30px 0px 0px 0px;
+    color: #dadada;
+    font-size: 30px;
+}
 
 /* Header */
 .header {
@@ -149,11 +154,6 @@ a {
 .platform-container{
     grid-column: 2;
 }
-.title-platform{
-    margin: 30px 0px 0px 0px;
-    color: #dadada;
-    font-size: 30px;
-}
 .discord-card{
     margin-left: 0px;
     border: solid 1px #2E3247;
@@ -203,40 +203,41 @@ a {
     color: white;
 }
 
-/*platforms container*/
+
+/*calendar container*/
 .calendar-container {
+    color: #d5d5d5;
+    grid-column: 3;
+}
+.calendarContainer {
     border: solid 1px #2E3247;
     background: #2E3247;
     display: inline-block;
     padding: 8px;
     border-radius: 6px;
     box-shadow: 2px 2px 4px 2px #00000005;
-    color: #d5d5d5;
+    color: #b9b9b9;
+    margin: 10px 50px 0px 0px;
     grid-column: 3;
 }
-
-/*calendar container*/
-.calendarcontainer {
-    width: 55%;
-    float: right;
-    margin: 10px 0px 0px 0px;
+.calendarContainer li{
+    font-family: 'Nunito';
+    width: 500px;
 }
 .calendarcontainer h2 {
     color: #dadada;
     margin-left: 50px;
+    width: 500px;
 }
 
 /*calendar*/
-.calendarcontainer li {
+h3.date {
     font-family: 'Nunito';
-    display: inline;
-    margin-right: 6%;
-    color: #dadada;
+    margin: 14px 0px 0px 2px;
+    color: #a4a8bf;
 }
-.calendarcontainer ul {
-    margin-left: 30px;
-    margin-right: 8%;
-
+.date span {
+    color: #515467;
 }
 
 @media screen and (max-width: 500px){
