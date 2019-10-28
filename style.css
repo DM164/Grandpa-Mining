@@ -68,47 +68,6 @@ a {
     text-decoration: none;
 }
 
-/*payment heading*/
-.payment {
-    font-family: 'Nunito';
-}
-.payment h2 {
-    margin: 30px 0px 0px 50px;
-    color: #dadada;
-}
-.payment li {
-    border: solid 1px #2c2c2c;
-    display: inline-block;
-    clear: left;
-    position: relative;
-    margin: 10px;
-    padding: 10px;
-    background: #2c2c2c;
-    border-radius: 10px;
-    width: 15%;
-    min-width: 165px;
-    box-shadow: 2px 2px 4px 2px #191919b3;
-    color: #d5d5d5;
-}
-.statusNP {
-    font-size: 12px;
-    padding: 2px 5px;
-    background: #ff1515bd;
-    border-radius: 6px;
-    color: white;
-}
-.status {
-    font-size: 12px;
-    padding: 2px 5px;
-    background: #33b70abd;
-    border-radius: 6px;
-    color: white;
-}
-.price {
-    float: right;
-    margin: 11px;
-}
-
 /*news container*/
 .container {
     margin-left: 50px;
@@ -237,13 +196,18 @@ h3.date {
     color: #515467;
 }
 
-@media screen and (max-width: 500px){
-  .newscontainer {
-    width: 100%;
-  }
-  .container {
-    margin-right: 50px;
-  }
+@media screen and (max-width: 1300px) and (min-width: 960px){
+    .platform-container {
+        grid-column: 3;
+        grid-row: 2;
+    }
+    .discord-card {
+        width: 418px;
+    }
+    .join-discord {
+        right: -14px;
+        float: right;
+    }
 }
 @media screen and (max-width: 960px){
     .newscontainer{
@@ -267,16 +231,40 @@ h3.date {
         min-width: 400px;
     }
 }
-@media screen and (max-width: 1300px) and (min-width: 960px){
-    .platform-container {
-        grid-column: 3;
-        grid-row: 2;
+@media screen and (max-width: 500px){
+    .navElements {
+        float: right;
+        color: #d8d8d8;
+        font-family: "Source Sans Pro";
+        margin: -8px 52px 0px 0px;
+        font-size: 22px;
+        display: none;
+    }
+
+    .newscontainer {
+        width: 100%;
+    }
+    .newscontainer h2 {
+        margin: 30px 0px 0px 20px;
+    }
+    
+    .container {
+        margin-left: 20px;
+        width: 64.4%;
+        grid-column: 1;
     }
     .discord-card {
-        width: 418px;
+        width: 67%;
     }
-    .join-discord {
-        right: -14px;
-        float: right;
+    .platform-container {
+        margin-top: 0px;
+        margin-left: 20px;
+    }
+    .calendar-container {
+        margin-top: 0px;
+        margin-left: 20px;
+    }
+    .calendarContainer {
+        width: 67%;
     }
 }
