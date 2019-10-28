@@ -34,15 +34,14 @@ h2{
 h1.GMLogoText {
     font-size: 30px;
     color: #ffffff;
-    font-weight: 700;
-    font-family: 'Source Sans Pro';
+    font-family: 'Nunito';
     display: inline-block;
     position: relative;
     top: -20px;
 }
 .navDiv {
     display: inline-block;
-    background: #00000046;
+    background: #ffffff0f;
     height: 25px;
     width: 1px;
     position: relative;
@@ -51,8 +50,7 @@ h1.GMLogoText {
 .navElements {
     float: right;
     color: #d8d8d8;
-    font-family: "Roboto";
-    list-style-type: none;
+    font-family: "Source Sans Pro";
     margin: 22px 52px 0px 0px;
     font-size: 22px;
 }
