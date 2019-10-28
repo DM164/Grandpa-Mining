@@ -62,8 +62,8 @@ a {
     margin: 0px 4px;
     display: inline-block;
 }
-.navSelected{
-    color: #c1c1c1;
+.navSelected {
+    color: #dadada;
     font-weight: 600;
     text-decoration: none;
 }
@@ -196,6 +196,29 @@ h3.date {
     color: #515467;
 }
 
+/* Scrollbar taken by Dark Instagram by DM */
+::-webkit-scrollbar-track-piece {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    border: none !important;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #00000038 !important;
+    border-radius: 10px !important;
+    transition: 0.3s background ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #00000049 !important;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    border: none !important;
+}
+
 @media screen and (max-width: 1300px) and (min-width: 960px){
     .platform-container {
         grid-column: 3;
@@ -240,6 +263,9 @@ h3.date {
         font-size: 22px;
         display: none;
     }
+    h1.GMLogoText{
+        display: none;
+    }
 
     .newscontainer {
         width: 100%;
@@ -250,11 +276,11 @@ h3.date {
     
     .container {
         margin-left: 20px;
-        width: 64.4%;
+        width: 67%;
         grid-column: 1;
     }
     .discord-card {
-        width: 67%;
+        width: 69%;
     }
     .platform-container {
         margin-top: 0px;
@@ -265,6 +291,6 @@ h3.date {
         margin-left: 20px;
     }
     .calendarContainer {
-        width: 67%;
+        width: 69%;
     }
 }
