@@ -5,6 +5,7 @@
 
 body {
     background: #2B2E44;
+    user-select: none;
 }
 .body2 {
     display: grid;
@@ -24,6 +25,7 @@ h2{
 .header {
     border-bottom: 1px solid #2E3247;
     background: #2E3247;
+    user-select: none;
 }
 .GMLogo {
     height: 64px;
@@ -92,6 +94,7 @@ a {
     font-family: 'Nunito';
     line-height: 22px;
     color: #cecece;
+    user-select: text;
 }
 .newscontainer h2 {
     margin: 30px 0px 0px 50px;
@@ -181,6 +184,7 @@ a {
 .calendarContainer li{
     font-family: 'Nunito';
     width: 400px;
+    user-select: text;
 }
 .calendarcontainer h2 {
     color: #dadada;
