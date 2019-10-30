@@ -9,9 +9,3 @@ document.getElementById('navIcon').addEventListener('click', function(){
         navOpen = false
     }
 });
-
-// Sets the calendar date
-let d = Date(Date.now())
-d = 'Current Month | ' + d.slice(0, -50)
-
-document.getElementsByClassName('date')[0].innerText=d
