@@ -149,7 +149,6 @@ a {
 }
 .join-discord {
     background: #383c52;
-    display: inline-block;
     padding: 10px 20px;
     position: relative;
     top: -21px;
@@ -177,6 +176,22 @@ a {
 }
 .open-crunchyroll:hover {
     background: #EB7220;
+    box-shadow: 0px 3px 9px #0000003d;
+    color: white;
+}
+.join-w2g {
+    background: #383c52;
+    padding: 10px 20px;
+    position: relative;
+    top: -21px;
+    right: -17px;
+    float: right;
+    border-radius: 6px;
+    transition-property: background, color, box-shadow;
+    transition: 0.3s;
+}
+.join-w2g:hover {
+    background: #FACD3B;
     box-shadow: 0px 3px 9px #0000003d;
     color: white;
 }
