@@ -36,6 +36,16 @@
     top: 5px;
     box-shadow: 0 0 8px 0px #e0474757;
 }
+.statusPP {
+    font-size: 12px;
+    padding: 1px 7px;
+    background: #dda326c9;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    top: 5px;
+    box-shadow: 0 0 8px 0px #3f82535c;
+}
 .status {
     font-size: 12px;
     padding: 1px 7px;
