@@ -278,11 +278,11 @@ h3.date {
         margin-top: 10px;
         margin-left: 50px;
     }
-    .calendar-container{
-        grid-column: 1;
-        grid-row: 3;
-        margin-top: 10px;
-        margin-left: 50px;
+    .calendar-container {
+        color: #d5d5d5;
+        grid-column: 2;
+        margin-bottom: 20px;
+        margin-top: -64px;
     }
     .calendarContainer li{
         font-family: 'Nunito';
