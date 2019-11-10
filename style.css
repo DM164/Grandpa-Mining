@@ -353,6 +353,61 @@ h3.date {
         width: 92%;
     }
 }
+@media screen and (max-width: 440px){    
+    .title {
+        margin: 20px 0px 8px 20px;
+    }
+    .newscontainer h2 {
+        margin: 30px 0px 10px 20px;
+    }
+
+    .container {
+        margin-left: 0px;
+        width: 100%;
+        grid-column: 1;
+        border-radius: 0px;
+        margin-top: 0px;
+        border-bottom: 1px solid #3b3f5d;
+    }
+    .platform-card {
+        width: 100%;
+        border-radius: 0px;
+        margin-top: 0px;
+        border-bottom: 1px solid #3b3f5d;
+    }
+    .discord-card {
+        width: 100%;
+    }
+    h3.date {
+        margin: 4px 0px 0px 0px;
+        padding: 4px 10px;
+        background: #343950;
+        border-radius: 0px;
+    }
+    
+    .platform-container {
+        margin-top: 0px;
+        margin-left: 20px;
+        width: 100%;
+        grid-column: 1;
+        grid-row: 2;
+        margin-left: 0px;
+    }
+    .calendar-container {
+        margin-top: 0px;
+        margin-left: 20px;
+        grid-column: 1;
+        width: 100%;
+        border-radius: 0px;
+        margin-left: 0px;
+    }
+    .calendar-container li {
+        width: 100%;
+        border-radius: 0px;
+        min-width: 0px;
+        margin-top: 0px;
+    }
+}
 
 /* animations */
 @keyframes slidein-menu{
