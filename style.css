@@ -256,15 +256,24 @@ h3.date {
 
 @media screen and (max-width: 1300px) and (min-width: 960px){
     .platform-container {
-        grid-column: 3;
-        grid-row: 2;
+        grid-column: 2;
+        grid-row: 1;
+        width: 400px;
+    }
+    .platform-card {
+        width: 100%;
     }
     .discord-card {
-        width: 418px;
+        width: 100%;
     }
     .join-discord {
         right: -14px;
         float: right;
+    }
+    .calendar-container {
+        color: #d5d5d5;
+        grid-column: 2;
+        margin-bottom: 20px;
     }
 }
 @media screen and (max-width: 960px){
@@ -273,8 +282,8 @@ h3.date {
         grid-row: 1;
     }
     .platform-container {
-        grid-column: 1;
-        grid-row: 2;
+        grid-column: 2;
+        grid-row: 1;
         margin-top: 10px;
         margin-left: 50px;
     }
@@ -282,14 +291,14 @@ h3.date {
         color: #d5d5d5;
         grid-column: 2;
         margin-bottom: 20px;
-        margin-top: -64px;
+        margin-left: 50px;
     }
     .calendarContainer li{
         font-family: 'Nunito';
         min-width: 400px;
     }
 }
-@media screen and (max-width: 610px){
+@media screen and (max-width: 890px){
     .navElements {
         float: right;
         color: #d8d8d8;
@@ -318,22 +327,30 @@ h3.date {
     
     .container {
         margin-left: 20px;
-        width: 67%;
+        width: 92%;
         grid-column: 1;
     }
+    .platform-card {
+        width: 100%;
+    }
     .discord-card {
-        width: 69%;
+        width: 100%;
     }
     .platform-container {
         margin-top: 0px;
         margin-left: 20px;
+        width: 92%;
+        grid-column: 1;
+        grid-row: 2;
     }
     .calendar-container {
         margin-top: 0px;
         margin-left: 20px;
+        grid-column: 1;
+        width: 100%;
     }
-    .calendarContainer {
-        width: 69%;
+    .calendar-container li{
+        width: 92%;
     }
 }
 
