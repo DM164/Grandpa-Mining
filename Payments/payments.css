@@ -79,14 +79,14 @@ span.PPmonths {
 
 @media screen and (max-width: 610px){
     .payment li {
-        width: 90% !important;
+        width: 94% !important;
         max-width: 600px;
-        margin-top: 0px;
+        margin: 2px 12px;
     }
     .payment h2 {
-        margin: 30px 0px 0px 30px;
+        margin: 10px 0px 0px 20px;
     }
     .payment-container {
-        margin: 10px 0px 0px 20px;
+        margin: 15px 0px 0px 0px;
     }
 }
