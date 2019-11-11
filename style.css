@@ -362,27 +362,26 @@ h3.date {
     }
 
     .container {
-        margin-left: 0px;
-        width: 100%;
+        width: 94%;
         grid-column: 1;
-        border-radius: 0px;
-        margin-top: 0px;
-        border-bottom: 1px solid #3b3f5d;
+        margin: 4px 12px;
     }
     .platform-card {
-        width: 100%;
-        border-radius: 0px;
-        margin-top: 0px;
-        border-bottom: 1px solid #3b3f5d;
+        width: 94%;
+        margin: 4px 12px;
     }
     .discord-card {
         width: 100%;
     }
+    
     h3.date {
-        margin: 4px 0px 0px 0px;
+        margin: 8px 0px 0px 0px;
         padding: 4px 10px;
         background: #343950;
-        border-radius: 0px;
+        border-radius: 6px 6px 0px 0px;
+    }
+    .calendar-container h2 {
+        margin: 20px 0px 8px 8px;
     }
     
     .platform-container {
@@ -397,13 +396,13 @@ h3.date {
         margin-top: 0px;
         margin-left: 20px;
         grid-column: 1;
-        width: 100%;
+        width: 94%;
         border-radius: 0px;
-        margin-left: 0px;
+        margin: 0px 12px;
     }
     .calendar-container li {
         width: 100%;
-        border-radius: 0px;
+        border-radius: 0px 0px 6px 6px;
         min-width: 0px;
         margin-top: 0px;
     }
