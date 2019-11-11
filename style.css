@@ -10,6 +10,7 @@ body {
 .body2 {
     display: grid;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 h2{
@@ -353,7 +354,7 @@ h3.date {
         width: 92%;
     }
 }
-@media screen and (max-width: 440px){    
+@media screen and (max-width: 440px){        
     .title {
         margin: 20px 0px 8px 20px;
     }
