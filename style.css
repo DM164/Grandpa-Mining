@@ -65,11 +65,26 @@ a {
 .navElements p {
     margin: 0px 4px;
     display: inline-block;
+    position: relative;
+    top: -3px;
 }
 .navSelected {
     color: #dadada;
     font-weight: 600;
     text-decoration: none;
+}
+
+.open-payments {
+    background: #383c52;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition-property: background, color, box-shadow;
+    transition: 0.3s;
+}
+.open-payments:hover {
+    background: #EB7220;
+    box-shadow: 0px 3px 9px #0000003d;
+    color: white;
 }
 
 /*news container*/
@@ -164,22 +179,6 @@ a {
     box-shadow: 0px 3px 9px #0000003d;
     color: white;
 }
-.open-crunchyroll {
-    background: #383c52;
-    padding: 10px 20px;
-    position: relative;
-    top: -21px;
-    right: -17px;
-    float: right;
-    border-radius: 6px;
-    transition-property: background, color, box-shadow;
-    transition: 0.3s;
-}
-.open-crunchyroll:hover {
-    background: #EB7220;
-    box-shadow: 0px 3px 9px #0000003d;
-    color: white;
-}
 .open-notion {
     background: #383c52;
     padding: 10px 20px;
@@ -193,6 +192,22 @@ a {
 }
 .open-notion:hover {
     background: #e8ba7f;
+    box-shadow: 0px 3px 9px #0000003d;
+    color: white;
+}
+.open-reddit {
+    background: #383c52;
+    padding: 10px 20px;
+    position: relative;
+    top: -21px;
+    right: -17px;
+    float: right;
+    border-radius: 6px;
+    transition-property: background, color, box-shadow;
+    transition: 0.3s;
+}
+.open-reddit:hover {
+    background: #FF4500;
     box-shadow: 0px 3px 9px #0000003d;
     color: white;
 }
@@ -373,6 +388,23 @@ h3.date {
     }
     .calendar-container li{
         width: 92%;
+    }
+}
+@media screen and (max-width: 513px){
+    .navElements {
+        float: right;
+        color: #d8d8d8;
+        font-family: "Source Sans Pro";
+        margin: 20px 15px 0px 14px;
+        font-size: 22px;
+        display: none;
+        animation: slidein-menu 0.2s forwards;
+        position: absolute;
+        top: -8px;
+        padding: 18px 20px;
+        right: 15%;
+        background: #262a3c;
+        border-radius: 10px;
     }
 }
 @media screen and (max-width: 440px){        
