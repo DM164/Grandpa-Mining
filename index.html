@@ -52,6 +52,7 @@
                 <p>Join our Discord Server</p>
                 <a href="https://discord.gg/m6B2EXu"><div class="join-discord">Join</div></a>
         </div>
+        <div class="discordVC-count" style="display: none;"><span id="VC-count">0</span> Users in Voice Chat</div>
         <div class="platform-card">
             <h2>Reddit</h2> <!-- Don't move -->
                 <p>Check our subreddit!</p>
@@ -172,6 +173,12 @@ function retrieveData() {
         document.getElementsByClassName('platform-container')[0].style.webkitAnimationPlayState = "running";
         document.getElementsByClassName('calendar-container')[0].style.webkitAnimationPlayState = "running";
     })
+
+    firebase.database().ref('/voiceActivity/').once('value').then(function(snapshot){
+        let users = snapshot.val()
+        console.log(users)
+        setcount(users)
+    })
 }
 
 function addEvent(id, desc, date) {
@@ -185,6 +192,17 @@ function addNews(id, title, date) {
         title: title,
         date: date
     });
+}
+
+function setcount(number) {
+    if(number === 0){
+        document.getElementsByClassName('discordVC-count')[0].style.display='none'
+        document.getElementsByClassName('discordVC-count')[0].style.webkitAnimationPlayState = "paused";
+    } else {
+        document.getElementsByClassName('discordVC-count')[0].style.display='block'
+        document.getElementsByClassName('discordVC-count')[0].style.webkitAnimationPlayState = "running";
+        document.getElementById('VC-count').innerText=number
+    }
 }
 
 setInterval(() => {

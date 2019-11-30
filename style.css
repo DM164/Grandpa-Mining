@@ -153,6 +153,7 @@ a {
     height: 75px;
     width: 325px;
     margin: 10px 25px 0px 0px;
+    z-index: 1;
 }
 .platform-card h2 {
     color: #dadada;
@@ -182,6 +183,17 @@ a {
     background: #7289DA;
     box-shadow: 0px 3px 9px #0000003d;
     color: white;
+}
+.discordVC-count {
+    background: #25283a;
+    width: 325px;
+    padding: 10px 0px 6px 18px;
+    font-family: 'Nunito';
+    margin-top: -3px;
+    border-radius: 0px 0px 6px 6px;
+    color: #8791a3;
+    animation: slidedown 0.5s forwards;
+    animation-play-state: paused;
 }
 .open-notion {
     background: #383c52;
@@ -303,10 +315,7 @@ h3.date {
         grid-row: 1;
         width: 400px;
     }
-    .platform-card {
-        width: 100%;
-    }
-    .discord-card {
+    .platform-card, .discord-card, .discordVC-count {
         width: 100%;
     }
     .join-discord {
@@ -373,10 +382,7 @@ h3.date {
         width: 92%;
         grid-column: 1;
     }
-    .platform-card {
-        width: 100%;
-    }
-    .discord-card {
+    .platform-card, .discord-card, .discordVC-count {
         width: 100%;
     }
     .platform-container {
@@ -480,4 +486,8 @@ h3.date {
 @keyframes fadein {
     0%{ transform: translateY(50px); opacity: 0; }
     100%{ transform: translateY(0px); opacity: 1; }
+}
+@keyframes slidedown{
+    0% { transform: translateY(-10px); opacity: 0;}
+    100% { transform: translateY(0px); opacity: 1; }
 }
