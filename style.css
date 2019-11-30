@@ -391,6 +391,9 @@ h3.date {
     }
 }
 @media screen and (max-width: 513px){
+    .navSelected, .navDiv {
+        display: none !important;
+    }
     .navElements {
         float: right;
         color: #d8d8d8;
