@@ -439,6 +439,10 @@ h3.date {
         width: 94%;
         margin: 4px 12px;
     }
+    .discordVC-count{
+        width: 94%;
+        margin: -4px 12px 4px 12px;
+    }
     .discord-card {
         width: 100%;
     }
