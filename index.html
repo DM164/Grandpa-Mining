@@ -69,43 +69,13 @@
         </div>
     </div>
 
-    <div class="calendar-container">
+    <div id="eventsA" class="calendar-container">
+        <!-- Retrieved through Firebase -->
         <h2 class="title">Events</h2>
-
-        <h3 class="date">The whole month of November</h3>
+        <h3 class="date">Loading...</h3>
         <div class="calendarContainer">
             <ul>
-                <li>💦No nut November</li>
-            </ul>
-        </div>
-        <h3 class="date">Sunday, 8th December 2019</h3>
-        <div class="calendarContainer">
-            <ul>
-                <li>St. Nicholas</li>
-            </ul>
-        </div>
-        <h3 class="date">Wednesday, 23th December 2019</h3>
-        <div class="calendarContainer">
-            <ul>
-                <li>Crunchyroll payments update</li>
-            </ul>
-        </div>
-        <h3 class="date">Wednesday, 24-25th December 2019</h3>
-        <div class="calendarContainer">
-            <ul>
-                <li>🎄Christmas Eve</li>
-            </ul>
-        </div>
-        <h3 class="date">Wednesday, 26th December 2019</h3>
-        <div class="calendarContainer">
-            <ul>
-                <li>Crunchyroll monthly billing</li>
-            </ul>
-        </div>
-        <h3 class="date">Thursday, 1th January 2020</h3>
-        <div class="calendarContainer">
-            <ul>
-                <li>🎇New Years Eve</li>
+                <li>Loading...</li>
             </ul>
         </div>
 </div>
@@ -136,40 +106,86 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-firebase.database().ref('/news/').once('value').then(function(snapshot){
-    let newsArray = snapshot.val()
-    console.log(newsArray)
+retrieveData()
+function retrieveData() {
+    firebase.database().ref('/news/').once('value').then(function(snapshot){
+        let newsArray = snapshot.val()
+        console.log(newsArray)
+    
+        let loadingElement = document.getElementById('newsA')
+        while (loadingElement.firstChild){
+            loadingElement.removeChild(loadingElement.firstChild)
+        }
+    
+        newsArray.forEach(element => {
+            const listElement = document.createElement('div')
+            const listText = document.createElement('p')
+            const listDate = document.createElement('h6')
+            
+            listText.innerText = element.title
+            listDate.innerText = element.date
+            listElement.appendChild(listText)
+            listElement.appendChild(listDate)
+            listElement.setAttribute('class', 'container')
+            listDate.setAttribute('class', 'postdate')
+            document.getElementById('newsA').prepend(listElement)
+        });
+    
+        const listDate = document.createElement('h2')
+        listDate.innerText='News'
+        document.getElementById('newsA').prepend(listDate)
+    })
+    
+    firebase.database().ref('/events/').once('value').then(function(snapshot){
+        let eventsArray = snapshot.val()
+        console.log(eventsArray)
+    
+        let loadingElement = document.getElementById('eventsA')
+        while (loadingElement.firstChild){
+            loadingElement.removeChild(loadingElement.firstChild)
+        }
+    
+        eventsArray.forEach(element => {
+            const listElement = document.createElement('div')
+            const listDescContainer = document.createElement('ul')
+            const listDesc = document.createElement('li')
+            const listDiv = document.createElement('div')
+            const listDate = document.createElement('h3')
+            
+            listDate.innerText = element.date
+            listDesc.innerText = element.description
+            listElement.appendChild(listDate)
+            listDiv.appendChild(listDescContainer)
+            listDescContainer.appendChild(listDesc)
+            listElement.appendChild(listDiv)
+            listDate.setAttribute('class', 'date')
+            listDiv.setAttribute('class', 'calendarContainer')
+            document.getElementById('eventsA').appendChild(listElement)
+        });
+    
+        const listDate = document.createElement('h2')
+        listDate.innerText='Events'
+        listDate.setAttribute('class', 'title')
+        document.getElementById('eventsA').prepend(listDate)
+    })
+}
 
-    let loadingElement = document.getElementById('newsA')
-    while (loadingElement.firstChild){
-        loadingElement.removeChild(loadingElement.firstChild)
-    }
-
-    newsArray.forEach(element => {
-        const listElement = document.createElement('div')
-        const listText = document.createElement('p')
-        const listDate = document.createElement('h6')
-        
-        listText.innerText = element.title
-        listDate.innerText = element.date
-        listElement.appendChild(listText)
-        listElement.appendChild(listDate)
-        listElement.setAttribute('class', 'container')
-        listDate.setAttribute('class', 'postdate')
-        document.getElementById('newsA').prepend(listElement)
+function addEvent(id, desc, date) {
+    firebase.database().ref('events/' + id).set({
+        description: desc,
+        date: date
     });
-
-    const listDate = document.createElement('h2')
-    listDate.innerText='News'
-    document.getElementById('newsA').prepend(listDate)
-})
-
+}
 function addNews(id, title, date) {
     firebase.database().ref('news/' + id).set({
         title: title,
         date: date
     });
 }
+
+setInterval(() => {
+    retrieveData()
+}, 60000);
 </script>
 </body>
 </html>
