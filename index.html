@@ -1,24 +1,24 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="stylesheet" href="reset.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    
-    <!-- Google AdSense -->
-    <script data-ad-client="ca-pub-1177915241290016" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script data-ad-client="ca-pub-1177915241290016" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>    <link rel="stylesheet" href="style.css" type="text/css">
-    
-    <script src="script.js" defer></script>
-    <link rel="shortcut icon" href="files/images/favicon.png" type="image/png">
-
-    <title>Granpa Mining | Home</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link rel="stylesheet" href="reset.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        
+        <!-- Google AdSense -->
+        <script data-ad-client="ca-pub-1177915241290016" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script data-ad-client="ca-pub-1177915241290016" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>    <link rel="stylesheet" href="style.css" type="text/css">
+        
+        <link rel="shortcut icon" href="files/images/favicon.png" type="image/png">
+        <script src="script.js" defer></script>
+        
+        <title>Granpa Mining | Home</title>
+    </head>
 <body>
 
     <div class="header">
@@ -36,32 +36,12 @@
     </div>
     
 <div class="body2">
-    <div class="newscontainer">
-        <h2>News</h2> <!-- Don't move -->
-        <div class="container">
-                <p>We created a subreddit for Grandpa Mining! <br>If you want to join click on "join" on the Platform Tab.</p>
-                <h6 class="postdate">18.36 CET | 27/11/2019</h6>
-        </div>
-        <div class="container">
-                <p>Payment statuses updated.</p>
-                <h6 class="postdate">18.00 CET | 26/11/2019</h6>
-        </div>
-        <div class="container">
-                <p>Payment statuses updated.</p>
-                <h6 class="postdate">16.42 CET | 07/11/2019</h6>
-        </div>
-        <div class="container">
-                <p>The website will be launched soon. We are still working on it. <br>
-                    If you have any suggestion let us know on Discord!
-                </p>
-                <h6 class="postdate">08.16 CET | 22/10/2019</h6>
-        </div>
-        <div class="container">
-                <p>Credentials will be sent privately on May 1st on Discord.<br>
-                Free trial is going to start on the 1st of May, check the calendar.<br>
-                Billing Prices are now updated and can be seen under Payment Status.
-                </p>
-                <h6 class="postdate">21.18 CET | 24/04/2019</h6>
+    <div id="newsA" class="newscontainer">
+        <!-- Retrieved through Firebase -->
+        <h2 class="title">News</h2>
+        <div class="container loading">
+            <p>Loading...</p>
+            <h6 class="postdate">Loading...</h6>
         </div>
     </div>
 
@@ -98,12 +78,6 @@
                 <li>💦No nut November</li>
             </ul>
         </div>
-        <h3 class="date">Wednesday, 27th November 2019</h3>
-        <div class="calendarContainer">
-            <ul>
-                <li>Crunchyroll monthly billing</li>
-            </ul>
-        </div>
         <h3 class="date">Sunday, 8th December 2019</h3>
         <div class="calendarContainer">
             <ul>
@@ -135,5 +109,67 @@
             </ul>
         </div>
 </div>
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+
+<script>
+// TODO: Replace the following with your app's Firebase project configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyAhPz-IG85lj7AIPvrPvxV0-RnLNaU888A",
+    authDomain: "project-id.firebaseapp.com",
+    databaseURL: "https://grandpa-mining-website.firebaseio.com/",
+    projectId: "project-id",
+    storageBucket: "project-id.appspot.com",
+    messagingSenderId: "sender-id",
+    appId: "app-id",
+    measurementId: "G-measurement-id",
+};
+  
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+firebase.database().ref('/news/').once('value').then(function(snapshot){
+    let newsArray = snapshot.val()
+    console.log(newsArray)
+
+    let loadingElement = document.getElementById('newsA')
+    while (loadingElement.firstChild){
+        loadingElement.removeChild(loadingElement.firstChild)
+    }
+
+    newsArray.forEach(element => {
+        const listElement = document.createElement('div')
+        const listText = document.createElement('p')
+        const listDate = document.createElement('h6')
+        
+        listText.innerText = element.title
+        listDate.innerText = element.date
+        listElement.appendChild(listText)
+        listElement.appendChild(listDate)
+        listElement.setAttribute('class', 'container')
+        listDate.setAttribute('class', 'postdate')
+        document.getElementById('newsA').prepend(listElement)
+    });
+
+    const listDate = document.createElement('h2')
+    listDate.innerText='News'
+    document.getElementById('newsA').prepend(listDate)
+})
+
+function addNews(id, title, date) {
+    firebase.database().ref('news/' + id).set({
+        title: title,
+        date: date
+    });
+}
+</script>
 </body>
 </html>
