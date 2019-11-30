@@ -167,6 +167,10 @@ function retrieveData() {
         listDate.innerText='Events'
         listDate.setAttribute('class', 'title')
         document.getElementById('eventsA').prepend(listDate)
+        
+        document.getElementsByClassName('newscontainer')[0].style.webkitAnimationPlayState = "running";
+        document.getElementsByClassName('platform-container')[0].style.webkitAnimationPlayState = "running";
+        document.getElementsByClassName('calendar-container')[0].style.webkitAnimationPlayState = "running";
     })
 }
 
