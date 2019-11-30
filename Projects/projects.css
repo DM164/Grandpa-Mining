@@ -7,4 +7,10 @@
     font-family: 'Roboto';
     font-weight: bold;
     font-size: 55px;
+    animation: fadein 1s forwards;
+}
+
+@keyframes fadein {
+    0%{ transform: translateY(50px); opacity: 0; }
+    100%{ transform: translateY(0px); opacity: 1; }
 }
