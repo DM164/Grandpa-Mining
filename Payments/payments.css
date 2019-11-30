@@ -3,6 +3,8 @@
     font-family: 'Nunito';
     display: grid;
     overflow: hidden;
+    animation: fadein 0.5s forwards;
+    /* animation-play-state: paused; */
 }
 .payment-container {
     grid-column: 1;
@@ -24,7 +26,7 @@ span.monthTAG {
     display: inline-block;
     clear: left;
     position: relative;
-    margin: 10px;
+    margin: 6px;
     padding: 12px;
     background: #2e3247;
     border-radius: 10px;
@@ -89,4 +91,9 @@ span.PPmonths {
     .payment-container {
         margin: 15px 0px 0px 0px;
     }
+}
+
+@keyframes fadein {
+    0%{ transform: translateY(50px); opacity: 0; }
+    100%{ transform: translateY(0px); opacity: 1; }
 }
