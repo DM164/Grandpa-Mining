@@ -1,0 +1,178 @@
+/*payment heading*/
+.body2{
+    display: grid;
+}
+.payment {
+    font-family: 'Nunito';
+    overflow: hidden;
+    animation: fadein 0.5s forwards;
+    animation-play-state: paused;
+}
+.payment-container {
+    grid-column: 1;
+    margin: 10px 0px 0px 40px;
+}
+.payment h2 {
+    margin: 30px 0px 0px 50px;
+}
+h2.month {
+    color: #a6b5cc;
+}
+span.monthTAG {
+    background: #3b405a;
+    padding: 2px 12px;
+    border-radius: 18px;
+}
+.payment li {
+    border: solid 1px #2e3247;
+    display: block;
+    clear: left;
+    position: relative;
+    margin: 6px;
+    padding: 12px;
+    background: #2e3247;
+    border-radius: 10px;
+    min-width: 165px;
+    box-shadow: 2px 2px 4px 2px #0000000d;
+    color: #d5d5d5;
+    max-width: 340px;
+    overflow: hidden;
+}
+.statusNP {
+    font-size: 12px;
+    padding: 1px 7px;
+    background: #b73a3ac9;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    top: 5px;
+    box-shadow: 0 0 8px 0px #e0474757;
+}
+.statusPP {
+    font-size: 12px;
+    padding: 1px 7px;
+    background: #dda326c9;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    top: 5px;
+    box-shadow: 0 0 8px 0px #a095415c;
+}
+.status {
+    font-size: 12px;
+    padding: 1px 7px;
+    background: #3f8253;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    top: 5px;
+    box-shadow: 0 0 8px 0px #3f82535c;
+}
+.price {
+    float: right;
+    margin: 11px;
+}
+span.PPmonths {
+    background: #00000026;
+    margin: 2px 4px 2px -1px;
+    position: relative;
+    top: 7px;
+    padding: 0px 5px;
+    border-radius: 6px;
+}
+
+/*calendar container*/
+.week-table {
+    color: #d5d5d5;
+    grid-column: 2;
+    margin: 0px 0px 20px 20px;
+    animation: fadein 0.5s forwards;
+    animation-play-state: paused;
+}
+.week-table-container li {
+    border: solid 1px #2E3247;
+    background: #2E3247;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 4px 2px #00000005;
+    color: #b9b9b9;
+    margin: 4px 50px 0px 0px;
+    font-family: 'Nunito';
+    width: 400px;
+    user-select: text;
+}
+.week-table-container img {
+    width: 100%;
+    margin: 8px 0px 0px 0px;
+    border-radius: 10px;
+}
+.week-table-container h2 {
+    color: #dadada;
+    margin-left: 50px;
+}
+
+/*calendar*/
+h3.date {
+    font-family: 'Nunito';
+    margin: 10px 0px 0px 2px;
+    color: #a4a8bf;
+}
+.date span {
+    color: #515467;
+}
+
+@media screen and (max-width: 800px){
+    .payment li {
+        width: 48% !important;
+        margin: 2px 0px 0px 2px;
+        display: inline-block;
+    }
+    .payment h2 {
+        margin: 10px 0px 0px 20px;
+    }
+    .payment-container {
+        margin: 15px 0px 0px 0px;
+        padding-left: 10px;
+    }
+
+    .week-table-container li {
+        width: 100%;
+    }
+    .week-table {
+        grid-column: 1;
+        margin: 0px 24px 0px 0px;
+    }
+    .title {
+        margin: 20px 0px 0px 17px;
+        font-size: 30px;
+    }
+    h3.date {
+        margin: 8px 0px 0px 0px;
+        padding: 4px 10px;
+        background: #343950;
+        border-radius: 6px 6px 0px 0px;
+    }
+    .week-table-container h2 {
+        margin: 20px 0px 8px 8px;
+    }
+    .week-table-container {
+        margin-top: 0px;
+        margin-left: 20px;
+        grid-column: 1;
+        width: 100%;
+        border-radius: 0px;
+        margin: 0px 12px;
+    }
+    .week-table-container li {
+        width: 100%;
+        border-radius: 0px 0px 6px 6px;
+        min-width: 0px;
+        margin-top: 0px;
+        border-top: 2px solid #2b2e44;
+    }
+}
+
+@keyframes fadein {
+    0%{ transform: translateY(50px); opacity: 0; }
+    100%{ transform: translateY(0px); opacity: 1; }
+}
