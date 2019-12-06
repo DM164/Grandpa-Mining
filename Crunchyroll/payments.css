@@ -20,7 +20,7 @@ h2.month {
 }
 span.monthTAG {
     background: #3b405a;
-    padding: 2px 12px;
+    padding: 0px 10px;
     border-radius: 18px;
 }
 .payment li {
@@ -57,6 +57,11 @@ span.monthTAG {
     position: relative;
     top: 5px;
     box-shadow: 0 0 8px 0px #a095415c;
+    transition: background 0.3s;
+}
+span.statusPP:hover {
+    background: #e0b455c9;
+    cursor: pointer;
 }
 .status {
     font-size: 12px;
@@ -74,11 +79,24 @@ span.monthTAG {
 }
 span.PPmonths {
     background: #00000026;
-    margin: 2px 4px 2px -1px;
+    margin: 5px 4px 2px -1px;
     position: relative;
     top: 7px;
-    padding: 0px 5px;
+    padding: 5px 5px;
     border-radius: 6px;
+}
+#PPmonthsContainer {
+    display: none;
+    animation: openMonthPP 0.3s forwards;
+    animation-play-state: paused;
+    height: 25px;
+    margin-top: 15px;
+}
+
+@keyframes openMonthPP {
+    0%{ transform: translateY(-20px); opacity: 0;}
+    10%{ transform: translateY(-10px); opacity: 0;}
+    100%{ transform: translateY(0px); opacity: 1; }
 }
 
 /*calendar container*/
