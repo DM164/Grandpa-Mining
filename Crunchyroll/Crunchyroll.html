@@ -104,9 +104,30 @@ function retrieveData() {
             
             listDate.innerText = element.day 
             element.anime.forEach(element => {
-                const listDesc = document.createElement('li')
-                listDesc.innerText = element
-                listDescContainer.appendChild(listDesc)
+                if (element.title === 'No anime scheduled for this day'){
+                    let listDesc = document.createElement('li')
+                    listDesc.innerText = element.title
+
+                    listDescContainer.appendChild(listDesc)
+                } else {
+                    const listDesc = document.createElement('li')
+                    listDesc.innerText = element.title
+                    
+                    const newLine = document.createElement('br')
+    
+                    const listTime = document.createElement('h6')
+                    listTime.innerText=element.time
+                    listTime.setAttribute('class', 'time')
+                    
+                    const listPlatform = document.createElement('h6')
+                    listPlatform.innerText=element.platform
+                    listPlatform.setAttribute('class', 'platform')
+    
+                    listDesc.appendChild(document.createElement('br'))
+                    listDesc.appendChild(listTime)
+                    listDesc.appendChild(listPlatform)
+                    listDescContainer.appendChild(listDesc)
+                }
             })
             listDiv.appendChild(listDescContainer)
             listElement.append(listDate)

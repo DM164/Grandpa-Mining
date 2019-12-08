@@ -129,7 +129,7 @@ span.PPmonths {
     margin-left: 50px;
 }
 
-/*calendar*/
+/*anime timetable*/
 h3.date {
     font-family: 'Nunito';
     margin: 10px 0px 0px 2px;
@@ -137,6 +137,14 @@ h3.date {
 }
 .date span {
     color: #515467;
+}
+h6.time, h6.platform {
+    background: #272a3c;
+    padding: 4px 8px;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 12px;
+    margin: 4px 5px 0px 0px;
 }
 
 @media screen and (max-width: 800px){
