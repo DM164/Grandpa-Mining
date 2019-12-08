@@ -197,6 +197,15 @@ h6.time, h6.platform {
         border-top: 2px solid #2b2e44;
     }
 }
+@media screen and (max-width: 348px){
+    .payment li {
+        width: 96% !important;
+    }
+    .title {
+        margin: 20px 0px 0px 17px;
+        font-size: 20px;
+    }
+}
 
 @keyframes fadein {
     0%{ transform: translateY(50px); opacity: 0; }
