@@ -144,11 +144,6 @@ h3.date {
         width: 48% !important;
         margin: 2px 0px 0px 2px;
         display: inline-block;
-        overflow: scroll;
-    }
-    ::-webkit-scrollbar {
-        width: 0px;
-        height: 0px;
     }
     .payment h2 {
         margin: 10px 0px 0px 20px;
