@@ -34,14 +34,14 @@
 
         <div class="payment">
             <h2 class="title">Payment Status</h2>
-            <h2 class="month">Currently shown month: <span class="monthTAG">December</span></h2>
+            <h2 class="month">Currently shown month: <span class="monthTAG">January</span></h2>
 
             <div class="payment-container">
                 <ul>
-                    <li>Dalura <span class="price">1,25€</span> <br> <span class="status">Payed</span></li>
+                    <li>Dalura <span class="price">1,25€</span> <br> <span class="statusNP">Not payed</span></li>
                     <li>Frozer13 <span class="price">1,25€</span> <br> <span class="statusNP">Not Payed</span></li>
                     <li>iGoof <span class="price">1,25€</span> <br> <span class="status">Payed</span></li>
-                    <li>Milu28 <span class="price">1,25€</span> <br> <span class="statusPP">Pre-payed</span> <br> <div id="PPmonthsContainer"><span class="PPmonths">December</span><span class="PPmonths">January</span><span class="PPmonths">February</span></div></li>
+                    <li>Milu28 <span class="price">1,25€</span> <br> <span class="statusPP">Pre-payed</span> <br> <div id="PPmonthsContainer"><span class="PPmonths">January</span><span class="PPmonths">February</span></div></li>
                 </ul>
             </div>
         </div>
@@ -133,7 +133,8 @@ function retrieveData() {
             listElement.append(listDate)
             listElement.appendChild(listDiv)
             listDate.setAttribute('class', 'date')
-            listElement.setAttribute('class', 'week-table-container')
+            i++
+            listElement.setAttribute('class', `week-table-container c${i}`)
             document.getElementById('weekT').append(listElement)
         });
     
