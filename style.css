@@ -196,6 +196,15 @@ a {
     animation: slidedown 0.5s forwards;
     animation-play-state: paused;
 }
+.dot {
+    background: #3fff3f;
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 0px 10px 1.5px 0px;
+    box-shadow: 0 0 8px 0px #5dff36f7;
+}
 .open-notion {
     background: #383c52;
     padding: 10px 20px;
