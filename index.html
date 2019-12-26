@@ -112,7 +112,7 @@ firebase.initializeApp(firebaseConfig);
 retrieveData()
 function retrieveData() {
     firebase.database().ref('/status/').once('value').then(function(snapshot){
-        if (snapshot.val() === 'maintenance'){
+        if (snapshot.val() === 'maintenance1'){
             console.log('Website is in maintenance mode')
             document.getElementsByClassName('maintenance')[0].style.display='inline-block'
             document.getElementsByClassName('body2')[0].style.display='none'
@@ -148,15 +148,16 @@ function retrieveData() {
     })
     
     firebase.database().ref('/events/').once('value').then(function(snapshot){
-        let eventsArray = snapshot.val()
-        console.log(eventsArray)
+        let events = snapshot.val()
+        console.log(events)
     
         let loadingElement = document.getElementById('eventsA')
         while (loadingElement.firstChild){
             loadingElement.removeChild(loadingElement.firstChild)
         }
     
-        eventsArray.forEach(element => {
+        events.forEach(element => {
+            if (element.description === 'placeholder'){return}
             const listElement = document.createElement('div')
             const listDescContainer = document.createElement('ul')
             const listDesc = document.createElement('li')
