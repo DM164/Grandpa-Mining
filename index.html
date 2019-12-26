@@ -34,7 +34,7 @@
         </div>
     </div>
     
-<h1 class="maintenance">Website is undergoing maintenance, please check back later.</h1>
+<h1 class="maintenance">Website is undergoing maintenance.</h1>
     
 <div class="body2">
     <div id="newsA" class="newscontainer">
@@ -118,7 +118,7 @@ function retrieveData() {
             document.getElementsByClassName('body2')[0].style.display='none'
         }
     })
-    
+
     firebase.database().ref('/news/').once('value').then(function(snapshot){
         let newsArray = snapshot.val()
         console.log(newsArray)
