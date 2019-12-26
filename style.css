@@ -37,11 +37,12 @@ h2{
 }
 h1.GMLogoText {
     font-size: 30px;
-    color: #ffffff;
+    color: #d9009f;
     font-family: 'Nunito';
     display: inline-block;
     position: relative;
     top: -20px;
+    font-weight: 700;
 }
 .navDiv {
     display: inline-block;
