@@ -286,6 +286,27 @@ h3.date {
     color: #515467;
 }
 
+/* Maintenance mode */
+.maintenance {
+    display: none;
+    animation: fadein 1s forwards;
+}
+h1.maintenance {
+    margin: 20px;
+    border: solid 1px #2E3247;
+    background: #2E3247;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 4px 2px #00000005;
+    color: #d5d5d5;
+    display: none;
+    font-family: 'Nunito';
+    position: relative;
+    left: 50%;
+    margin-left: -176.54px;
+}
+
 /* Scrollbar taken by Dark Instagram by DM */
 ::-webkit-scrollbar-track-piece {
     background-color: transparent !important;
