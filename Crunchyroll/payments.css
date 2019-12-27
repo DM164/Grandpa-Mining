@@ -89,7 +89,7 @@ span.PPmonths {
     padding: 5px 5px;
     border-radius: 6px;
 }
-#PPmonthsContainer {
+.PPmonthsContainer {
     display: none;
     animation: openMonthPP 0.3s forwards;
     animation-play-state: paused;
@@ -120,7 +120,6 @@ span.PPmonths {
     color: #b9b9b9;
     margin: 4px 50px 0px 0px;
     font-family: 'Nunito';
-    width: 400px;
     user-select: text;
 }
 .week-table-container img {
@@ -158,6 +157,7 @@ h6.time, h6.platform {
         left: initial !important;
         margin-left: initial !important;        
     }
+}
 @media screen and (max-width: 800px){
     .payment li {
         width: 48% !important;

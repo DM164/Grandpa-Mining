@@ -34,14 +34,11 @@
 
         <div class="payment">
             <h2 class="title">Payment Status</h2>
-            <h2 class="month">Currently shown month: <span class="monthTAG">January</span></h2>
+            <h2 class="month">Currently shown month: <span class="monthTAG">Month</span></h2>
 
             <div class="payment-container">
-                <ul>
-                    <li>Dalura <span class="price">1,25€</span> <br> <span class="status">Payed</span></li>
-                    <li>Frozer13 <span class="price">2,50€</span> <br> <span class="statusNP">Not Payed</span></li>
-                    <li>iGoof <span class="price">1,25€</span> <br> <span class="status">Payed</span></li>
-                    <li>Milu28 <span class="price">1,25€</span> <br> <span class="statusPP">Pre-payed</span> <br> <div id="PPmonthsContainer"><span class="PPmonths">January</span><span class="PPmonths">February</span></div></li>
+                <ul id="payments">
+                    <!-- Elements go here -->
                 </ul>
             </div>
         </div>
@@ -86,6 +83,36 @@ firebase.initializeApp(firebaseConfig);
 
 retrieveData()
 function retrieveData() {
+    firebase.database().ref('/payments-month/').once('value').then(function(snapshot){
+        document.getElementsByClassName('monthTAG')[0].innerText=snapshot.val()
+    })
+
+    firebase.database().ref('/payments/').once('value').then(function(snapshot){
+        let paymentsArray = snapshot.val()
+        console.log(paymentsArray)
+
+        let loadingElement = document.getElementById('payments')
+        while (loadingElement.firstChild){
+            loadingElement.removeChild(loadingElement.firstChild)
+        }
+        let i = 0
+        let PPmonthsElements = ''
+        paymentsArray.forEach(element => {
+            let statusClass = 'status'
+            const statusLi = document.createElement('li')
+            if (element.status === 'Not payed'){
+                statusClass = 'statusNP'
+            } else if (element.status === 'Pre-payed') {
+                console.log(element.PPmonths)
+                statusClass = 'statusPP ' + i
+                PPmonthsElements = `<div id="${i}" class="PPmonthsContainer" style="display: none; animation-play-state: running;"><span class="PPmonths">January</span><span class="PPmonths">February</span></div>`
+                i++
+            }
+            statusLi.innerHTML = `${element.name} <span class="price">${element.price}€</span><br><span class="${statusClass}">${element.status}</span>${PPmonthsElements}`
+            document.getElementById('payments').appendChild(statusLi)
+        })
+    })
+
     firebase.database().ref('/anime/').once('value').then(function(snapshot){
         let animeArray = snapshot.val()
         console.log(animeArray)
@@ -147,6 +174,23 @@ function retrieveData() {
         document.getElementsByClassName('week-table')[0].style.webkitAnimationPlayState = "running";
     })
 }
+
+// Expand prepayed months
+let preOpen = false
+document.addEventListener('click', (e) => {
+    console.log(e)
+    if (e.target.classList[0] === 'statusPP'){
+        if (preOpen === false){
+            document.getElementById(e.target.classList[1]).style.display='block'
+            document.getElementById(e.target.classList[1]).style.webkitAnimationPlayState = "running";
+            preOpen = true
+        } else {
+            document.getElementById(e.target.classList[1]).style.display='none'
+            document.getElementById(e.target.classList[1]).style.webkitAnimationPlayState = "paused";
+            preOpen = false
+        }
+    }
+})
 
 setInterval(() => {
     retrieveData()

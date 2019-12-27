@@ -9,17 +9,3 @@ document.getElementById('navIcon').addEventListener('click', function(){
         navOpen = false
     }
 });
-
-// Expand prepayed months
-let preOpen = false
-document.getElementsByClassName('statusPP')[0].addEventListener('click', (e) => {
-    if (preOpen === false){
-        document.getElementById('PPmonthsContainer').style.display='inline-block'
-        document.getElementById('PPmonthsContainer').style.webkitAnimationPlayState = "running";
-        preOpen = true
-    } else {
-        document.getElementById('PPmonthsContainer').style.display='none'
-        document.getElementById('PPmonthsContainer').style.webkitAnimationPlayState = "paused";
-        preOpen = false
-    }
-})
