@@ -61,12 +61,36 @@ li:hover {
 }
 
 @media screen and (max-width: 1280px){
-    .soon {
+    .article a {
+        display: block;
+        position: relative;
+        left: 50%;
+    }
+    /* .soon {
         display: inline-block !important;
         animation: fadein 1s forwards;
     }
     .article {
         display: none;
+    } */
+}
+@media screen and (max-width: 590px){
+    .article a {
+        display: block;
+        position: relative;
+        left: 0;
+    }
+    .article {
+        position: relative;
+        left: 0;
+        margin-left: 0;
+        display: inline-block;
+        margin-top: 40px;
+        animation: fadein 1s forwards;
+    }
+    li {
+        margin: 10px;
+        height: auto;
     }
 }
 
