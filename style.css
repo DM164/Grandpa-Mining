@@ -512,6 +512,55 @@ h1.maintenance {
         border-top: 2px solid #2b2e44;
     }
 }
+@media (prefers-color-scheme: light){
+    body{
+        background: white;
+    }
+    .navSelected {
+        color: #232323;
+    }
+    .navDiv {
+        background: #00000021;
+    }
+    a {
+        color: #2d2d2d;
+    }
+    .open-payments, .join-discord, .open-reddit, .join-w2g, .open-notion {
+        background: #ffffff;
+    }
+    .header {
+        border-bottom: 1px solid #eaeaea;
+        background: #eaeaea;
+    }
+    .container, .platform-card, .calendarContainer li {
+        border: solid 1px #eaeaea;
+        background: #eaeaea;
+    }
+    .postdate {
+        color: #adadad;
+    }
+    .newscontainer p, .platform-card h2 {
+        color: #212121;
+    }
+    .platform-card p, h3.date, .navSelected {
+        color: #3e3e3e;
+    }
+    .newscontainer h2, .title, .calendarContainer li {
+        color: #232323;
+    }
+    .discordVC-count {
+        background: #d8d8d8;
+        color: #4a4a4a;
+    }
+    .dot {
+        background: #45d445;
+        box-shadow: 0 0 8px 0px #19cc19;
+    }
+    @media screen and (max-width: 890px){
+        .navElements {
+            background: #e2e2e2;
+        }
+}
 
 /* animations */
 @keyframes slidein-menu{
