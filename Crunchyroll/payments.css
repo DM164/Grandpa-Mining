@@ -1,6 +1,10 @@
 /*payment heading*/
-.body2{
+.body2 {
     display: grid;
+    max-width: 954px;
+    position: relative;
+    left: 50%;
+    margin-left: -477px;
 }
 .payment {
     font-family: 'Nunito';
@@ -147,6 +151,13 @@ h6.time, h6.platform {
     margin: 4px 5px 0px 0px;
 }
 
+@media screen and (max-width: 960px){
+    .body2 {
+        display: grid;
+        position: initial !important;
+        left: initial !important;
+        margin-left: initial !important;        
+    }
 @media screen and (max-width: 800px){
     .payment li {
         width: 48% !important;
