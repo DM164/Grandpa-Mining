@@ -388,13 +388,18 @@ h1.maintenance {
     }
 
     .newscontainer {
+        font-family: 'Nunito';
+        display: inline-block;
+        height: 100%;
         width: 100%;
-        padding-right: 20px;
-    }
-    .newscontainer h2 {
-        margin: 30px 0px 0px 20px;
+        animation: fadein 0.5s forwards;
+        animation-play-state: paused;
+        padding: 0px 20px 0px 0px;
     }
     
+    .platform-container .title {
+        margin: 30px 0px 0px 10px;
+    }
     .container {
         margin-left: 0px;
         grid-column: 1;
@@ -402,6 +407,7 @@ h1.maintenance {
     }
     .platform-card, .discord-card, .discordVC-count {
         width: 100%;
+        margin-left: 10px;
     }
     .platform-container {
         margin-top: 0px;
@@ -416,10 +422,13 @@ h1.maintenance {
         margin-left: 10px;
         grid-column: 1;
         width: 100%;
-        padding-right: 20px;
     }
     .calendar-container li{
         margin: 2px 0px 0px 0px;
+    }
+
+    .week-table-container li {
+        margin: 4px 10px 0px 0px;
     }
     #eventsA .date {
     margin: 8px 0px 0px 0px;
