@@ -440,6 +440,9 @@ h1.maintenance {
         background: #262a3c;
         border-radius: 10px;
     }
+    .navSelected, .navDiv {
+        display: none !important;
+    }
 }
 
 /* animations */
