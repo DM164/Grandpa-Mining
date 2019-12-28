@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         
         <link rel="stylesheet" href="style.css" type="text/css">        
+        <link rel="stylesheet" href="payments.css" type="text/css">        
         <link rel="shortcut icon" href="files/images/favicon.png" type="image/png">
         <script src="script.js" defer></script>
 
@@ -30,11 +31,22 @@
             <p class="navSelected">Home</p>
             <div class="navDiv"></div>
             <p><a href="Projects/Projects.html">Projects</a></p>
-            <a href="Crunchyroll/Crunchyroll.html"><p class="open-payments">Crunchyroll</p></a>
+            <p class="open-payments">Payments</p>
         </div>
     </div>
     
 <h1 class="maintenance">Website is undergoing maintenance.</h1>
+
+<div class="payment">
+    <h2 class="title">Payment Status</h2>
+    <h2 class="month">Currently shown month: <span class="monthTAG">Month</span></h2>
+
+    <div class="payment-container">
+        <ul id="payments">
+            <!-- Elements go here -->
+        </ul>
+    </div>
+</div>
     
 <div class="body2">
     <div id="newsA" class="newscontainer">
@@ -82,7 +94,17 @@
                 <li>Loading...</li>
             </ul>
         </div>
-</div>
+    </div>
+    <div id="weekT" class="week-table">
+        <h2 class="title">Simulcasts on our database</h2>
+        
+        <h3 class="date">Loading...</h3>
+        <div class="week-table-container">
+            <ul>
+                <li>Loading...</li>
+            </ul>
+        </div>
+    </div>
 <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
 
@@ -93,134 +115,5 @@
 <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
-
-<script>
-// TODO: Replace the following with your app's Firebase project configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyAhPz-IG85lj7AIPvrPvxV0-RnLNaU888A",
-    authDomain: "project-id.firebaseapp.com",
-    databaseURL: "https://grandpa-mining-website.firebaseio.com/",
-    projectId: "project-id",
-    storageBucket: "project-id.appspot.com",
-    messagingSenderId: "sender-id",
-    appId: "app-id",
-    measurementId: "G-measurement-id",
-};
-  
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-
-retrieveData()
-function retrieveData() {
-    firebase.database().ref('/status/').once('value').then(function(snapshot){
-        if (snapshot.val() === 'maintenance'){
-            console.log('Website is in maintenance mode')
-            document.getElementsByClassName('maintenance')[0].style.display='inline-block'
-            document.getElementsByClassName('body2')[0].style.display='none'
-        }
-    })
-
-    firebase.database().ref('/news/').once('value').then(function(snapshot){
-        let newsArray = snapshot.val()
-        console.log(newsArray)
-    
-        let loadingElement = document.getElementById('newsA')
-        while (loadingElement.firstChild){
-            loadingElement.removeChild(loadingElement.firstChild)
-        }
-    
-        newsArray.forEach(element => {
-            const listElement = document.createElement('div')
-            const listText = document.createElement('p')
-            const listDate = document.createElement('h6')
-            
-            listText.innerText = element.title
-            listDate.innerText = element.date
-            listElement.appendChild(listText)
-            listElement.appendChild(listDate)
-            listElement.setAttribute('class', 'container')
-            listDate.setAttribute('class', 'postdate')
-            document.getElementById('newsA').prepend(listElement)
-        });
-    
-        const listDate = document.createElement('h2')
-        listDate.innerText='News'
-        document.getElementById('newsA').prepend(listDate)
-    })
-    
-    firebase.database().ref('/events/').once('value').then(function(snapshot){
-        let events = snapshot.val()
-        console.log(events)
-    
-        let loadingElement = document.getElementById('eventsA')
-        while (loadingElement.firstChild){
-            loadingElement.removeChild(loadingElement.firstChild)
-        }
-    
-        events.forEach(element => {
-            if (element.description === 'placeholder'){return}
-            const listElement = document.createElement('div')
-            const listDescContainer = document.createElement('ul')
-            const listDesc = document.createElement('li')
-            const listDiv = document.createElement('div')
-            const listDate = document.createElement('h3')
-            
-            listDate.innerText = element.date
-            listDesc.innerText = element.description
-            listElement.appendChild(listDate)
-            listDiv.appendChild(listDescContainer)
-            listDescContainer.appendChild(listDesc)
-            listElement.appendChild(listDiv)
-            listDate.setAttribute('class', 'date')
-            listDiv.setAttribute('class', 'calendarContainer')
-            document.getElementById('eventsA').appendChild(listElement)
-        });
-    
-        const listDate = document.createElement('h2')
-        listDate.innerText='Events'
-        listDate.setAttribute('class', 'title')
-        document.getElementById('eventsA').prepend(listDate)
-        
-        document.getElementsByClassName('newscontainer')[0].style.webkitAnimationPlayState = "running";
-        document.getElementsByClassName('platform-container')[0].style.webkitAnimationPlayState = "running";
-        document.getElementsByClassName('calendar-container')[0].style.webkitAnimationPlayState = "running";
-    })
-
-    firebase.database().ref('/voiceActivity/').once('value').then(function(snapshot){
-        let users = snapshot.val()
-        console.log(users)
-        setcount(users)
-    })
-}
-
-function addEvent(id, desc, date) {
-    firebase.database().ref('events/' + id).set({
-        description: desc,
-        date: date
-    });
-}
-function addNews(id, title, date) {
-    firebase.database().ref('news/' + id).set({
-        title: title,
-        date: date
-    });
-}
-
-function setcount(number) {
-    if(number === 0){
-        document.getElementsByClassName('discordVC-count')[0].style.display='none'
-        document.getElementsByClassName('discordVC-count')[0].style.webkitAnimationPlayState = "paused";
-    } else {
-        document.getElementsByClassName('discordVC-count')[0].style.display='block'
-        document.getElementsByClassName('discordVC-count')[0].style.webkitAnimationPlayState = "running";
-        document.getElementById('VC-count').innerText=number
-    }
-}
-
-setInterval(() => {
-    retrieveData()
-}, 60000);
-</script>
 </body>
 </html>

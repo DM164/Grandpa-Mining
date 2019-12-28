@@ -16,7 +16,7 @@ body {
 h2{
     font-family: 'Nunito';
 }
-.title{
+.title {
     margin: 30px 0px 0px 0px;
     color: #dadada;
     font-size: 30px;
@@ -79,6 +79,7 @@ a {
     background: #383c52;
     padding: 10px 20px;
     border-radius: 6px;
+    cursor: pointer;
     transition-property: background, color, box-shadow;
     transition: 0.3s;
 }
@@ -153,7 +154,7 @@ a {
     display: inline-block;
     height: 75px;
     width: 325px;
-    margin: 10px 25px 0px 0px;
+    margin: 10px 10px 0px 0px;
     z-index: 1;
 }
 .platform-card h2 {
@@ -259,7 +260,6 @@ a {
 .calendar-container {
     color: #d5d5d5;
     grid-column: 3;
-    margin-bottom: 20px;
     animation: fadein 0.5s forwards;
     animation-play-state: paused;
 }
@@ -270,7 +270,7 @@ a {
     border-radius: 6px;
     box-shadow: 2px 2px 4px 2px #00000005;
     color: #b9b9b9;
-    margin: 10px 50px 0px 0px;
+    margin: 10px 10px 0px 0px;
     grid-column: 3;
     font-family: 'Nunito';
     width: 400px;
@@ -390,6 +390,9 @@ h1.maintenance {
         font-size: 22px;
         display: none;
         animation: slidein-menu 0.2s forwards;
+    }
+    .payment{
+        right: 0px !important;
     }
     h1.GMLogoText{
         display: none;
