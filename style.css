@@ -21,6 +21,9 @@ h2{
     color: #dadada;
     font-size: 30px;
 }
+#eventsA .title {
+    margin: 20px 0px 0px 0px;
+}
 
 /* Header */
 .header {
@@ -91,7 +94,6 @@ a {
 
 /*news container*/
 .container {
-    margin-left: 50px;
     border: solid 1px #2E3247;
     background: #2E3247;
     display: inline-block;
@@ -100,7 +102,7 @@ a {
     border-radius: 6px;
     box-shadow: 2px 2px 4px 2px #00000005;
     color: #d5d5d5;
-    width: 86%;
+    width: 100%;
     grid-column: 1;
 }
 .newscontainer {
@@ -109,6 +111,7 @@ a {
     height: 100%;
     animation: fadein 0.5s forwards;
     animation-play-state: paused;
+    padding: 0px 20px 0px 30px;
 }
 .newscontainer p {
     font-family: 'Nunito';
@@ -117,7 +120,7 @@ a {
     user-select: text;
 }
 .newscontainer h2 {
-    margin: 30px 0px 0px 50px;
+    margin: 30px 0px 0px 0px;
     color: #dadada;
     font-size: 30px;
 }
@@ -137,8 +140,9 @@ a {
     width: 350px;
     animation: fadein 0.5s forwards;
     animation-play-state: paused;
+    padding-right: 10px;
 }
-.platform-card{
+.platform-card {
     margin-left: 0px;
     border: solid 1px #2E3247;
     background: #2E3247;
@@ -151,8 +155,8 @@ a {
     font-family: 'Nunito';
     display: inline-block;
     height: 75px;
-    width: 325px;
-    margin: 10px 0px 0px 10px;
+    width: 100%;
+    margin: 10px 0px 0px 0px;
     z-index: 1;
 }
 .platform-card h2 {
@@ -186,10 +190,10 @@ a {
 }
 .discordVC-count {
     background: #25283a;
-    width: 325px;
+    width: 100%;
     padding: 10px 0px 6px 18px;
     font-family: 'Nunito';
-    margin: -4px 0px 0px 10px;
+    margin: -4px 0px 0px 0px;
     border-radius: 0px 0px 6px 6px;
     color: #8791a3;
     animation: slidedown 0.5s forwards;
@@ -268,7 +272,7 @@ a {
     border-radius: 6px;
     box-shadow: 2px 2px 4px 2px #00000005;
     color: #b9b9b9;
-    margin: 10px 10px 0px 0px;
+    margin: 10px 0px 0px 0px;
     grid-column: 3;
     font-family: 'Nunito';
     user-select: text;
