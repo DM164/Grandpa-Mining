@@ -148,13 +148,11 @@ a {
     box-shadow: 2px 2px 4px 2px #00000005;
     color: #d5d5d5;
     position: relative;
-}
-.platform-card {
     font-family: 'Nunito';
     display: inline-block;
     height: 75px;
     width: 325px;
-    margin: 10px 10px 0px 0px;
+    margin: 10px 0px 0px 10px;
     z-index: 1;
 }
 .platform-card h2 {
@@ -191,7 +189,7 @@ a {
     width: 325px;
     padding: 10px 0px 6px 18px;
     font-family: 'Nunito';
-    margin-top: -4px;
+    margin: -4px 0px 0px 10px;
     border-radius: 0px 0px 6px 6px;
     color: #8791a3;
     animation: slidedown 0.5s forwards;
@@ -266,14 +264,13 @@ a {
 .calendarContainer li {
     border: solid 1px #2E3247;
     background: #2E3247;
-    padding: 8px;
+    padding: 8px 14px 8px 8px;
     border-radius: 6px;
     box-shadow: 2px 2px 4px 2px #00000005;
     color: #b9b9b9;
     margin: 10px 10px 0px 0px;
     grid-column: 3;
     font-family: 'Nunito';
-    width: 400px;
     user-select: text;
 }
 .calendarContainer img {
@@ -340,48 +337,30 @@ h1.maintenance {
     border: none !important;
 }
 
-@media screen and (max-width: 1300px) and (min-width: 960px){
-    .platform-container {
-        grid-column: 2;
-        grid-row: 1;
-        width: 400px;
-    }
-    .platform-card, .discord-card, .discordVC-count {
-        width: 100%;
-    }
-    .join-discord {
-        right: -14px;
-        float: right;
-    }
-    .calendar-container {
-        color: #d5d5d5;
-        grid-column: 2;
-        margin-bottom: 20px;
-    }
-}
-@media screen and (max-width: 960px){
+@media screen and (max-width: 1200px){
     .newscontainer{
         grid-column: 1;
         grid-row: 1;
-    }
-    .platform-container {
-        grid-column: 2;
-        grid-row: 1;
-        margin-top: 10px;
-        margin-left: 50px;
+        margin: 0px 10px 0px 10px;
+    } 
+    .platform-container{
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0px 10px 0px 10px;
+    } 
+    .platform-card {
+        width: 96%;
     }
     .calendar-container {
-        color: #d5d5d5;
-        grid-column: 2;
-        margin-bottom: 20px;
-        margin-left: 50px;
+        grid-column: 1;
+        grid-row: 3;
+        margin: 0px 10px 0px 10px;
     }
-    .calendarContainer li{
-        font-family: 'Nunito';
-        min-width: 400px;
+    .week-table{
+        grid-column: 1 !important;
+        grid-row: 4 !important;
+        margin: 0px 10px 0px 10px;
     }
-}
-@media screen and (max-width: 890px){
     .navElements {
         float: right;
         color: #d8d8d8;
@@ -406,113 +385,43 @@ h1.maintenance {
 
     .newscontainer {
         width: 100%;
+        padding-right: 20px;
     }
     .newscontainer h2 {
         margin: 30px 0px 0px 20px;
     }
     
     .container {
-        margin-left: 20px;
-        width: 92%;
+        margin-left: 0px;
         grid-column: 1;
+        width: 100%;
     }
     .platform-card, .discord-card, .discordVC-count {
         width: 100%;
     }
     .platform-container {
         margin-top: 0px;
-        margin-left: 20px;
-        width: 92%;
+        margin-left: 0px;
+        width: 100%;
         grid-column: 1;
         grid-row: 2;
+        padding-right: 20px;
     }
     .calendar-container {
         margin-top: 0px;
-        margin-left: 20px;
+        margin-left: 10px;
         grid-column: 1;
         width: 100%;
+        padding-right: 20px;
     }
     .calendar-container li{
-        width: 92%;
+        margin: 2px 0px 0px 0px;
     }
-}
-@media screen and (max-width: 513px){
-    .navSelected, .navDiv {
-        display: none !important;
-    }
-    .navElements {
-        float: right;
-        color: #d8d8d8;
-        font-family: "Source Sans Pro";
-        margin: 20px 15px 0px 14px;
-        font-size: 22px;
-        display: none;
-        animation: slidein-menu 0.2s forwards;
-        position: absolute;
-        top: -8px;
-        padding: 18px 20px;
-        right: 15%;
-        background: #262a3c;
-        border-radius: 10px;
-    }
-}
-@media screen and (max-width: 440px){        
-    .title {
-        margin: 20px 0px 8px 20px;
-    }
-    .newscontainer h2 {
-        margin: 30px 0px 10px 20px;
-    }
-
-    .container {
-        width: 94%;
-        grid-column: 1;
-        margin: 4px 12px;
-    }
-    .platform-card {
-        width: 94%;
-        margin: 4px 12px;
-    }
-    .discordVC-count{
-        width: 94%;
-        margin: -4px 12px 4px 12px;
-    }
-    .discord-card {
-        width: 100%;
-    }
-    
-    h3.date {
-        margin: 8px 0px 0px 0px;
-        padding: 4px 10px;
-        background: #343950;
-        border-radius: 6px 6px 0px 0px;
-    }
-    .calendar-container h2 {
-        margin: 20px 0px 8px 8px;
-    }
-    
-    .platform-container {
-        margin-top: 0px;
-        margin-left: 20px;
-        width: 100%;
-        grid-column: 1;
-        grid-row: 2;
-        margin-left: 0px;
-    }
-    .calendar-container {
-        margin-top: 0px;
-        margin-left: 20px;
-        grid-column: 1;
-        width: 94%;
-        border-radius: 0px;
-        margin: 0px 12px;
-    }
-    .calendar-container li {
-        width: 100%;
-        border-radius: 0px 0px 6px 6px;
-        min-width: 0px;
-        margin-top: 0px;
-        border-top: 2px solid #2b2e44;
+    #eventsA .date {
+    margin: 8px 0px 0px 0px;
+    padding: 4px 10px;
+    background: #343950;
+    border-radius: 6px 6px 0px 0px;
     }
 }
 

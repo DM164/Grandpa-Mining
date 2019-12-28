@@ -155,6 +155,12 @@ h6.time, h6.platform {
     margin: 4px 5px 0px 0px;
 }
 
+@media screen and (max-width: 1300px){
+    .week-table {
+        grid-column: 3;
+        grid-row: 1;
+    }
+}
 @media screen and (max-width: 960px){
     .body2 {
         display: grid;
