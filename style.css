@@ -341,7 +341,7 @@ h1.maintenance {
     border: none !important;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1000px){
     .newscontainer{
         grid-column: 1;
         grid-row: 1;
