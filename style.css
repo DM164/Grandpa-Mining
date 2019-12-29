@@ -53,7 +53,7 @@ h1.GMLogoText {
     height: 25px;
     width: 1px;
     position: relative;
-    top: 5px;
+    top: 3px;
 }
 .navElements {
     float: right;
@@ -451,11 +451,80 @@ h1.maintenance {
         top: -8px;
         padding: 18px 20px;
         right: 15%;
-        background: #262a3c;
+        background: #131313;
         border-radius: 10px;
     }
     .navSelected, .navDiv {
         display: none !important;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background: #f3f3f3;
+    }
+    .header {
+        border-bottom: 1px solid #ffffff;
+        background: #ffffff;
+    }
+    .container,.platform-card {
+        border: 1px solid #ffffff;
+        background: #ffffff;
+    }
+    .newscontainer p, .platform-card h2 {
+        color: #060606;
+    }
+    .postdate {
+        color: #c5c5c5;
+    }
+    .week-table-container li, .calendarContainer li {
+        border: solid 1px #ffffff !important;
+        background: #ffffff !important;
+        color: #060606 !important;
+    }
+    h3.date {
+        color: #383838;
+    }
+    h6.time, h6.platform {
+        background: #dedede !important;
+    }
+    .title, .newscontainer h2 {
+        color: #252525;
+    }
+    .discordVC-count {
+        background: #ffffff;
+        color: #3c3c3c;
+    }
+    .navSelected {
+        color: #1f1f1f;
+    }
+    a {
+        color: #424242;
+    }
+    .join-discord, .open-reddit, .open-notion, .join-discord, .join-w2g {
+        background: black;
+        color: white;
+    }
+    .navDiv {
+        background: #00000017;
+    }
+    .open-payments {
+        background: black;
+    }
+    .dot {
+        background: #21d021;
+        box-shadow: 0 0 8px 1px #3fff10f7;
+    }
+    @media screen and (max-width: 1000px){
+        #eventsA .date, h3.date {
+            color: #e4e4e4;
+        }
+        #navIcon {
+            filter: invert(1);
+        }
+        .navElements {
+            background: #dedede;
+        }
     }
 }
 

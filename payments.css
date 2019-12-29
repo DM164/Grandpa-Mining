@@ -197,6 +197,28 @@ h6.time, h6.platform {
         border-top: 2px solid #0e0e0e;
     }
 }
+@media (prefers-color-scheme: light) {
+    .payment {
+        background: #f3f3f3;
+        box-shadow: 0px 2px 6px 0px #00000033;
+    }
+    .payment li {
+        border: solid 1px #ffffff;
+        background: #ffffff;
+        box-shadow: 2px 2px 4px 2px #00000012;
+        color: #000000;
+    }
+    .payment .title {
+        color: #252525;
+    }
+    .month {
+        color: #2b2b2b;
+        border-bottom: 1px solid #dedede;
+    }
+    span.monthTAG {
+        background: #ffffff;
+    }
+}
 
 @keyframes fadeinPayments {
     0%{ transform: translateY(-50px); opacity: 0; }
