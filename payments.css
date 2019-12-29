@@ -5,7 +5,7 @@
     animation: fadeinPayments 0.3s forwards;
     display: none;
     position: absolute;
-    background: #1e202f;
+    background: #131313;
     z-index: 1;
     padding: 0px 10px 10px 10px;
     border-radius: 6px;
@@ -22,27 +22,27 @@
     grid-column: 1;
 }
 .month {
-    color: #a6b5cc;
+    color: #a2a2a2;
     margin: 10px 6px;
     padding: 8px 4px 10px 4px;
-    border-bottom: 1px solid #272a3c;
+    border-bottom: 1px solid #1f1f1f;
 }
 span.monthTAG {
-    background: #2e3247;
+    background: #1f1f1f;
     padding: 0px 10px;
     border-radius: 18px;
 }
 .payment li {
-    border: solid 1px #2e3247;
+    border: solid 1px #181818;
     display: block;
     clear: left;
     position: relative;
     margin: 6px;
     padding: 12px;
-    background: #2e3247;
+    background: #1b1b1b;
     border-radius: 10px;
     min-width: 165px;
-    box-shadow: 2px 2px 4px 2px #0000000d;
+    box-shadow: 2px 2px 4px 2px #0000001a;
     color: #d5d5d5;
     max-width: 340px;
     overflow: hidden;
@@ -87,7 +87,7 @@ span.statusPP:hover {
     margin: 11px;
 }
 .PPmonths {
-    background: #00000026;
+    background: #292929;
     margin: 5px 4px 2px -1px;
     position: relative;
     display: inline;
@@ -118,8 +118,8 @@ span.statusPP:hover {
     animation-play-state: paused;
 }
 .week-table-container li {
-    border: solid 1px #2E3247;
-    background: #2E3247;
+    border: solid 1px #181818;
+    background: #181818;
     padding: 8px;
     border-radius: 6px;
     box-shadow: 2px 2px 4px 2px #00000005;
@@ -142,13 +142,12 @@ span.statusPP:hover {
 h3.date {
     font-family: 'Nunito';
     margin: 10px 0px 0px 2px;
-    color: #a4a8bf;
 }
 .date span {
     color: #515467;
 }
 h6.time, h6.platform {
-    background: #272a3c;
+    background: #232323;
     padding: 4px 8px;
     display: inline-block;
     border-radius: 4px;
@@ -176,7 +175,7 @@ h6.time, h6.platform {
     h3.date {
         margin: 8px 0px 0px 0px;
         padding: 4px 10px;
-        background: #343950;
+        background: #242424;
         border-radius: 6px 6px 0px 0px;
     }
     .week-table-container h2 {
@@ -195,7 +194,7 @@ h6.time, h6.platform {
         border-radius: 0px 0px 6px 6px;
         min-width: 0px;
         margin-top: 0px;
-        border-top: 2px solid #2b2e44;
+        border-top: 2px solid #0e0e0e;
     }
 }
 

@@ -4,7 +4,7 @@
 }
 
 body {
-    background: #2B2E44;
+    background: #0e0e0e;
     user-select: none;
 }
 .body2 {
@@ -27,8 +27,8 @@ h2{
 
 /* Header */
 .header {
-    border-bottom: 1px solid #2E3247;
-    background: #2E3247;
+    border-bottom: 1px solid #181818;
+    background: #181818;
     user-select: none;
 }
 .GMLogo {
@@ -79,7 +79,7 @@ a {
 }
 
 .open-payments {
-    background: #383c52;
+    background: #242424;
     padding: 10px 20px;
     border-radius: 6px;
     cursor: pointer;
@@ -94,8 +94,8 @@ a {
 
 /*news container*/
 .container {
-    border: solid 1px #2E3247;
-    background: #2E3247;
+    border: solid 1px #181818;
+    background: #181818;
     display: inline-block;
     padding: 18px 15px 10px 18px;
     margin-top: 10px;
@@ -127,7 +127,7 @@ a {
 .postdate {
     float: right;
     margin: 0;
-    color: #474c63;
+    color: #3c3c3c;
     font-size: 13px;
     font-family: 'Roboto';
     margin-top: 10px;
@@ -144,8 +144,8 @@ a {
 }
 .platform-card {
     margin-left: 0px;
-    border: solid 1px #2E3247;
-    background: #2E3247;
+    border: solid 1px #181818;
+    background: #181818;
     display: inline-block;
     padding: 15px 35px;
     border-radius: 6px;
@@ -167,13 +167,13 @@ a {
 .platform-card p {
     font-family: 'Nunito';
     line-height: 22px;
-    color: #8491a5;
+    color: #797979;
     display: inline-block;
     margin-left: -17px;
     position: relative;
 }
 .join-discord {
-    background: #383c52;
+    background: #242424;
     padding: 10px 20px;
     position: relative;
     top: -21px;
@@ -189,13 +189,13 @@ a {
     color: white;
 }
 .discordVC-count {
-    background: #25283a;
+    background: #131313;
     width: 100%;
     padding: 10px 0px 6px 18px;
     font-family: 'Nunito';
     margin: -4px 0px 0px 0px;
     border-radius: 0px 0px 6px 6px;
-    color: #8791a3;
+    color: #b3b3b3;
     animation: slidedown 0.5s forwards;
     animation-play-state: paused;
 }
@@ -209,7 +209,7 @@ a {
     box-shadow: 0 0 8px 0px #5dff36f7;
 }
 .open-notion {
-    background: #383c52;
+    background: #242424;
     padding: 10px 20px;
     position: relative;
     top: -21px;
@@ -225,7 +225,7 @@ a {
     color: white;
 }
 .open-reddit {
-    background: #383c52;
+    background: #242424;
     padding: 10px 20px;
     position: relative;
     top: -21px;
@@ -241,7 +241,7 @@ a {
     color: white;
 }
 .join-w2g {
-    background: #383c52;
+    background: #242424;
     padding: 10px 20px;
     position: relative;
     top: -21px;
@@ -266,8 +266,8 @@ a {
     animation-play-state: paused;
 }
 .calendarContainer li {
-    border: solid 1px #2E3247;
-    background: #2E3247;
+    border: solid 1px #181818;
+    background: #181818;
     padding: 8px 14px 8px 8px;
     border-radius: 6px;
     box-shadow: 2px 2px 4px 2px #00000005;
@@ -290,8 +290,8 @@ a {
 /*calendar*/
 h3.date {
     font-family: 'Nunito';
-    margin: 14px 0px 0px 2px;
-    color: #a4a8bf;
+    margin: 10px 0px 0px 2px;
+    color: #c5c5c5;
 }
 .date span {
     color: #515467;
@@ -304,8 +304,8 @@ h3.date {
 }
 h1.maintenance {
     margin: 20px;
-    border: solid 1px #2E3247;
-    background: #2E3247;
+    border: solid 1px #181818;
+    background: #181818;
     padding: 20px;
     margin-top: 30px;
     border-radius: 6px;
@@ -328,7 +328,7 @@ h1.maintenance {
     width: 5px;
 }
 ::-webkit-scrollbar-thumb {
-    background: #00000038 !important;
+    background: #ffffff0f !important;
     border-radius: 10px !important;
     transition: 0.3s background ease-in-out;
 }
@@ -423,18 +423,19 @@ h1.maintenance {
         grid-column: 1;
         width: 100%;
     }
-    .calendar-container li{
+    .calendar-container li {
         margin: 2px 0px 0px 0px;
+        border-radius: 0px 0px 6px 6px;
     }
 
     .week-table-container li {
         margin: 4px 10px 0px 0px;
     }
     #eventsA .date {
-    margin: 8px 0px 0px 0px;
-    padding: 4px 10px;
-    background: #343950;
-    border-radius: 6px 6px 0px 0px;
+        margin: 8px 0px 0px 0px;
+        padding: 4px 10px;
+        background: #242424;
+        border-radius: 6px 6px 0px 0px;
     }
 }
 @media screen and (max-width: 513px){
