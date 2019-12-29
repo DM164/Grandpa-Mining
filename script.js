@@ -107,21 +107,32 @@ function retrieveData() {
         while (loadingElement.firstChild) {
             loadingElement.removeChild(loadingElement.firstChild)
         }
-        let i = 0
+        let im = 0
         let PPmonthsElements = ''
+        let faggotSaysYes = false
         paymentsArray.forEach(element => {
             let statusClass = 'status'
             const statusLi = document.createElement('li')
+
             if (element.status === 'Not payed') {
                 statusClass = 'statusNP'
             } else if (element.status === 'Pre-payed') {
-                console.log(element.PPmonths)
-                statusClass = 'statusPP ' + i
-                PPmonthsElements = `<div id="${i}" class="PPmonthsContainer" style="display: none; animation-play-state: running;"><span class="PPmonths">January</span><span class="PPmonths">February</span></div>`
-                i++
+                statusClass = 'statusPP ' + im
+                faggotSaysYes = true
             }
-            statusLi.innerHTML = `${element.name} <span class="price">${element.price}€</span><br><span class="${statusClass}">${element.status}</span>${PPmonthsElements}`
+            statusLi.innerHTML = `${element.name} <span class="price">${element.price}€</span><br><span class="${statusClass}">${element.status}</span><div id="${im}" class="PPmonthsContainer">${PPmonthsElements}</div>`
             document.getElementById('payments').appendChild(statusLi)
+            if (faggotSaysYes === true){
+                console.log(element.PPmonths)
+                element.PPmonths.forEach(element => {
+                    let PPmonthDiv = document.createElement('div')
+                    PPmonthDiv.setAttribute('class', 'PPmonths')
+                    PPmonthDiv.innerText=element
+                    document.getElementById(im).appendChild(PPmonthDiv)
+                });
+                faggotSaysYes = false
+            }
+            im++
         })
     })
 

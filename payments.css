@@ -86,19 +86,20 @@ span.statusPP:hover {
     float: right;
     margin: 11px;
 }
-span.PPmonths {
+.PPmonths {
     background: #00000026;
     margin: 5px 4px 2px -1px;
     position: relative;
-    top: 7px;
-    padding: 5px 5px;
+    display: inline;
+    top: 3px;
+    padding: 2px 6px;
     border-radius: 6px;
 }
 .PPmonthsContainer {
     display: none;
     animation: openMonthPP 0.3s forwards;
     animation-play-state: paused;
-    height: 25px;
+    height: 18px;
     margin-top: 15px;
 }
 
@@ -155,32 +156,10 @@ h6.time, h6.platform {
     margin: 4px 5px 0px 0px;
 }
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1000px){
     .week-table {
         grid-column: 3;
         grid-row: 1;
-    }
-}
-@media screen and (max-width: 960px){
-    .body2 {
-        display: grid;
-        position: initial !important;
-        left: initial !important;
-        margin-left: initial !important;        
-    }
-}
-@media screen and (max-width: 800px){
-    .payment li {
-        width: 48% !important;
-        margin: 2px 0px 0px 2px;
-        display: inline-block;
-    }
-    .payment h2 {
-        margin: 10px 0px 0px 20px;
-    }
-    .payment-container {
-        margin: 15px 0px 0px 0px;
-        padding-left: 10px;
     }
 
     .week-table-container li {
@@ -217,15 +196,6 @@ h6.time, h6.platform {
         min-width: 0px;
         margin-top: 0px;
         border-top: 2px solid #2b2e44;
-    }
-}
-@media screen and (max-width: 348px){
-    .payment li {
-        width: 96% !important;
-    }
-    .title {
-        margin: 20px 0px 0px 17px;
-        font-size: 20px;
     }
 }
 
