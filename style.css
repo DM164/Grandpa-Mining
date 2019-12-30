@@ -208,22 +208,6 @@ a {
     margin: 0px 10px 2px 0px;
     box-shadow: 0 0 8px 0px #5dff36f7;
 }
-.open-notion {
-    background: #242424;
-    padding: 10px 20px;
-    position: relative;
-    top: -21px;
-    right: -17px;
-    float: right;
-    border-radius: 6px;
-    transition-property: background, color, box-shadow;
-    transition: 0.3s;
-}
-.open-notion:hover {
-    background: #e8ba7f;
-    box-shadow: 0px 3px 9px #0000003d;
-    color: white;
-}
 .open-reddit {
     background: #242424;
     padding: 10px 20px;
@@ -253,6 +237,22 @@ a {
 }
 .join-w2g:hover {
     background: #FACD3B;
+    box-shadow: 0px 3px 9px #0000003d;
+    color: white;
+}
+.open-lb {
+    background: #242424;
+    padding: 10px 20px;
+    position: relative;
+    top: -21px;
+    right: -17px;
+    float: right;
+    border-radius: 6px;
+    transition-property: background, color, box-shadow;
+    transition: 0.3s;
+}
+.open-lb:hover {
+    background: #60D1F6;
     box-shadow: 0px 3px 9px #0000003d;
     color: white;
 }
@@ -501,7 +501,7 @@ h1.maintenance {
     a {
         color: #424242;
     }
-    .join-discord, .open-reddit, .open-notion, .join-discord, .join-w2g {
+    .join-discord, .open-reddit, .open-lb, .join-discord, .join-w2g {
         background: black;
         color: white;
     }
