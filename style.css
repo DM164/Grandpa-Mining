@@ -262,8 +262,6 @@ a {
 .calendar-container {
     color: #d5d5d5;
     grid-column: 3;
-    animation: fadein 0.5s forwards;
-    animation-play-state: paused;
 }
 .calendarContainer li {
     border: solid 1px #181818;

@@ -87,7 +87,6 @@ function retrieveData() {
 
         document.getElementsByClassName('newscontainer')[0].style.webkitAnimationPlayState = "running";
         document.getElementsByClassName('platform-container')[0].style.webkitAnimationPlayState = "running";
-        document.getElementsByClassName('calendar-container')[0].style.webkitAnimationPlayState = "running";
     })
 
     firebase.database().ref('/voiceActivity/').once('value').then(function (snapshot) {
