@@ -13,7 +13,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-
+//testing
 retrieveData()
 function retrieveData() {
     firebase.database().ref('/status/').once('value').then(function (snapshot) {
