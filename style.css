@@ -137,7 +137,8 @@ a {
 /*platforms container*/
 .event-card {
     margin-left: 0px;
-    border: solid 1px #181818;
+    border: solid 1px #bad2cd;
+    background: #b8d1cb;
     display: inline-block;
     padding: 15px 35px;
     border-radius: 6px;
@@ -167,7 +168,7 @@ a {
     font-size: 24px;
     margin-left: -17px;
     font-weight: 600;
-    text-shadow: 1px 1px 4px #191919e0;
+    text-shadow: 2px 2px 2px #ffffff;
 }
 .event-card p {
     font-family: 'Nunito';
@@ -176,7 +177,7 @@ a {
     display: inline-block;
     margin-left: -17px;
     position: relative;
-    text-shadow: 1px 1px 4px #191919e0;
+    text-shadow: 2px 2px 2px #ffffff;
 }
 .platform-container {
     grid-column: 2;
