@@ -24,6 +24,9 @@ h2{
 #eventsA .title {
     margin: 20px 0px 0px 0px;
 }
+div#weekT h2 {
+    padding-right: 30px;
+}
 
 /* Header */
 .header {
@@ -442,6 +445,7 @@ h1.maintenance {
     .platform-container .title {
         margin: 30px 0px 0px 10px;
     }
+
     .container {
         margin-left: 0px;
         grid-column: 1;
