@@ -37,7 +37,7 @@ function retrieveData() {
             const listText = document.createElement('p')
             const listDate = document.createElement('h6')
 
-            listText.innerText = element.title
+            listText.innerHTML = element.title
             listDate.innerText = element.date
             listElement.appendChild(listText)
             listElement.appendChild(listDate)
