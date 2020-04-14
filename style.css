@@ -28,6 +28,12 @@ div#weekT h2 {
     padding-right: 30px;
 }
 
+/* Brawlhalla countdown */
+#t td {
+    color: #c7c7c7;
+    font-family: 'Nunito';
+}
+
 /* Header */
 .header {
     border-bottom: 1px solid #181818;
@@ -541,6 +547,11 @@ h1.maintenance {
         .navElements {
             background: #dedede;
         }
+    }
+    /* Brawlhalla countdown */
+    #t td {
+        color: #4e4e4e;
+        font-family: 'Nunito';
     }
 }
 
