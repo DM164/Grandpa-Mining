@@ -93,6 +93,16 @@ function retrieveData() {
         console.log(users)
         setcount(users)
     })
+    firebase.database().ref('/W2G/').once('value').then(function (snapshot) {
+        let status = snapshot.val()
+        console.log(status)
+        if (status == 0){
+            return
+        } else {
+            setcountW(status)
+        }
+    })
+    
     firebase.database().ref('/payments-month/').once('value').then(function (snapshot) {
         document.getElementsByClassName('monthTAG')[0].innerText = snapshot.val()
     })
@@ -207,6 +217,15 @@ function addNews(id, title, date) {
         date: date
     });
 }
+function updateW2Gstatus() {
+    let updateStatus = firebase.functions().httpsCallable('W2Gstatus');
+    updateStatus().then((result) => {
+        // Read result of the Cloud Function.
+        console.log(result.data.message)
+    }).catch(function (error) {
+        console.log(error)
+    });
+}
 
 function setcount(number) {
     if (number === 0) {
@@ -216,6 +235,16 @@ function setcount(number) {
         document.getElementsByClassName('discordVC-count')[0].style.display = 'block'
         document.getElementsByClassName('discordVC-count')[0].style.webkitAnimationPlayState = "running";
         document.getElementById('VC-count').innerText = number
+    }
+}
+function setcountW(number) {
+    if (number === 0) {
+        document.getElementsByClassName('W2G-count')[0].style.display = 'none'
+        document.getElementsByClassName('W2G-count')[0].style.webkitAnimationPlayState = "paused";
+    } else {
+        document.getElementsByClassName('W2G-count')[0].style.display = 'block'
+        document.getElementsByClassName('W2G-count')[0].style.webkitAnimationPlayState = "running";
+        document.getElementById('W2G-count').innerText = number
     }
 }
 
