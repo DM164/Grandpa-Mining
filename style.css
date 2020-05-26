@@ -303,7 +303,7 @@ a {
     box-shadow: 0px 3px 9px #0000003d;
     color: white;
 }
-.open-gmc {
+.open-insta {
     background: #242424;
     padding: 10px 20px;
     position: relative;
@@ -314,8 +314,8 @@ a {
     transition-property: background, color, box-shadow;
     transition: 0.3s;
 }
-.open-gmc:hover {
-    background: rgb(134, 170, 255);
+.open-insta:hover {
+    background: #D32553;
     box-shadow: 0px 3px 9px #0000003d;
     color: white;
 }
@@ -533,7 +533,7 @@ h1.maintenance {
     a {
         color: #424242;
     }
-    .join-discord, .open-reddit, .open-lb, .join-discord, .join-w2g, .join-gmc {
+    .join-discord, .open-reddit, .open-lb, .join-discord, .join-w2g, .join-gmc, .open-insta {
         background: black;
         color: white;
     }
