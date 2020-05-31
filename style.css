@@ -518,13 +518,14 @@ h1.maintenance {
         color: #383838;
     }
     h6.time, h6.platform {
-        background: #dedede !important;
+        background: #f9f9f9 !important;
+        border: 1px solid #dedede;
     }
     .title, .newscontainer h2 {
         color: #252525;
     }
     .discordVC-count {
-        background: #ffffff;
+        background: #fbfbfb;
         color: #3c3c3c;
     }
     .navSelected {
@@ -534,8 +535,12 @@ h1.maintenance {
         color: #424242;
     }
     .join-discord, .open-reddit, .open-lb, .join-discord, .join-w2g, .join-gmc, .open-insta {
-        background: black;
-        color: white;
+        background: #f9f9f9;
+        color: black;
+        border: 1px solid #dedede;
+    }
+    .join-discord::hover, .open-reddit::hover, .open-lb::hover, .join-discord::hover, .join-w2g::hover, .join-gmc::hover, .open-insta::hover {
+        box-shadow: 0px 3px 9px #0000001a;
     }
     .navDiv {
         background: #00000017;
