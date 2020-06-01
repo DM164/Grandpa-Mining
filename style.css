@@ -515,7 +515,11 @@ h1.maintenance {
         color: #060606 !important;
     }
     h3.date {
-        color: #383838;
+        color: #383838 !important;
+        margin: 8px 0px 0px 0px;
+        padding: 4px 10px;
+        background: #e6e6e6 !important;
+        border-radius: 6px 6px 0px 0px;
     }
     h6.time, h6.platform {
         background: #f9f9f9 !important;
@@ -546,7 +550,7 @@ h1.maintenance {
         background: #00000017;
     }
     .open-payments {
-        background: black;
+        background: #292929;
     }
     .dot {
         background: #21d021;
