@@ -1,13 +1,13 @@
 // TODO: Replace the following with your app's Firebase project configuration
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyAhPz-IG85lj7AIPvrPvxV0-RnLNaU888A",
-    authDomain: "project-id.firebaseapp.com",
-    databaseURL: "https://grandpa-mining-website.firebaseio.com/",
-    projectId: "project-id",
-    storageBucket: "project-id.appspot.com",
-    messagingSenderId: "sender-id",
-    appId: "app-id",
-    measurementId: "G-measurement-id",
+    authDomain: "grandpa-mining-website.firebaseapp.com",
+    databaseURL: "https://grandpa-mining-website.firebaseio.com",
+    projectId: "grandpa-mining-website",
+    storageBucket: "grandpa-mining-website.appspot.com",
+    messagingSenderId: "201425292407",
+    appId: "1:201425292407:web:54a6b7d8a8f3d777e04a72",
+    measurementId: "G-SMDH0B47FM"
 };
 
 // Initialize Firebase
