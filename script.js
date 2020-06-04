@@ -70,7 +70,7 @@ function retrieveData() {
             const listDate = document.createElement('h3')
 
             listDate.innerText = element.date
-            listDesc.innerText = element.description
+            listDesc.innerHTML = element.description
             listElement.appendChild(listDate)
             listDiv.appendChild(listDescContainer)
             listDescContainer.appendChild(listDesc)
