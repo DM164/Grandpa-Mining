@@ -21,7 +21,7 @@ h2{
     color: #dadada;
     font-size: 30px;
 }
-#eventsA .title {
+h2.title.platform {
     margin: 20px 0px 0px 0px;
 }
 div#weekT h2 {
@@ -443,8 +443,14 @@ h1.maintenance {
         padding: 0px 20px 0px 0px;
     }
     
+    .title, h2.title.platform {
+        margin: 16px 0px 0px 10px !important;
+    }
     .platform-container .title {
-        margin: 30px 0px 0px 10px;
+        margin: 20px 0px 0px 0px !important;
+    }
+    .month {
+        padding: 0px 4px 10px 4px !important;
     }
 
     .container {
@@ -488,6 +494,21 @@ h1.maintenance {
 @media screen and (max-width: 513px){
     .navElements {
         margin: 20px 15px 0px 14px;
+    }
+    .payment {
+        position: fixed !important;
+        animation: mobilePayments 0.6s forwards !important;
+        border-radius: 15px 15px 0px 0px !important;
+        box-shadow: 0px 0px 6px 6px #00000061 !important;
+        right: 0 !important;
+        top: unset !important;
+        bottom: -30px;
+        width: 100%;
+        padding: 0px 10px 40px 10px !important;
+    }
+    .payment li {
+        margin: 6px auto !important;
+        max-width: unset !important;
     }
 }
 
@@ -573,6 +594,11 @@ h1.maintenance {
 }
 @keyframes fadein {
     0%{ transform: translateY(50px); opacity: 0; }
+    100%{ transform: translateY(0px); opacity: 1; }
+}
+@keyframes mobilePayments {
+    0%{ transform: translateY(200px); opacity: 0; }
+    50%{ transform: translateY(-10px); opacity: 1; }
     100%{ transform: translateY(0px); opacity: 1; }
 }
 @keyframes slidedown{
