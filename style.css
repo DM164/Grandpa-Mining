@@ -246,6 +246,35 @@ a {
     animation: slidedown 0.5s forwards;
     animation-play-state: paused;
 }
+#discord-widget {
+    margin: 10px 0px 0px 0px;
+    display: none;
+    animation-iteration-count: 1;
+    animation: widget 0.5s;
+}
+@keyframes widget {
+    0%{ transform: translateY(-10px); opacity: 0; height: 0px; }
+    100%{ transform: translateY(0px); opacity: 1; height: 500px;}
+}
+@keyframes widget-out {
+    0%{ transform: translateY(-10px); opacity: 0; height: 0px; }
+    100%{ transform: translateY(0px); opacity: 1; height: 500px;}
+}
+#openWidget {
+    float: right;
+    margin: -2px 20px 0px 0px;
+    background: #242424;
+    padding: 3px 9px 3px 8px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition-property: color, background;
+    transition: 0.3s;
+}
+#openWidget:hover {
+    background: #2f2f2f;
+    color: #e4e4e4;
+    cursor: pointer;
+}
 .dot {
     background: #3fff3f;
     height: 8px;
@@ -337,6 +366,7 @@ a {
     grid-column: 3;
     font-family: 'Nunito';
     user-select: text;
+    border-left: 6px solid #8c2b2b;
 }
 .calendarContainer img {
     width: 100%;
@@ -413,6 +443,10 @@ h1.maintenance {
         grid-row: 2;
         margin: 0px 10px 0px 10px;
     } 
+    #discord-widget {
+        margin: 10px 10px 0px 10px;
+        
+    }
     .platform-card {
         width: 96%;
     }

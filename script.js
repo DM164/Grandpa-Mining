@@ -249,6 +249,22 @@ document.getElementsByClassName('open-payments')[0].addEventListener('click', ()
     }
 })
 
+// Open Discord Widget
+let widgetOpen = false
+document.getElementById('openWidget').addEventListener('click', () => {
+    if (widgetOpen === false) {
+        document.getElementById('discord-widget').style.display = 'inline-block'
+        document.getElementById('discord-widget').style.animation = 'widget 0.5s forwards'
+        widgetOpen = true
+    } else {
+        document.getElementById('discord-widget').style.animation = 'widget-out reverse 0.5s forwards'
+        setTimeout(() => {
+            document.getElementById('discord-widget').style.display = 'none'
+            widgetOpen = false
+        }, 500);
+    }
+})
+
 // Open Navigation Menu on Mobile devices
 let navOpen = false;
 document.getElementById('navIcon').addEventListener('click', function () {
