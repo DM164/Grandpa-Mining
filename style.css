@@ -229,6 +229,7 @@ a {
     border-radius: 6px;
     transition-property: background, color, box-shadow;
     transition: 0.3s;
+    cursor: pointer;
 }
 .join-discord:hover {
     background: #7289DA;

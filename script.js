@@ -251,7 +251,8 @@ document.getElementsByClassName('open-payments')[0].addEventListener('click', ()
 
 // Open Discord Widget
 let widgetOpen = false
-document.getElementById('openWidget').addEventListener('click', () => {
+document.getElementsByClassName('join-discord')[0].addEventListener('click', () => {
+    firebase.analytics().logEvent('opened_widget');
     if (widgetOpen === false) {
         document.getElementById('discord-widget').style.display = 'inline-block'
         document.getElementById('discord-widget').style.animation = 'widget 0.5s forwards'
