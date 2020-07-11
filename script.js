@@ -188,7 +188,7 @@ function retrieveData() {
         });
 
         const listDate = document.createElement('h2')
-        listDate.innerText = 'Simulcasts on our database'
+        listDate.innerText = 'Simulcasts'
         listDate.setAttribute('class', 'title')
         document.getElementById('weekT').prepend(listDate)
 
