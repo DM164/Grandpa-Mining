@@ -125,7 +125,7 @@ span.statusPP:hover {
     box-shadow: 2px 2px 4px 2px #00000005;
     color: #b9b9b9;
     margin: 4px 30px 0px 0px;
-    font-family: 'Nunito';
+    font-family: 'Lexend Deca';
     user-select: text;
 }
 .week-table-container img {
@@ -139,10 +139,6 @@ span.statusPP:hover {
 }
 
 /*anime timetable*/
-h3.date {
-    font-family: 'Nunito';
-    margin: 10px 0px 0px 2px;
-}
 .date span {
     color: #515467;
 }

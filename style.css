@@ -14,7 +14,7 @@ body {
 }
 
 h2{
-    font-family: 'Nunito';
+    font-family: 'Lexend Deca';
 }
 .title {
     margin: 30px 0px 0px 0px;
@@ -60,10 +60,10 @@ h1.GMLogoText {
 }
 .navElements {
     float: right;
-    color: #d8d8d8;
-    font-family: "Source Sans Pro";
-    margin: 22px 52px 0px 0px;
-    font-size: 22px;
+    color: #d8d8d8 !important;
+    font-family: "Lexend Deca";
+    margin: 23px 52px 0px 0px;
+    font-size: 18px;
 }
 a {
     color: #c1c1c1;
@@ -94,6 +94,19 @@ a {
     box-shadow: 0px 3px 9px #0000003d;
     color: white;
 }
+.open-home {
+    background: #242424;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition-property: background, color, box-shadow;
+    transition: 0.3s;
+}
+.open-home:hover {
+    background: #292929;
+    box-shadow: 0px 3px 9px #0000003d;
+    color: white;
+}
 
 /*news container*/
 .container {
@@ -117,7 +130,8 @@ a {
     padding: 0px 20px 0px 30px;
 }
 .newscontainer p {
-    font-family: 'Nunito';
+    font-family: 'Lexend Deca';
+    font-size: 15px;
     line-height: 22px;
     color: #cecece;
     user-select: text;
@@ -199,7 +213,7 @@ a {
     box-shadow: 2px 2px 4px 2px #00000005;
     color: #d5d5d5;
     position: relative;
-    font-family: 'Nunito';
+    font-family: 'Lexend Deca';
     display: inline-block;
     height: 75px;
     width: 100%;
@@ -208,15 +222,16 @@ a {
 }
 .platform-card h2 {
     color: #dadada;
-    font-size: 24px;
+    font-size: 23px;
     margin-left: -17px;
 }
 .platform-card p {
-    font-family: 'Nunito';
+    font-family: 'Lexend Deca';
     line-height: 22px;
     color: #797979;
     display: inline-block;
     margin-left: -17px;
+    font-size: 15px;
     position: relative;
 }
 .join-discord {
@@ -257,7 +272,8 @@ a {
     background: #131313;
     width: 100%;
     padding: 10px 0px 6px 18px;
-    font-family: 'Nunito';
+    font-family: 'Lexend Deca';
+    font-size: 14px;
     margin: -4px 0px 0px 0px;
     border-radius: 0px 0px 6px 6px;
     color: #b3b3b3;
@@ -299,7 +315,7 @@ a {
     width: 8px;
     display: inline-block;
     border-radius: 10px;
-    margin: 0px 10px 2px 0px;
+    margin: 0px 10px 1px 0px;
     box-shadow: 0 0 8px 0px #5dff36f7;
 }
 .open-reddit {
@@ -382,7 +398,8 @@ a {
     color: #b9b9b9;
     margin: 10px 0px 0px 0px;
     grid-column: 3;
-    font-family: 'Nunito';
+    font-family: 'Lexend Deca';
+    font-size: 15px;
     user-select: text;
     border-left: 6px solid #8c2b2b;
 }
@@ -398,9 +415,10 @@ a {
 
 /*calendar*/
 h3.date {
-    font-family: 'Nunito';
-    margin: 10px 0px 0px 2px;
+    font-family: 'Lexend Deca';
+    margin: 10px 0px 5px 2px;
     color: #c5c5c5;
+    font-size: 15px;
 }
 .date span {
     color: #515467;
@@ -425,6 +443,58 @@ h1.maintenance {
     position: relative;
     left: 50%;
     margin-left: -151.28px;
+}
+
+/* Warnings */
+.title {
+    margin: 20px 0px 0px 0px;
+    color: #dadada;
+    font-size: 30px;
+}
+.warnings-table ul {
+    background: #181818;
+    font-family: 'Lexend Deca';
+    color: #dedede;
+    padding: 10px;
+    margin: 10px 0px 0px 0px;
+    border-radius: 6px;
+    display: grid;
+    grid-template-columns: 20% max-content 20% auto;
+    font-size: 15px;
+}
+.wName {
+    grid-column: 1;
+}
+.wType {
+    grid-column: 2;
+}
+span.wTypeYellow {
+    background: #d8bc35;
+    padding: 0px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+    text-shadow: 0 0 4px #00000082;
+    margin: 0px 20px 0px 0px;
+}
+span.wTypeRed {
+    background: #e03939;
+    padding: 0px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+    margin: 0px 20px 0px 0px;
+}
+.wDate {
+    grid-column: 3;
+    margin: 0px 40px 0px 0px;
+}
+.wMore {
+    grid-column: 4;
+}
+div#warnings {
+    margin: 0px 20px 18px 20px;
+}
+.warnings-table p {
+    display: inline-block;
 }
 
 /* Scrollbar taken by Dark Instagram by DM */
@@ -562,6 +632,9 @@ h1.maintenance {
         margin: 6px auto !important;
         max-width: unset !important;
     }
+    .open-home {
+        display: none !important;
+    }
 }
 
 @media (prefers-color-scheme: light) {
@@ -610,6 +683,14 @@ h1.maintenance {
     }
     a {
         color: #424242;
+    }
+    .open-home {
+        color: #d8d8d8;
+    }
+    .warnings-table ul {
+        background: #ffffff;
+        color: #0a0a0a;
+        box-shadow: 0 0 6px #00000024;
     }
     .join-discord, .open-reddit, .open-lb, .join-discord, .join-w2g, .join-gmc, .open-insta {
         background: #f9f9f9;

@@ -144,6 +144,10 @@ function retrieveData() {
             loadingElement.removeChild(loadingElement.firstChild)
         }
 
+        // get weekday
+        let d = new Date
+        console.log(d.getDay())
+
         let i = 0
         animeArray.forEach(element => {
             const listElement = document.createElement('div')
@@ -191,6 +195,9 @@ function retrieveData() {
         listDate.innerText = 'Simulcasts'
         listDate.setAttribute('class', 'title')
         document.getElementById('weekT').prepend(listDate)
+
+        document.getElementsByClassName('c' + d.getDay())[0].style.borderLeft = '3px solid #e0c53e'
+        document.getElementsByClassName('c' + d.getDay())[0].style.padding = '0px 0px 0px 6px'
 
         document.getElementsByClassName('week-table')[0].style.webkitAnimationPlayState = "running";
     })
