@@ -196,8 +196,10 @@ function retrieveData() {
         listDate.setAttribute('class', 'title')
         document.getElementById('weekT').prepend(listDate)
 
-        document.getElementsByClassName('c' + d.getDay())[0].style.borderLeft = '3px solid #e0c53e'
-        document.getElementsByClassName('c' + d.getDay())[0].style.padding = '0px 0px 0px 6px'
+        let dateIndex = d.getDay()
+        if (dateIndex === 0){ dateIndex = 7}
+        document.getElementsByClassName('c' + dateIndex)[0].style.borderLeft = '3px solid #e0c53e'
+        document.getElementsByClassName('c' + dateIndex)[0].style.padding = '0px 0px 0px 6px'
 
         document.getElementsByClassName('week-table')[0].style.webkitAnimationPlayState = "running";
     })
