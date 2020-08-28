@@ -529,6 +529,22 @@
         .message-list-subheader {
             color: #b3c1e2;
         }
+        .message-list-picker-button {
+            background: #2f2f2f;
+            box-shadow: 0 0 16px 0 rgba(39, 39, 39, .1);
+        }
+        .message-list-tab-bar a {
+            color: #d2dcef;
+        }
+        .message-list-tab-bar .message-list-picker-choose.inactive {
+            background: rgb(47 47 47 / 38%);
+        }
+        .message-list-picker-button:hover {
+            background-color: #353535;
+        }
+        .message-list-tab-bar .message-list-picker-choose.inactive:hover {
+            background-color: #2f2f2f;
+        }
     }
     }
     
