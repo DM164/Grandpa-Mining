@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dark Digitales Register
 @namespace      github.com/openstyles/stylus
-@version        1.1.0
+@version        1.2.0
 @description    Style for the register YEET
 @author         Denis Mignanelli (DM164)
 ==/UserStyle== */
@@ -544,6 +544,9 @@
         }
         .message-list-tab-bar .message-list-picker-choose.inactive:hover {
             background-color: #2f2f2f;
+        }
+        .summary-table tr:nth-child(odd) {
+            background: #232323;
         }
     }
     }
