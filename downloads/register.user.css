@@ -548,6 +548,22 @@
         .summary-table tr:nth-child(odd) {
             background: #232323;
         }
+        .lesson-homework-exams-homework-card {
+            border: 1px solid #232323;
+            background: rgb(53 53 53 / 60%);
+        }
+        .form-group-label-lessontypes {
+            color: #9cadcc;
+        }
+        .form-info, .form-simple-span {
+            color: #ffffff;
+        }
+        .summary-table {
+            background: #272727;
+        }
+        .summary-table tr:hover {
+            background: transparent;
+        }
     }
     }
     
