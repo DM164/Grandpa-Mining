@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dark Digitales Register
 @namespace      github.com/openstyles/stylus
-@version        1.3.0
+@version        1.4.0
 @description    Style for the register YEET
 @author         Denis Mignanelli (DM164)
 ==/UserStyle== */
@@ -563,6 +563,24 @@
         }
         .summary-table tr:hover {
             background: transparent;
+        }
+        .ql-toolbar {
+            background: #232323;
+        }
+        .ql-container.ql-snow, .ql-toolbar.ql-snow  {
+            border: 1px solid #181818;
+        }
+        .ql-editor.ql-blank::before {
+            color: rgb(255 255 255 / 60%);
+        }
+        .ql-snow .ql-picker {
+            color: #bdbdbd;
+        }
+        .ql-snow .ql-stroke {
+            stroke: #c3c3c3;
+        }
+        .ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill {
+            fill: #fff;
         }
     }
     }
