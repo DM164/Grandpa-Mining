@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dark Digitales Register
 @namespace      github.com/openstyles/stylus
-@version        1.4.0
+@version        1.5.0
 @description    Style for the register YEET
 @author         Denis Mignanelli (DM164)
 ==/UserStyle== */
@@ -460,7 +460,7 @@
         }
         .modal .lesson-list .modal-close {
             display: block;
-            filter: invert(88.5%);
+            filter: invert(84.5%);
         }
         .student-subject-item-view-chooser {
             background: #292929;
@@ -474,6 +474,13 @@
         .course-content-item, .message-item {
             background: #2f2f2f;
             color: #d2dae8;
+        }
+        .course-content-item, .student-dashboard-list .student-absence-item, .v2-notification {
+            box-shadow: 0 0 16px 0 rgb(0 0 0 / 10%);
+        }
+        .disabled input.input, input.input.disabled, input.input:disabled {
+            filter: invert(84%);
+            border-color: #e8e8e8;
         }
         .course-content-item, .message-item, .message-item-expanded, .v2-notification {
             box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
@@ -581,6 +588,23 @@
         }
         .ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill {
             fill: #fff;
+        }
+        .big-message, .calendar-menu>li, .message, .message-menu>li, .table>thead>tr>.header:hover, li.calendar-menu, li.message-menu {
+            color: #d2d2d2;
+            background: #484848 !important;
+            border-color: #484848 !important;
+        }
+        .message, .big-message {
+            box-shadow: inset 0 1px 0 #484848, 0 1px 5px rgba(0, 0, 0, .4) !important;
+        }
+        #tooltips .message, #tooltips-over .message {
+            max-width: unset !important;
+        }
+        .block-arrow > span {
+            border-top-color: #484848 !important;
+        }
+        .student-dashboard-list .item-status {
+            background: #303030;
         }
     }
     }
