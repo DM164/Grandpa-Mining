@@ -475,6 +475,17 @@ span.wTypeYellow {
     text-shadow: 0 0 4px #00000082;
     margin: 0px 20px 0px 0px;
 }
+.warnings-table ul:first-of-type {
+    background: transparent;
+    padding: 10px 10px 14px 10px;
+    border-radius: 0px;
+    border-bottom: 1.5px solid #1d1d1d;
+    box-shadow: none;
+}
+.warnings-table ul:first-of-type .wTypeYellow{
+    background: #242424;
+    text-shadow: none;
+}
 span.wTypeRed {
     background: #e03939;
     padding: 0px 8px;
@@ -708,6 +719,13 @@ div#warnings {
     .dot {
         background: #21d021;
         box-shadow: 0 0 8px 1px #3fff10f7;
+    }
+    .warnings-table ul:first-of-type .wTypeYellow{
+        background: white;
+        color: black;
+    }
+    .warnings-table ul:first-of-type {
+        border-bottom: 1.5px solid #dedede;
     }
     @media screen and (max-width: 1000px){
         #eventsA .date, h3.date {
