@@ -43,12 +43,11 @@ div#weekT h2 {
 }
 h1.GMLogoText {
     font-size: 30px;
-    color: #d9009f;
-    font-family: 'Nunito';
+    color: #ff20a7;
+    font-family: 'Permanent Marker';
     display: inline-block;
     position: relative;
     top: -20px;
-    font-weight: 700;
 }
 .navDiv {
     display: inline-block;
