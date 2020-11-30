@@ -672,10 +672,6 @@ div#warnings {
     }
     h3.date {
         color: #383838 !important;
-        margin: 8px 0px 0px 0px;
-        padding: 4px 10px;
-        background: #e6e6e6 !important;
-        border-radius: 6px 6px 0px 0px;
     }
     h6.time, h6.platform {
         background: #f9f9f9 !important;
@@ -733,6 +729,13 @@ div#warnings {
         }
         #navIcon {
             filter: invert(1);
+        }
+        h3.date {
+            color: #383838 !important;
+            margin: 8px 0px 0px 0px;
+            padding: 4px 10px;
+            background: #e6e6e6 !important;
+            border-radius: 6px 6px 0px 0px;
         }
     }
 }
