@@ -136,7 +136,7 @@ a {
     user-select: text;
 }
 .newscontainer h2 {
-    margin: 30px 0px 0px 0px;
+    margin: 20px 0px 0px 0px;
     color: #dadada;
     font-size: 30px;
 }
@@ -631,7 +631,7 @@ div#warnings {
         position: fixed !important;
         animation: mobilePayments 0.6s forwards !important;
         border-radius: 15px 15px 0px 0px !important;
-        box-shadow: 0px 0px 6px 6px #00000061 !important;
+        box-shadow: 0px 0px 6px 6px #0000001e !important;
         right: 0 !important;
         top: unset !important;
         bottom: -30px;
