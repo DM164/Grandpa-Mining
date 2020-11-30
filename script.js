@@ -85,8 +85,8 @@ function retrieveData() {
         listDate.setAttribute('class', 'title')
         document.getElementById('eventsA').prepend(listDate)
 
-        document.getElementsByClassName('newscontainer')[0].style.webkitAnimationPlayState = "running";
-        document.getElementsByClassName('platform-container')[0].style.webkitAnimationPlayState = "running";
+        document.getElementsByClassName('newscontainer')[0].style.animationPlayState = "running";
+        document.getElementsByClassName('platform-container')[0].style.animationPlayState = "running";
     })
 
     firebase.database().ref('/voiceActivity/').once('value').then(function (snapshot) {
@@ -192,7 +192,7 @@ function retrieveData() {
         });
 
         const listDate = document.createElement('h2')
-        listDate.innerText = 'Simulcasts'
+        listDate.innerText = 'Simulcasts on our database'
         listDate.setAttribute('class', 'title')
         document.getElementById('weekT').prepend(listDate)
 
@@ -201,7 +201,7 @@ function retrieveData() {
         document.getElementsByClassName('c' + dateIndex)[0].style.borderLeft = '3px solid #e0c53e'
         document.getElementsByClassName('c' + dateIndex)[0].style.padding = '0px 0px 0px 6px'
 
-        document.getElementsByClassName('week-table')[0].style.webkitAnimationPlayState = "running";
+        document.getElementsByClassName('week-table')[0].style.animationPlayState = "running";
     })
 }
 
@@ -221,10 +221,10 @@ function addNews(id, title, date) {
 function setcount(number) {
     if (number === 0) {
         document.getElementsByClassName('discordVC-count')[0].style.display = 'none'
-        document.getElementsByClassName('discordVC-count')[0].style.webkitAnimationPlayState = "paused";
+        document.getElementsByClassName('discordVC-count')[0].style.animationPlayState = "paused";
     } else {
         document.getElementsByClassName('discordVC-count')[0].style.display = 'block'
-        document.getElementsByClassName('discordVC-count')[0].style.webkitAnimationPlayState = "running";
+        document.getElementsByClassName('discordVC-count')[0].style.animationPlayState = "running";
         document.getElementById('VC-count').innerText = number
     }
 }
@@ -236,11 +236,11 @@ document.addEventListener('click', (e) => {
     if (e.target.classList[0] === 'statusPP') {
         if (preOpen === false) {
             document.getElementById(e.target.classList[1]).style.display = 'block'
-            document.getElementById(e.target.classList[1]).style.webkitAnimationPlayState = "running";
+            document.getElementById(e.target.classList[1]).style.animationPlayState = "running";
             preOpen = true
         } else {
             document.getElementById(e.target.classList[1]).style.display = 'none'
-            document.getElementById(e.target.classList[1]).style.webkitAnimationPlayState = "paused";
+            document.getElementById(e.target.classList[1]).style.animationPlayState = "paused";
             preOpen = false
         }
     }
