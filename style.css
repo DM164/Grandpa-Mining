@@ -657,7 +657,7 @@ div#warnings {
         margin: 6px auto !important;
         max-width: unset !important;
     }
-    .open-home {
+    .open-home, .open-services {
         display: none !important;
     }
 }
