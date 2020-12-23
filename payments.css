@@ -1,6 +1,6 @@
 /*payment heading*/
 .payment {
-    font-family: 'Nunito';
+    font-family: 'Lexend Deca';
     overflow: hidden;
     animation: fadeinPayments 0.3s forwards;
     display: none;
@@ -14,7 +14,7 @@
     top: 66px;
 }
 .payment .title {
-    margin: 20px 0px 0px 6px;
+    margin: 20px 0px 0px 10px;
     color: #dadada;
     font-size: 20px;
 }
@@ -23,8 +23,8 @@
 }
 .month {
     color: #a2a2a2;
-    margin: 10px 6px;
-    padding: 8px 4px 10px 4px;
+    margin: 10px 10px;
+    padding: 0px 0px 10px 0px;
     border-bottom: 1px solid #1f1f1f;
 }
 span.monthTAG {

@@ -89,10 +89,11 @@ a {
     transition: 0.3s;
 }
 .open-payments:hover {
-    background: #EB7220;
+    background: #292929;
     box-shadow: 0px 3px 9px #0000003d;
-    color: white;
+    color: #EB7220;
 }
+
 .open-home {
     background: #242424;
     padding: 10px 20px;
@@ -102,6 +103,20 @@ a {
     transition: 0.3s;
 }
 .open-home:hover {
+    background: #292929;
+    box-shadow: 0px 3px 9px #0000003d;
+    color: white;
+}
+
+.open-services {
+    background: #242424;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition-property: background, color, box-shadow;
+    transition: 0.3s;
+}
+.open-services:hover {
     background: #292929;
     box-shadow: 0px 3px 9px #0000003d;
     color: white;

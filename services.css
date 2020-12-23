@@ -1,0 +1,38 @@
+.service {
+    font-family: 'Lexend Deca';
+    overflow: hidden;
+    animation: fadeinPayments 0.3s forwards;
+    display: none;
+    position: absolute;
+    background: #131313;
+    z-index: 1;
+    padding: 0px 20px 20px 20px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 6px 0px #000000a3;
+    right: 20px;
+    top: 66px;
+}
+.service .title {
+    color: #dadada;
+    font-size: 20px;
+}
+.service p {
+    color: #a2a2a2;
+    font-size: 14px;
+    margin: 10px 0px 10px 0px;
+    padding: 0px 0px 10px 0px;
+    border-bottom: 1px solid #1f1f1f;
+}
+.service li {
+    border: solid 1px #181818;
+    display: block;
+    clear: left;
+    position: relative;
+    padding: 12px;
+    background: #1b1b1b;
+    border-radius: 4px;
+    min-width: 165px;
+    box-shadow: 2px 2px 4px 2px #0000001a;
+    color: #d5d5d5;
+    overflow: hidden;
+}

@@ -258,6 +258,18 @@ document.getElementsByClassName('open-payments')[0].addEventListener('click', ()
     }
 })
 
+// Open services
+let servicesOpen = false
+document.getElementsByClassName('open-services')[0].addEventListener('click', () => {
+    if (servicesOpen === false) {
+        document.getElementsByClassName('service')[0].style.display = 'inline-block'
+        servicesOpen = true
+    } else {
+        document.getElementsByClassName('service')[0].style.display = 'none'
+        servicesOpen = false
+    }
+})
+
 // Open Discord Widget
 let widgetOpen = false
 document.getElementsByClassName('join-discord')[0].addEventListener('click', () => {
@@ -276,16 +288,16 @@ document.getElementsByClassName('join-discord')[0].addEventListener('click', () 
 })
 
 // Open Navigation Menu on Mobile devices
-let navOpen = false;
-document.getElementById('navIcon').addEventListener('click', function () {
-    if (navOpen == false) {
-        document.querySelector('.navElements').style.display = 'inline-block';
-        navOpen = true
-    } else {
-        document.querySelector('.navElements').style.display = 'none';
-        navOpen = false
-    }
-});
+// let navOpen = false;
+// document.getElementById('navIcon').addEventListener('click', function () {
+//     if (navOpen == false) {
+//         document.querySelector('.navElements').style.display = 'inline-block';
+//         navOpen = true
+//     } else {
+//         document.querySelector('.navElements').style.display = 'none';
+//         navOpen = false
+//     }
+// });
 
 setInterval(() => {
     retrieveData()
