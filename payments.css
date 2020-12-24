@@ -109,48 +109,6 @@ span.statusPP:hover {
     100%{ transform: translateY(0px); opacity: 1; }
 }
 
-/*calendar container*/
-.week-table {
-    color: #d5d5d5;
-    grid-column: 4;
-    margin: 0px 0px 10px 10px;
-    animation: fadein 0.5s forwards;
-    animation-play-state: paused;
-}
-.week-table-container li {
-    border: solid 1px #181818;
-    background: #181818;
-    padding: 8px;
-    border-radius: 6px;
-    box-shadow: 2px 2px 4px 2px #00000005;
-    color: #b9b9b9;
-    margin: 4px 30px 0px 0px;
-    font-family: 'Lexend Deca';
-    user-select: text;
-}
-.week-table-container img {
-    width: 100%;
-    margin: 8px 0px 0px 0px;
-    border-radius: 10px;
-}
-.week-table-container h2 {
-    color: #dadada;
-    margin-left: 50px;
-}
-
-/*anime timetable*/
-.date span {
-    color: #515467;
-}
-h6.time, h6.platform {
-    background: #232323;
-    padding: 4px 8px;
-    display: inline-block;
-    border-radius: 4px;
-    font-size: 12px;
-    margin: 4px 5px 0px 0px;
-}
-
 @media screen and (max-width: 1000px){
     .week-table {
         grid-column: 3;

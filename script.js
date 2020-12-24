@@ -169,8 +169,6 @@ function retrieveData() {
                     const listDesc = document.createElement('li')
                     listDesc.innerText = element.title
 
-                    const newLine = document.createElement('br')
-
                     const listTime = document.createElement('h6')
                     listTime.innerText = element.time
                     listTime.setAttribute('class', 'time')
@@ -179,9 +177,13 @@ function retrieveData() {
                     listPlatform.innerText = element.platform
                     listPlatform.setAttribute('class', 'platform')
 
+                    const listLink = document.createElement('a')
+                    listLink.innerHTML = `<a class='listLink' href="${element.link}">Watch now!</a>`
+
                     listDesc.appendChild(document.createElement('br'))
                     listDesc.appendChild(listTime)
                     listDesc.appendChild(listPlatform)
+                    listDesc.appendChild(listLink)
                     listDescContainer.appendChild(listDesc)
                 }
             })
@@ -195,7 +197,7 @@ function retrieveData() {
         });
 
         const listDate = document.createElement('h2')
-        listDate.innerText = 'Simulcasts on our database'
+        listDate.innerText = 'Simulcasts'
         listDate.setAttribute('class', 'title')
         document.getElementById('weekT').prepend(listDate)
 

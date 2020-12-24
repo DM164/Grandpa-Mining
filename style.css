@@ -145,7 +145,7 @@ a {
 }
 .newscontainer p {
     font-family: 'Lexend Deca';
-    font-size: 15px;
+    font-size: 14px;
     line-height: 22px;
     color: #cecece;
     user-select: text;
@@ -162,7 +162,6 @@ a {
     font-size: 13px;
     font-family: 'Lexend Deca';
     margin-top: 10px;
-    font-weight: bold;
 }
 
 /*platforms container*/
@@ -459,6 +458,66 @@ h1.maintenance {
     margin-left: -151.28px;
 }
 
+/*anime timetable*/
+/*calendar container*/
+.week-table {
+    color: #d5d5d5;
+    grid-column: 4;
+    margin: 0px 0px 10px 10px;
+    animation: fadein 0.5s forwards;
+    animation-play-state: paused;
+}
+.week-table-container li {
+    border: solid 1px #181818;
+    background: #181818;
+    padding: 8px 40px 8px 8px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 4px 2px #00000005;
+    color: #b9b9b9;
+    margin: 4px 30px 0px 0px;
+    font-family: 'Lexend Deca';
+    user-select: text;
+}
+.week-table-container img {
+    width: 100%;
+    margin: 8px 0px 0px 0px;
+    border-radius: 10px;
+}
+.week-table-container h2 {
+    color: #dadada;
+    margin-left: 50px;
+}
+.date span {
+    color: #515467;
+}
+h6.time, h6.platform {
+    background: #232323;
+    padding: 4px 8px;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 12px;
+    margin: 6px 5px 0px 0px;
+    user-select: none;
+}
+a.listLink{
+    background: #232323;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 6px;
+    user-select: none;
+    float: right;
+    position: relative;
+    right: -32px;
+    transition-property: background, color;
+    transition: 0.3s;
+}
+a.listLink:hover{
+    background: #5d8fda;
+    color: white;
+}
+
+
 /* Warnings */
 .title {
     margin: 20px 0px 0px 0px;
@@ -688,8 +747,8 @@ div#warnings {
     h3.date {
         color: #383838 !important;
     }
-    h6.time, h6.platform {
-        background: #f9f9f9 !important;
+    h6.time, h6.platform, a.listLink {
+        background: #f9f9f9;
         border: 1px solid #dedede;
     }
     .title, .newscontainer h2 {
