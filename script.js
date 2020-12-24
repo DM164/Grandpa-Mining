@@ -33,7 +33,9 @@ function retrieveData() {
             loadingElement.removeChild(loadingElement.firstChild)
         }
 
-        newsArray.forEach(element => {
+        let ni = 0
+        newsArray.reverse().forEach(element => {
+            if (ni > 5) { return }
             const listElement = document.createElement('div')
             const listText = document.createElement('p')
             const listDate = document.createElement('h6')
@@ -44,7 +46,8 @@ function retrieveData() {
             listElement.appendChild(listDate)
             listElement.setAttribute('class', 'container')
             listDate.setAttribute('class', 'postdate')
-            document.getElementById('newsA').prepend(listElement)
+            document.getElementById('newsA').appendChild(listElement)
+            ni++
         });
 
         const listDate = document.createElement('h2')
@@ -121,12 +124,12 @@ function retrieveData() {
             }
             statusLi.innerHTML = `${element.name} <span class="price">${element.price}€</span><br><span class="${statusClass}">${element.status}</span><div id="${im}" class="PPmonthsContainer">${PPmonthsElements}</div>`
             document.getElementById('payments').appendChild(statusLi)
-            if (faggotSaysYes === true){
+            if (faggotSaysYes === true) {
                 console.log(element.PPmonths)
                 element.PPmonths.forEach(element => {
                     let PPmonthDiv = document.createElement('div')
                     PPmonthDiv.setAttribute('class', 'PPmonths')
-                    PPmonthDiv.innerText=element
+                    PPmonthDiv.innerText = element
                     document.getElementById(im).appendChild(PPmonthDiv)
                 });
                 faggotSaysYes = false
@@ -197,7 +200,7 @@ function retrieveData() {
         document.getElementById('weekT').prepend(listDate)
 
         let dateIndex = d.getDay()
-        if (dateIndex === 0){ dateIndex = 7}
+        if (dateIndex === 0) { dateIndex = 7 }
         document.getElementsByClassName('c' + dateIndex)[0].style.borderLeft = '3px solid #e0c53e'
         document.getElementsByClassName('c' + dateIndex)[0].style.padding = '0px 0px 0px 6px'
 
