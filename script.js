@@ -16,7 +16,7 @@ firebase.analytics();
 
 retrieveData()
 function retrieveData() {
-    firebase.database().ref('/status/').once('value').then(function (snapshot) {
+    firebase.database().ref('/websiteStatus/homepage').once('value').then(function (snapshot) {
         if (snapshot.val() === 'maintenance') {
             console.log('Website is in maintenance mode')
             document.getElementsByClassName('maintenance')[0].style.display = 'inline-block'

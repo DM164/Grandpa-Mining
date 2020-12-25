@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="services.css" type="text/css">
     <link rel="shortcut icon" href="files/images/favicon.png" type="image/png">
     <script src="script.js" defer></script>
+    <script src="statuses.js" defer></script>
 
     <meta name="google-site-verification" content="MygUF14plGsEYaQfIeStl3p00BaOQcrjbz-31zEYAzM" />
 
@@ -60,7 +61,61 @@
         <div class="services-container">
             <ul id="services">
                 <!-- Elements go here -->
-                <li>We're currently working on this.</li>
+                <li id="service-message"></li>
+                <li>
+                    <div class="service-status-indicator" id="alice-status" style="margin: 0px 4px 0px 4px;"></div>
+                    <h3>Alice</h3>
+                    <h4 class="text-status" id="alice-text-status">Offline</h4>
+                    <ul>
+                        <li class="modules">
+                            <div class="service-status-indicator" id="main-module-status"></div>Discord activity
+                        </li>
+                        <li class="modules">
+                            <div class="service-status-indicator" id="vc-module-status"></div>Voice status
+                        </li>
+                        <li class="modules">
+                            <div class="service-status-indicator" id="anime-module-status"></div>Anime releases
+                        </li>
+                        <li class="modules">
+                            <div class="service-status-indicator" id="welcome-module-status"></div>Welcome and Autorole module
+                        </li>
+                        <li class="modules">
+                            <div class="service-status-indicator" id="autorole-module-status"></div>Autoroles
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="service-status-indicator" id="bot-status" style="margin: 0px 4px 0px 4px;"></div>
+                    <h3>Other bots</h3>
+                    <h4 class="text-status" id="bot-text-status">Offline</h4>
+                    <ul>
+                        <li class="modules">
+                            <div class="service-status-indicator" id="fleischi-status"></div>Fleischi
+                        </li>
+                        <li class="modules">
+                            <div class="service-status-indicator" id="pipeline-status"></div>Pipeline
+                        </li>
+                        <li class="modules">
+                            <div class="service-status-indicator" id="superbus-status"></div>Superbus
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="service-status-indicator" id="website-status" style="margin: 0px 4px 0px 4px;"></div>
+                    <h3>Website</h3>
+                    <h4 class="text-status" id="website-text-status">Offline</h4>
+                    <ul>
+                        <li class="modules">
+                            <div class="service-status-indicator" id="homepage-status"></div>Homepage
+                        </li>
+                        <li class="modules">
+                            <div class="service-status-indicator" id="warnings-status"></div>Warnings
+                        </li>
+                        <li class="modules">
+                            <div class="service-status-indicator" id="database-status"></div>Database
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -102,13 +157,6 @@
             <iframe id="discord-widget" src="https://discordapp.com/widget?id=401404642468036608&theme=dark"
                 width="100%" height="500" allowtransparency="true" frameborder="0"></iframe>
             <div class="platform-card">
-                <h2>Instagram</h2> <!-- Don't move -->
-                <p>Check our Instagram!</p>
-                <a href="https://www.instagram.com/grandpamining/">
-                    <div class="open-insta">Open</div>
-                </a>
-            </div>
-            <div class="platform-card">
                 <h2>Leaderboard</h2> <!-- Don't move -->
                 <p>Discord server leaderboard</p>
                 <a href="https://mee6.xyz/leaderboard/401404642468036608">
@@ -120,6 +168,13 @@
                 <p>Join our W2G room!</p>
                 <a href="https://w2g.tv/rooms/grandpamining-xe2g2esl3nd0vrq62y?lang=en">
                     <div class="join-w2g">Join</div>
+                </a>
+            </div>
+            <div class="platform-card">
+                <h2>Instagram</h2> <!-- Don't move -->
+                <p>Check our Instagram!</p>
+                <a href="https://www.instagram.com/grandpamining/">
+                    <div class="open-insta">Open</div>
                 </a>
             </div>
             <div class="platform-card">
