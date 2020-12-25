@@ -25,7 +25,6 @@ firebase.database().ref('/websiteStatus/warnings').once('value').then(function (
 // Warnings
 firebase.database().ref('/warnings/').once('value').then(function (snapshot) {
     let warningsArray = snapshot.val()
-    console.log(warningsArray)
 
     let loadingElement = document.getElementById('warnings')
     while (loadingElement.firstChild) {

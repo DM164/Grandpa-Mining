@@ -109,6 +109,7 @@ function retrieveServiceData() {
         }
     })
     firebase.database().ref('/websiteStatus/').once('value').then(function (snapshot) {
+        let maintenance = false
         let modules = [
             { name: 'homepage', value: snapshot.val().homepage },
             { name: 'warnings', value: snapshot.val().warnings },
@@ -129,11 +130,7 @@ function retrieveServiceData() {
             } else if (status == 'maintenance') {
                 document.getElementById(`${element.name}-status`).style.background = '#3079ff'
                 document.getElementById(`${element.name}-status`).style.boxShadow = '0px 0px 8px 1px #649bff'
-
-                // Overall status update
-                document.getElementById('website-status').style.background = '#3079ff'
-                document.getElementById('website-status').style.boxShadow = '0px 0px 8px 1px #649bff'
-                document.getElementById('website-text-status').innerText = 'Maintenance'
+                maintenance = true
             } else {
                 document.getElementById(`${element.name}-status`).style.background = '#3efb4d'
                 document.getElementById(`${element.name}-status`).style.boxShadow = '0px 0px 8px 1px #31ff0b'
@@ -144,9 +141,16 @@ function retrieveServiceData() {
                 document.getElementById('website-status').style.boxShadow = '0px 0px 8px 1px #31ff0b'
             }
         });
+        // Overall status update
+        if (maintenance == true) {
+            // Overall status update
+            document.getElementById('website-status').style.background = '#3079ff'
+            document.getElementById('website-status').style.boxShadow = '0px 0px 8px 1px #649bff'
+            document.getElementById('website-text-status').innerText = 'Maintenance'
+        }
     })
     firebase.database().ref('/websiteStatus/statusMessage').once('value').then(function (snapshot) {
-        if (snapshot.val() != 'placeholder'){
+        if (snapshot.val() != 'placeholder') {
             document.getElementById('service-message').innerHTML = snapshot.val()
             document.getElementById('service-message').style.display = 'block'
         }

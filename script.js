@@ -26,7 +26,6 @@ function retrieveData() {
 
     firebase.database().ref('/news/').once('value').then(function (snapshot) {
         let newsArray = snapshot.val()
-        console.log(newsArray)
 
         let loadingElement = document.getElementById('newsA')
         while (loadingElement.firstChild) {
@@ -57,7 +56,6 @@ function retrieveData() {
 
     firebase.database().ref('/events/').once('value').then(function (snapshot) {
         let events = snapshot.val()
-        console.log(events)
 
         let loadingElement = document.getElementById('eventsA')
         while (loadingElement.firstChild) {
@@ -94,7 +92,6 @@ function retrieveData() {
 
     firebase.database().ref('/voiceActivity/').once('value').then(function (snapshot) {
         let users = snapshot.val()
-        console.log(users)
         setcount(users)
     })
     firebase.database().ref('/payments-month/').once('value').then(function (snapshot) {
@@ -103,7 +100,6 @@ function retrieveData() {
 
     firebase.database().ref('/payments/').once('value').then(function (snapshot) {
         let paymentsArray = snapshot.val()
-        console.log(paymentsArray)
 
         let loadingElement = document.getElementById('payments')
         while (loadingElement.firstChild) {
@@ -125,7 +121,6 @@ function retrieveData() {
             statusLi.innerHTML = `${element.name} <span class="price">${element.price}€</span><br><span class="${statusClass}">${element.status}</span><div id="${im}" class="PPmonthsContainer">${PPmonthsElements}</div>`
             document.getElementById('payments').appendChild(statusLi)
             if (faggotSaysYes === true) {
-                console.log(element.PPmonths)
                 element.PPmonths.forEach(element => {
                     let PPmonthDiv = document.createElement('div')
                     PPmonthDiv.setAttribute('class', 'PPmonths')
@@ -140,7 +135,6 @@ function retrieveData() {
 
     firebase.database().ref('/anime/').once('value').then(function (snapshot) {
         let animeArray = snapshot.val()
-        console.log(animeArray)
 
         let loadingElement = document.getElementById('weekT')
         while (loadingElement.firstChild) {
@@ -149,7 +143,6 @@ function retrieveData() {
 
         // get weekday
         let d = new Date
-        console.log(d.getDay())
 
         let i = 0
         animeArray.forEach(element => {
@@ -237,7 +230,6 @@ function setcount(number) {
 // Expand prepayed months
 let preOpen = false
 document.addEventListener('click', (e) => {
-    console.log(e)
     if (e.target.classList[0] === 'statusPP') {
         if (preOpen === false) {
             document.getElementById(e.target.classList[1]).style.display = 'block'
