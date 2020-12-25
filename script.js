@@ -14,7 +14,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-retrieveData()
 function retrieveData() {
     firebase.database().ref('/websiteStatus/homepage').once('value').then(function (snapshot) {
         if (snapshot.val() === 'maintenance') {
@@ -295,7 +294,9 @@ document.getElementsByClassName('join-discord')[0].addEventListener('click', () 
 //         navOpen = false
 //     }
 // });
-
 setInterval(() => {
     retrieveData()
 }, 60000);
+
+// startup
+retrieveData()

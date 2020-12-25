@@ -157,6 +157,6 @@ function retrieveServiceData() {
     })
 }
 retrieveServiceData()
-setTimeout(() => {
+setInterval(() => {
     retrieveServiceData()
 }, 60000);
