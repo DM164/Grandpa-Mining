@@ -76,3 +76,27 @@
     transition-property: background, box-shadow;
     transition: 1s;
 }
+
+@media (prefers-color-scheme: light) {
+    .service {
+        background: #f3f3f3;
+        box-shadow: 0px 2px 6px 0px #00000033;
+    }
+    .service li {
+        border: solid 1px #ffffff !important;
+        background: #ffffff !important;
+        box-shadow: 2px 2px 4px 2px #00000012;
+        color: #000000;
+    }
+    .service .title {
+        color: #252525;
+    }
+    .service p {
+        color: #2b2b2b;
+        border-bottom: 1px solid #dedede;
+    }
+    span.monthTAG {
+        background: #ffffff;
+    }
+
+}

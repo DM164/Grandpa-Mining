@@ -797,6 +797,16 @@ div#warnings {
     .warnings-table ul:first-of-type {
         border-bottom: 1.5px solid #dedede;
     }
+    .open-payments, .open-services, .open-home {
+        background: #f9f9f9;
+        border: 1px solid #dedede;
+        color: #212121;
+    }
+    .open-payments:hover, .open-services:hover, .open-home:hover {
+        background: #ebebeb;
+        border: 1px solid #ebebeb;
+        color: #000000;
+    }
     @media screen and (max-width: 1000px){
         #eventsA .date, h3.date {
             color: #e4e4e4;
