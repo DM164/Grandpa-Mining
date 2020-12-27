@@ -800,7 +800,7 @@ div#warnings {
     .open-payments, .open-services, .open-home {
         background: #f9f9f9;
         border: 1px solid #dedede;
-        color: #212121;
+        color: #222222;
     }
     .open-payments:hover, .open-services:hover, .open-home:hover {
         background: #ebebeb;
