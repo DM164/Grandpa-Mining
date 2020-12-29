@@ -245,26 +245,42 @@ document.addEventListener('click', (e) => {
 // Open payments
 let paymentsOpen = false
 document.getElementsByClassName('open-payments')[0].addEventListener('click', () => {
+    togglePayments()
+    if (servicesOpen){ toggleServices() }
+})
+function togglePayments() {
     if (paymentsOpen === false) {
         document.getElementsByClassName('payment')[0].style.display = 'inline-block'
+        document.getElementsByClassName('payment')[0].style.animation = ''
         paymentsOpen = true
     } else {
-        document.getElementsByClassName('payment')[0].style.display = 'none'
-        paymentsOpen = false
+        document.getElementsByClassName('payment')[0].style.animation = 'fadeoutPayments 0.3s forwards'
+        setTimeout(() => {
+            document.getElementsByClassName('payment')[0].style.display = 'none'
+            paymentsOpen = false
+        }, 200);
     }
-})
+}
 
 // Open services
 let servicesOpen = false
 document.getElementsByClassName('open-services')[0].addEventListener('click', () => {
+    if (paymentsOpen){ togglePayments() }
+    toggleServices()
+})
+function toggleServices() {
     if (servicesOpen === false) {
         document.getElementsByClassName('service')[0].style.display = 'inline-block'
+        document.getElementsByClassName('service')[0].style.animation = ''
         servicesOpen = true
     } else {
-        document.getElementsByClassName('service')[0].style.display = 'none'
-        servicesOpen = false
+        document.getElementsByClassName('service')[0].style.animation = 'fadeoutPayments 0.2s forwards'
+        setTimeout(() => {
+            document.getElementsByClassName('service')[0].style.display = 'none'
+            servicesOpen = false
+        }, 200);
     }
-})
+}
 
 // Open Discord Widget
 let widgetOpen = false
