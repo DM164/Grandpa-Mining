@@ -710,7 +710,7 @@ div#warnings {
         top: unset !important;
         bottom: -30px;
         width: 100%;
-        padding: 0px 10px 40px 10px !important;
+        padding: 0px 10px 50px 10px !important;
     }
     .payment li {
         margin: 6px auto !important;
