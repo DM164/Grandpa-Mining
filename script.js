@@ -245,6 +245,7 @@ document.addEventListener('click', (e) => {
 // Open payments
 let paymentsOpen = false
 document.getElementsByClassName('open-payments')[0].addEventListener('click', () => {
+    firebase.analytics().logEvent('opened_payments');
     togglePayments()
     if (servicesOpen){ toggleServices() }
 })
@@ -265,6 +266,7 @@ function togglePayments() {
 // Open services
 let servicesOpen = false
 document.getElementsByClassName('open-services')[0].addEventListener('click', () => {
+    firebase.analytics().logEvent('opened_service_statuses');
     if (paymentsOpen){ togglePayments() }
     toggleServices()
 })
@@ -298,6 +300,9 @@ document.getElementsByClassName('join-discord')[0].addEventListener('click', () 
         }, 500);
     }
 })
+
+// Add more analytics
+// code here
 
 // Open Navigation Menu on Mobile devices
 // let navOpen = false;
