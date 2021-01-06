@@ -156,12 +156,10 @@ a {
     font-size: 30px;
 }
 .postdate {
-    float: right;
-    margin: 0;
-    color: #3c3c3c;
-    font-size: 13px;
+    color: #7b7b7b;
+    font-size: 12px;
     font-family: 'Lexend Deca';
-    margin-top: 10px;
+    float: right;
 }
 
 /*platforms container*/

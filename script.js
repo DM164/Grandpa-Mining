@@ -40,8 +40,8 @@ function retrieveData() {
 
             listText.innerHTML = element.title
             listDate.innerText = element.date
-            listElement.appendChild(listText)
             listElement.appendChild(listDate)
+            listElement.appendChild(listText)
             listElement.setAttribute('class', 'container')
             listDate.setAttribute('class', 'postdate')
             document.getElementById('newsA').appendChild(listElement)
