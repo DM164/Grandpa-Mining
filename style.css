@@ -412,7 +412,10 @@ a {
     font-family: 'Lexend Deca';
     font-size: 15px;
     user-select: text;
-    border-left: 6px solid #8c2b2b;
+}
+.calendarContainer {
+    border-left: 4px solid #c93f3f;
+    padding: 0px 0px 0px 6px;
 }
 .calendarContainer img {
     width: 100%;
@@ -694,8 +697,13 @@ div#warnings {
         background: #242424;
         border-radius: 6px 6px 0px 0px;
     }
+
+    .calendarContainer{
+        border: 0;
+        padding: 0;
+    }
 }
-@media screen and (max-width: 510px){
+@media screen and (max-width: 570px){
     .navElements {
         margin: 20px 15px 0px 14px;
     }
@@ -750,6 +758,13 @@ div#warnings {
     }
     .open-home {
         display: none !important;
+    }
+
+    a.listLink {
+        display: inline-block;
+        right: 0;
+        margin-top: 10px;
+        float: none;
     }
 }
 
