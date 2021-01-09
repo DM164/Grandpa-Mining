@@ -172,6 +172,11 @@ span.statusPP:hover {
     span.monthTAG {
         background: #ffffff;
     }
+    .PPmonths {
+        background: #f9f9f9 !important;
+        border: 1px solid #dedede !important;
+        padding: 1px 6px !important;
+    }
 }
 
 @keyframes fadeinPayments {

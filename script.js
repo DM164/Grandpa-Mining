@@ -247,7 +247,7 @@ let paymentsOpen = false
 document.getElementsByClassName('open-payments')[0].addEventListener('click', () => {
     firebase.analytics().logEvent('opened_payments');
     togglePayments()
-    if (servicesOpen){ toggleServices() }
+    if (servicesOpen) { toggleServices() }
 })
 function togglePayments() {
     if (paymentsOpen === false) {
@@ -267,7 +267,7 @@ function togglePayments() {
 let servicesOpen = false
 document.getElementsByClassName('open-services')[0].addEventListener('click', () => {
     firebase.analytics().logEvent('opened_service_statuses');
-    if (paymentsOpen){ togglePayments() }
+    if (paymentsOpen) { togglePayments() }
     toggleServices()
 })
 function toggleServices() {
@@ -301,23 +301,37 @@ document.getElementsByClassName('join-discord')[0].addEventListener('click', () 
     }
 })
 
-// Add more analytics
-// code here
+//load widget with the right color
+function colorSchemeDiscord() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // dark mode
+        document.getElementById('discord-widget').src = "https://discordapp.com/widget?id=401404642468036608&theme=dark"
+    } else {
+        // light mode
+        document.getElementById('discord-widget').src = "https://discordapp.com/widget?id=401404642468036608&theme=light"
+    }
+}
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', e => e.matches && colorSchemeDiscord());
+window.matchMedia("(prefers-color-scheme: light)").addEventListener('change', e => e.matches && colorSchemeDiscord());
 
-// Open Navigation Menu on Mobile devices
-// let navOpen = false;
-// document.getElementById('navIcon').addEventListener('click', function () {
-//     if (navOpen == false) {
-//         document.querySelector('.navElements').style.display = 'inline-block';
-//         navOpen = true
-//     } else {
-//         document.querySelector('.navElements').style.display = 'none';
-//         navOpen = false
-//     }
-// });
+// Analytics
+document.getElementsByClassName('open-lb')[0].addEventListener('click', () =>{
+    firebase.analytics().logEvent('navTo_leaderboard');
+})
+document.getElementsByClassName('join-w2g')[0].addEventListener('click', () =>{
+    firebase.analytics().logEvent('navTo_w2g');
+})
+document.getElementsByClassName('open-insta')[0].addEventListener('click', () =>{
+    firebase.analytics().logEvent('navTo_instagram');
+})
+document.getElementsByClassName('open-reddit')[0].addEventListener('click', () =>{
+    firebase.analytics().logEvent('navTo_reddit');
+})
+
 setInterval(() => {
     retrieveData()
 }, 60000);
 
 // startup
 retrieveData()
+colorSchemeDiscord()
