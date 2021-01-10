@@ -155,11 +155,13 @@ function retrieveData() {
                 if (element.title === 'No anime scheduled for this day') {
                     let listDesc = document.createElement('li')
                     listDesc.innerText = element.title
+                    listDesc.setAttribute('id', 'no-data')
 
                     listDescContainer.appendChild(listDesc)
                 } else {
                     const listDesc = document.createElement('li')
                     listDesc.innerText = element.title
+                    listDesc.setAttribute('id', element.link)
 
                     const listTime = document.createElement('h6')
                     listTime.innerText = element.time
@@ -169,13 +171,9 @@ function retrieveData() {
                     listPlatform.innerText = element.platform
                     listPlatform.setAttribute('class', 'platform')
 
-                    const listLink = document.createElement('a')
-                    listLink.innerHTML = `<a class='listLink' href="${element.link}">Watch now!</a>`
-
                     listDesc.appendChild(document.createElement('br'))
                     listDesc.appendChild(listTime)
                     listDesc.appendChild(listPlatform)
-                    listDesc.appendChild(listLink)
                     listDescContainer.appendChild(listDesc)
                 }
             })
@@ -201,6 +199,14 @@ function retrieveData() {
         document.getElementsByClassName('week-table')[0].style.animationPlayState = "running";
     })
 }
+
+// Open anime
+document.getElementById('weekT').addEventListener('click', e => {
+    if (e.target.nodeName.toLowerCase() === 'li') {
+        if (e.target.id === 'no-data') { return }
+        window.open(e.target.id)
+    }
+})
 
 function addEvent(id, desc, date) {
     firebase.database().ref('events/' + id).set({
@@ -315,16 +321,16 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', e =
 window.matchMedia("(prefers-color-scheme: light)").addEventListener('change', e => e.matches && colorSchemeDiscord());
 
 // Analytics
-document.getElementsByClassName('open-lb')[0].addEventListener('click', () =>{
+document.getElementsByClassName('open-lb')[0].addEventListener('click', () => {
     firebase.analytics().logEvent('navTo_leaderboard');
 })
-document.getElementsByClassName('join-w2g')[0].addEventListener('click', () =>{
+document.getElementsByClassName('join-w2g')[0].addEventListener('click', () => {
     firebase.analytics().logEvent('navTo_w2g');
 })
-document.getElementsByClassName('open-insta')[0].addEventListener('click', () =>{
+document.getElementsByClassName('open-insta')[0].addEventListener('click', () => {
     firebase.analytics().logEvent('navTo_instagram');
 })
-document.getElementsByClassName('open-reddit')[0].addEventListener('click', () =>{
+document.getElementsByClassName('open-reddit')[0].addEventListener('click', () => {
     firebase.analytics().logEvent('navTo_reddit');
 })
 
