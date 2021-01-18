@@ -606,6 +606,23 @@
         .student-dashboard-list .item-status {
             background: #303030;
         }
+<<<<<<< Updated upstream
+=======
+        .cs-flex-table.cs-row-marker:nth-child(odd) .cs-flex-row {
+            background: #232323;
+        }
+        .cs-flex-row-grade .grade {
+            background: #202020;
+            border: 1px solid #303030;
+        }
+        .cs-flex-table:hover {
+            background: #292929;
+        }
+        .student-subject-item .badge-student-subject-observations {
+            color: #ffffff;
+            background: #407d7d;
+        }
+>>>>>>> Stashed changes
     }
     }
     
