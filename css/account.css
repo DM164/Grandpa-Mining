@@ -1,0 +1,182 @@
+/* Login */
+
+.account-menu {
+    background: #242424;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition-property: background, color, box-shadow;
+    transition: 0.3s;
+    pointer-events: all !important;
+}
+
+#account-menu {
+    position: absolute;
+    background: #131313;
+    display: none;
+    padding: 40px 22px;
+    right: 6%;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    border-radius: 6px;
+    width: 280px;
+    box-shadow: 0px 2px 6px 0px #000000a3;
+    text-align: center;
+    animation: fadeinMenu 0.3s forwards;
+    top: 66px;
+    right: 20px;
+}
+
+#account-menu input {
+    position: relative;
+    display: inline-block;
+    background: #1f1f1f;
+    padding: 6px 18px;
+    border-radius: 18px;
+    margin: 0px 0px 10px 0px;
+    height: 34px;
+    color: #dedede;
+    outline: none;
+    transition: filter 0.3s;
+    font-family: 'Lexend Deca';
+    box-shadow: 0 0 6px 2px #00000020;
+    border: 0px solid transparent;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#account-menu input::placeholder {
+	color: #575757;
+}
+
+#account-menu input:focus, #account-menu a:hover, #account-menu button:hover, #account-menu p:hover {
+	filter: brightness(1.2);
+	cursor: pointer;
+}
+
+button#log-in, #sign-out, #open-account-manager {
+    width: 100%;
+    background: #242424;
+    border: 0px transparent;
+    padding: 10px 0px;
+    height: 36px;
+    border-radius: 18px;
+    color: #d0d0d0;
+    font-family: 'Lexend Deca';
+    transition: filter 0.3s;
+}
+
+#open-account-manager {
+    margin-bottom: 8px;
+    display: none;
+}
+
+#sign-out {
+    display: none;
+}
+
+button#log-in:hover, #sign-out:hover {
+    cursor: pointer;
+    filter: brightness(1.3);
+}
+
+#account-menu h1 {
+    color: rgb(201, 201, 201);
+    font-family: 'Lexend Deca';
+    margin: 0px 0px 10px 0px;
+    font-size: 20px;
+}
+
+#account-menu h2 {
+    color: rgb(184, 184, 184);
+    font-family: 'Lexend Deca';
+    margin: 0px 0px 10px 0px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.accimg-container {
+	height: 24px !important;
+	position: relative;
+	border-radius: 50%;
+	margin: -4px 4px -6px -4px;
+	width: 24px;
+	display: none;
+	pointer-events: none;
+	overflow: hidden;
+}
+
+#accname {
+	pointer-events: none;
+}
+
+#accname_p {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 15px;
+    pointer-events: none;
+    color: #f9f9f9;
+}
+
+#accmail_p {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 33px;
+    pointer-events: none;
+    background: linear-gradient(to right, #c7c7c7 200px, transparent 240px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 14px;
+}
+
+img#accimg_p {
+	width: 100%;
+}
+
+.account-preview {
+    margin-bottom: 20px;
+    display: none;
+    grid-template-columns: 64px auto;
+    text-align: left;
+    overflow: hidden;
+    border-radius: 6px;
+    color: #d5d5d5;
+    font-family: 'Lexend Deca';
+    grid-gap: 0px 10px;
+}
+
+.failed-login {
+	font-family: 'Lexend Deca';
+	color: #efefef;
+	background: #d64d4d33;
+	border: 2px solid #ff383845;
+	padding: 10px 0px;
+	border-radius: 6px;
+	font-size: 14px;
+	display: block;
+	margin: 0px 0px 10px 0px;
+	font-weight: lighter;
+	line-break: normal !important;
+}
+
+@keyframes fadeinMenu {
+	0% {
+		transform: translateY(-50px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes fadeoutMenu {
+	0% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-50px);
+		opacity: 0;
+	}
+}

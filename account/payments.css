@@ -1,91 +1,155 @@
-/*payment heading*/
-.payment {
-    font-family: 'Lexend Deca';
+.body2 {
+    display: grid;
     overflow: hidden;
-    animation: fadeinPayments 0.3s forwards;
-    display: none;
-    position: absolute;
-    background: #131313;
-    z-index: 1;
-    padding: 0px 10px 10px 10px;
-    border-radius: 6px;
-    box-shadow: 0px 2px 6px 0px #000000a3;
-    right: 20px;
-    top: 66px;
+    margin-bottom: 20px;
+    grid-template-columns: 18% auto;
+    padding: 0px 20%;
+    grid-gap: 20px;
 }
-.payment .title {
+
+#sidebar {
+    border-right: 1px solid #252525;
+}
+
+li.sidebar-item {
+    background: #0e0e0e;
+    margin: 10px 0px;
+    padding: 10px 16px;
+    border-radius: 6px 0px 0px 6px;
+    font-family: 'Lexend Deca';
+    color: #b9b9b9;
+    transition: filter 0.3s;
+}
+
+li.sidebar-item:hover {
+    cursor: pointer;
+    filter: brightness(1.6);
+}
+
+.accimg-ui-container {
+    height: auto;
+    position: relative;
+    border-radius: 50%;
+    width: auto;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+#accname-ui {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 15px;
+    pointer-events: none;
+    color: #f9f9f9;
+}
+
+#accmail-ui {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 33px;
+    pointer-events: none;
+    background: linear-gradient(to right, #c7c7c7 60%, transparent 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 14px;
+}
+
+img#accimg-ui {
+    width: 100%;
+}
+
+.account-ui {
+    margin: 10px 0px 0px 0px;
+    display: none;
+    grid-template-columns: 64px auto;
+    text-align: left;
+    overflow: hidden;
+    color: #d5d5d5;
+    font-family: 'Lexend Deca';
+    grid-gap: 0px 10px;
+}
+
+/*payment heading*/
+
+#payment {
+    font-family: 'Lexend Deca';
+    grid-column: 2;
+}
+
+#payment .title {
     margin: 20px 0px 0px 10px;
     color: #dadada;
     font-size: 20px;
 }
+
 .payment-container {
     grid-column: 1;
 }
+
 .month {
     color: #a2a2a2;
     margin: 10px 10px;
     padding: 0px 0px 10px 0px;
-    border-bottom: 1px solid #1f1f1f;
 }
+
 span.monthTAG {
-    background: #1f1f1f;
-    padding: 0px 10px;
-    border-radius: 18px;
+    background: #232323;
+    padding: 2px 8px;
+    border-radius: 4px;
 }
-.payment li {
-    border: solid 1px #181818;
+
+#payment li {
+    border-top: solid 1px #252525;
     display: block;
-    clear: left;
     position: relative;
-    margin: 6px;
+    margin: 6px 0px 0px 0px;
     padding: 12px;
-    background: #1b1b1b;
-    border-radius: 10px;
-    min-width: 165px;
     box-shadow: 2px 2px 4px 2px #0000001a;
     color: #d5d5d5;
-    max-width: 340px;
     overflow: hidden;
 }
+
 .statusNP {
     font-size: 12px;
     padding: 1px 7px;
     background: #b73a3ac9;
-    border-radius: 5px;
+    border-radius: 15px;
     color: white;
     position: relative;
     top: 5px;
-    box-shadow: 0 0 8px 0px #e0474757;
 }
+
 .statusPP {
     font-size: 12px;
     padding: 1px 7px;
     background: #dda326c9;
-    border-radius: 5px;
+    border-radius: 15px;
     color: white;
     position: relative;
     top: 5px;
-    box-shadow: 0 0 8px 0px #a095415c;
     transition: background 0.3s;
 }
+
 span.statusPP:hover {
     background: #e0b455c9;
     cursor: pointer;
 }
+
 .status {
     font-size: 12px;
     padding: 1px 7px;
     background: #3f8253;
-    border-radius: 5px;
+    border-radius: 15px;
     color: white;
     position: relative;
     top: 5px;
-    box-shadow: 0 0 8px 0px #3f82535c;
 }
+
 .price {
     float: right;
     margin: 11px;
 }
+
 .PPmonths {
     background: #292929;
     margin: 5px 4px 2px -1px;
@@ -95,6 +159,7 @@ span.statusPP:hover {
     padding: 2px 6px;
     border-radius: 6px;
 }
+
 .PPmonthsContainer {
     display: none;
     animation: openMonthPP 0.3s forwards;
@@ -103,18 +168,61 @@ span.statusPP:hover {
     margin-top: 15px;
 }
 
-@keyframes openMonthPP {
-    0%{ transform: translateY(-20px); opacity: 0;}
-    10%{ transform: translateY(-10px); opacity: 0;}
-    100%{ transform: translateY(0px); opacity: 1; }
+/* Credentials */
+
+#credentials {
+    font-family: 'Lexend Deca';
+    grid-column: 2;
+    display: none;
 }
 
-@media screen and (max-width: 1000px){
+#credentials .title {
+    margin: 20px 0px 0px 10px;
+    color: #dadada;
+    font-size: 20px;
+}
+
+#credentials h3 {
+    margin: 0px 0px 10px 10px;
+    color: #d8d8d8;
+    font-size: 18px;
+}
+
+#credentials p {
+    margin: 0px 0px 20px 10px;
+    color: #888888;
+    font-size: 15px;
+    user-select: all;
+}
+
+p#credentials-password {
+    display: inline-block;
+    background: #313131;
+    color: #313131;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+@keyframes openMonthPP {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1000px) {
     .week-table {
         grid-column: 3;
         grid-row: 1;
     }
-
     .week-table-container li {
         width: 100%;
     }
@@ -151,6 +259,7 @@ span.statusPP:hover {
         border-top: 2px solid #0e0e0e;
     }
 }
+
 @media (prefers-color-scheme: light) {
     .payment {
         background: #f3f3f3;
@@ -180,10 +289,23 @@ span.statusPP:hover {
 }
 
 @keyframes fadeinPayments {
-    0%{ transform: translateY(-50px); opacity: 0; }
-    100%{ transform: translateY(0px); opacity: 1; }
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
+
 @keyframes fadeoutPayments {
-    0%{ transform: translateY(0px); opacity: 1; }
-    100%{ transform: translateY(-50px); opacity: 0; }
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
 }

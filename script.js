@@ -93,44 +93,6 @@ function retrieveData() {
         let users = snapshot.val()
         setcount(users)
     })
-    firebase.database().ref('/payments-month/').once('value').then(function (snapshot) {
-        document.getElementsByClassName('monthTAG')[0].innerText = snapshot.val()
-    })
-
-    firebase.database().ref('/payments/').once('value').then(function (snapshot) {
-        let paymentsArray = snapshot.val()
-
-        let loadingElement = document.getElementById('payments')
-        while (loadingElement.firstChild) {
-            loadingElement.removeChild(loadingElement.firstChild)
-        }
-        let im = 0
-        let PPmonthsElements = ''
-        let faggotSaysYes = false
-        paymentsArray.forEach(element => {
-            let statusClass = 'status'
-            const statusLi = document.createElement('li')
-
-            if (element.status === 'Not payed') {
-                statusClass = 'statusNP'
-            } else if (element.status === 'Pre-payed') {
-                statusClass = 'statusPP ' + im
-                faggotSaysYes = true
-            }
-            statusLi.innerHTML = `${element.name} <span class="price">${element.price}€</span><br><span class="${statusClass}">${element.status}</span><div id="${im}" class="PPmonthsContainer">${PPmonthsElements}</div>`
-            document.getElementById('payments').appendChild(statusLi)
-            if (faggotSaysYes === true) {
-                element.PPmonths.forEach(element => {
-                    let PPmonthDiv = document.createElement('div')
-                    PPmonthDiv.setAttribute('class', 'PPmonths')
-                    PPmonthDiv.innerText = element
-                    document.getElementById(im).appendChild(PPmonthDiv)
-                });
-                faggotSaysYes = false
-            }
-            im++
-        })
-    })
 
     firebase.database().ref('/anime/').once('value').then(function (snapshot) {
         let animeArray = snapshot.val()
@@ -247,27 +209,6 @@ document.addEventListener('click', (e) => {
         }
     }
 })
-
-// Open payments
-let paymentsOpen = false
-document.getElementsByClassName('open-payments')[0].addEventListener('click', () => {
-    firebase.analytics().logEvent('opened_payments');
-    togglePayments()
-    if (servicesOpen) { toggleServices() }
-})
-function togglePayments() {
-    if (paymentsOpen === false) {
-        document.getElementsByClassName('payment')[0].style.display = 'inline-block'
-        document.getElementsByClassName('payment')[0].style.animation = ''
-        paymentsOpen = true
-    } else {
-        document.getElementsByClassName('payment')[0].style.animation = 'fadeoutPayments 0.3s forwards'
-        setTimeout(() => {
-            document.getElementsByClassName('payment')[0].style.display = 'none'
-            paymentsOpen = false
-        }, 200);
-    }
-}
 
 // Open services
 let servicesOpen = false
