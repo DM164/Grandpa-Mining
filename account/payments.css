@@ -70,17 +70,17 @@ img#accimg-ui {
     grid-gap: 0px 10px;
 }
 
+.title {
+    margin: 20px 0px 0px 10px;
+    color: #dadada;
+    font-size: 20px;
+}
+
 /*payment heading*/
 
 #payment {
     font-family: 'Lexend Deca';
     grid-column: 2;
-}
-
-#payment .title {
-    margin: 20px 0px 0px 10px;
-    color: #dadada;
-    font-size: 20px;
 }
 
 .payment-container {
@@ -176,12 +176,6 @@ span.statusPP:hover {
     display: none;
 }
 
-#credentials .title {
-    margin: 20px 0px 0px 10px;
-    color: #dadada;
-    font-size: 20px;
-}
-
 #credentials .month {
     display: inline-block;
     margin: 10px 0px 16px 10px;
@@ -216,12 +210,6 @@ p#credentials-password {
     font-family: 'Lexend Deca';
     grid-column: 2;
     display: none;
-}
-
-#settings .title {
-    margin: 20px 0px 0px 10px;
-    color: #dadada;
-    font-size: 20px;
 }
 
 #settings .month {
@@ -348,10 +336,6 @@ form#change-password-form {
         grid-column: 1;
         margin: 0px 24px 0px 0px;
     }
-    .title {
-        margin: 20px 0px 0px 17px;
-        font-size: 30px;
-    }
     h3.date {
         margin: 8px 0px 0px 0px;
         padding: 4px 10px;
@@ -379,22 +363,22 @@ form#change-password-form {
 }
 
 @media (prefers-color-scheme: light) {
+    #sidebar {
+        border-right: 1px solid #e0e0e0;
+    }
+    .title {
+        color: #171717;
+    }
     .payment {
         background: #f3f3f3;
         box-shadow: 0px 2px 6px 0px #00000033;
     }
-    .payment li {
-        border: solid 1px #ffffff;
-        background: #ffffff;
-        box-shadow: 2px 2px 4px 2px #00000012;
-        color: #000000;
-    }
-    .payment .title {
-        color: #252525;
+    #payment li {
+        border-top: solid 1px #e0e0e0;
+        color: #3c3c3c;
     }
     .month {
-        color: #2b2b2b;
-        border-bottom: 1px solid #dedede;
+        color: #484848;
     }
     span.monthTAG {
         background: #ffffff;
@@ -403,6 +387,58 @@ form#change-password-form {
         background: #f9f9f9 !important;
         border: 1px solid #dedede !important;
         padding: 1px 6px !important;
+    }
+    li.sidebar-item {
+        background: #f3f3f3;
+        margin: 10px 0px;
+        padding: 10px 16px;
+        border-radius: 6px 0px 0px 6px;
+        font-family: 'Lexend Deca';
+        color: #151515;
+        transition: filter 0.3s;
+    }
+    #accname-ui {
+        color: #171717;
+    }
+    #accmail-ui {
+        grid-column: 2;
+        grid-row: 1;
+        margin-top: 33px;
+        pointer-events: none;
+        background: linear-gradient(to right, #2f2f2f 60%, transparent 70%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 14px;
+    }
+    #credentials .month {
+        border-bottom: solid 1px #e0e0e0;
+    }
+    #credentials h3 {
+        color: #2f2f2f;
+    }
+    p#credentials-password {
+        background: #b3b3b3;
+        color: #b3b3b3;
+    }
+    #settings form {
+        border-top: 1px solid #e0e0e0;
+    }
+    #settings input {
+        background: #e4e4e4;
+        border: 1px solid #d4d4d4;
+        color: #2f2f2f;
+    }
+    #settings input:focus {
+        background: #e4e4e4;
+        filter: brightness(0.9) !important;
+    }
+    #settings h3 {
+        color: #4a4a4a;
+    }
+    #settings button {
+        background: #e4e4e4;
+        border: 1px solid #d4d4d4;
+        color: #292929;
     }
 }
 
