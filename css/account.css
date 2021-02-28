@@ -46,12 +46,12 @@
 }
 
 #account-menu input::placeholder {
-	color: #575757;
+    color: #575757;
 }
 
 #account-menu input:focus, #account-menu a:hover, #account-menu button:hover, #account-menu p:hover {
-	filter: brightness(1.2);
-	cursor: pointer;
+    filter: brightness(1.2);
+    cursor: pointer;
 }
 
 button#log-in, #sign-out, #open-account-manager {
@@ -96,14 +96,14 @@ button#log-in:hover, #sign-out:hover {
 }
 
 .accimg-container {
-	height: 24px !important;
-	position: relative;
-	border-radius: 50%;
-	margin: -4px 4px -6px -4px;
-	width: 24px;
-	display: none;
-	pointer-events: none;
-	overflow: hidden;
+    height: 24px !important;
+    position: relative;
+    border-radius: 50%;
+    margin: -4px 4px -6px -4px;
+    width: 24px;
+    display: none;
+    pointer-events: none;
+    overflow: hidden;
 }
 
 .accimg_p_container {
@@ -114,7 +114,7 @@ button#log-in:hover, #sign-out:hover {
 }
 
 #accname {
-	pointer-events: none;
+    pointer-events: none;
 }
 
 #accname_p {
@@ -137,7 +137,7 @@ button#log-in:hover, #sign-out:hover {
 }
 
 img#accimg_p {
-	width: 100%;
+    width: 100%;
 }
 
 .account-preview {
@@ -153,37 +153,43 @@ img#accimg_p {
 }
 
 .failed-login {
-	font-family: 'Lexend Deca';
-	color: #efefef;
-	background: #d64d4d33;
-	border: 2px solid #ff383845;
-	padding: 10px 0px;
-	border-radius: 6px;
-	font-size: 14px;
-	display: block;
-	margin: 0px 0px 10px 0px;
-	font-weight: lighter;
-	line-break: normal !important;
+    font-family: 'Lexend Deca';
+    color: #efefef;
+    background: #d64d4d33;
+    border: 2px solid #ff383845;
+    padding: 10px 0px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: block;
+    margin: 0px 0px 10px 0px;
+    font-weight: lighter;
+    line-break: normal !important;
+}
+
+@media screen and (max-width: 860px) {
+    #account-menu input:active {
+        font-size: 100%;
+    }
 }
 
 @keyframes fadeinMenu {
-	0% {
-		transform: translateY(-50px);
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0px);
-		opacity: 1;
-	}
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
 @keyframes fadeoutMenu {
-	0% {
-		transform: translateY(0px);
-		opacity: 1;
-	}
-	100% {
-		transform: translateY(-50px);
-		opacity: 0;
-	}
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
 }
