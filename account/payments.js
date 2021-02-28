@@ -16,11 +16,11 @@ firebase.analytics();
 
 function retrieveData() {
     firebase.database().ref('/websiteStatus/database').once('value').then(function (snapshot) {
-        // if (snapshot.val() === 'maintenance') {
-        //     console.log('Website is in maintenance mode')
-        //     document.getElementsByClassName('maintenance')[0].style.display = 'inline-block'
-        //     document.getElementsByClassName('body2')[0].style.display = 'none'
-        // }
+        if (snapshot.val() === 'maintenance') {
+            console.log('Website is in maintenance mode')
+            document.getElementsByClassName('maintenance')[0].style.display = 'inline-block'
+            document.getElementsByClassName('body2')[0].style.display = 'none'
+        }
     })
 
     firebase.database().ref('/payments-month/').once('value').then(function (snapshot) {
