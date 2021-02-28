@@ -114,25 +114,7 @@ retrieveData()
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
-        // User is signed in.
-        if (user.photoURL !== null) {
-            document.getElementById('accimg').src = user.photoURL;
-        }
-        document.getElementById('accname').innerText = user.displayName;
-        document.getElementById('accname-ui').innerText = user.displayName;
-
-        // profile pic
-        if (user.photoURL !== null) {
-            document.getElementsByClassName('accimg-ui-container')[0].style.display = 'inline-block'
-            document.getElementById('accimg-ui').src = user.photoURL;
-        }
-
-        // account preview
-        document.getElementById('accname-ui').innerText = user.displayName;
-        document.getElementById('accmail-ui').innerText = user.email;
-
-        document.getElementById('account-ui').style.display = 'grid'
-        // ...
+        getUserData()
     } else {
         // User is signed out.
         // ...
@@ -140,9 +122,34 @@ firebase.auth().onAuthStateChanged(function (user) {
     }
 });
 
+function getUserData() {
+    // User is signed in.
+    let user = firebase.auth().currentUser;
+
+    if (user.photoURL !== null) {
+        document.getElementById('accimg_p').src = user.photoURL;
+    }
+    document.getElementById('accname').innerText = user.displayName;
+    document.getElementById('accname-ui').innerText = user.displayName;
+
+    // profile pic
+    if (user.photoURL !== null) {
+        document.getElementsByClassName('accimg-ui-container')[0].style.display = 'inline-block'
+        document.getElementById('accimg-ui').src = user.photoURL;
+    }
+
+    // account preview
+    document.getElementById('accname-ui').innerText = user.displayName;
+    document.getElementById('accmail-ui').innerText = user.email;
+
+    document.getElementById('account-ui').style.display = 'grid'
+    // ...
+}
+
 function renderTabs(arg) {
     document.getElementById('payment').style.display = 'none'
     document.getElementById('credentials').style.display = 'none'
+    document.getElementById('settings').style.display = 'none'
 
     if (arg === undefined || arg === null) {
         document.getElementById('payment-switch').style.filter = 'brightness(1.3)'
@@ -169,3 +176,55 @@ document.getElementById('credentials-password').addEventListener('click', () => 
     document.getElementById('credentials-password').style.color = '#888888'
     document.getElementById('credentials-password').style.padding = 'initial'
 })
+
+document.getElementById('change-username-form').addEventListener('submit', (e) => {
+
+    e.preventDefault()
+    let user = firebase.auth().currentUser;
+
+    user.updateProfile({
+        displayName: e.target.elements[0].value,
+    }).then(function () {
+        getUserData()
+        e.target.elements[0].value = ''
+        document.getElementById('change-username-form').style.background = '#ffff340f'
+        setTimeout(() => {
+            document.getElementById('change-username-form').style.background = ''
+        }, 1000);
+    }).catch(function (error) {
+        console.log('Couldn\'t change username')
+    })
+
+})
+
+document.getElementById('change-password-form').addEventListener('submit', (e) => {
+    e.preventDefault()
+    let newPassword = '';
+    let user = firebase.auth().currentUser;
+    if (e.target.elements[0].value === e.target.elements[1].value) {
+        newPassword = e.target.elements[0].value
+    } else {
+        changePasswordDenied()
+        return
+    }
+
+    user.updatePassword(newPassword).then(function () {
+        e.target.elements[0].value = ''
+        e.target.elements[1].value = ''
+        document.getElementById('change-password-form').style.background = '#ffff340f'
+        setTimeout(() => {
+            document.getElementById('change-password-form').style.background = ''
+        }, 1000);
+    }).catch(function (error) {
+        document.getElementById('change-password-form').style.background = '#b52c2c29'
+        setTimeout(() => {
+            document.getElementById('change-password-form').style.background = ''
+        }, 3000);
+    });
+})
+function changePasswordDenied() {
+    document.getElementById('change-password-form').style.background = '#b52c2c29'
+    setTimeout(() => {
+        document.getElementById('change-password-form').style.background = ''
+    }, 2000);
+}

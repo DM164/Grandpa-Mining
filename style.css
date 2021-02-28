@@ -796,8 +796,8 @@ div#warnings {
     .navElements p {
         margin: -2px 4px;
     }
-    .open-payments, .open-services {
-        padding: 8px 14px;
+    .open-payments, .open-services, .account-menu {
+        padding: 8px 14px !important;
         font-size: 15px;
     }
     .payment li {

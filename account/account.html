@@ -55,7 +55,7 @@
         <h1 class="info">Admin center</h1>
         <h2 class="info">Credentials are only given to admins.</h2>
         <form id="login-form">
-            <input type="text" id="email" placeholder="E-Mail">
+            <input type="text" id="email" placeholder="Username">
             <input type="password" id="password" placeholder="Password">
             <button id="log-in" type="submit">Log in</button>
         </form>
@@ -148,8 +148,10 @@
             </div>
             <li id="payment-switch" class="sidebar-item">Payments</li>
             <li id="credentials-switch" class="sidebar-item">Credentials</li>
+            <li id="settings-switch" class="sidebar-item">Settings</li>
             <li id="history-switch" class="sidebar-item" style="opacity: 0.5; pointer-events: none;">History</li>
-            <li id="database-switch" class="sidebar-item" style="opacity: 0.5; pointer-events: none;">Manage Database</li>
+            <li id="database-switch" class="sidebar-item" style="opacity: 0.5; pointer-events: none;">Manage Database
+            </li>
         </ul>
 
         <div id="payment">
@@ -163,13 +165,30 @@
             </div>
         </div>
         <div id="credentials">
-            <h2 class="title">Credentials</h2>
+            <h2 class="title">Crunchyroll Credentials</h2>
             <h2 class="month">Last updated: <span class="monthTAG">time</span></h2>
 
             <h3>Username</h3>
             <p id="credentials-username"></p>
             <h3>Password</h3>
             <p id="credentials-password"></p>
+        </div>
+        <div id="settings">
+            <h2 class="title">Settings</h2>
+            <h2 class="month">Change your password and username here.</h2>
+
+            <form action="" id="change-username-form">
+                <h3>Username</h3>
+                <input type="text" name="" id="change-username">
+                <button type="submit">Save</button>
+            </form>
+            <form action="" id="change-password-form">
+                <h3>Password</h3>
+                <input type="password" name="" id="change-password">
+                <h3>Confirm password</h3>
+                <input type="password" name="" id="change-password-confirm">
+                <button type="submit">Save</button>
+            </form>
         </div>
     </div>
 

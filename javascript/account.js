@@ -1,15 +1,15 @@
 document.getElementById('login-form').addEventListener('submit', (e) => {
     e.preventDefault()
-    login(e.target.elements[0].value, e.target.elements[1].value)
+    if (e.target.elements[0].value.includes('@')) {
+        login(e.target.elements[0].value, e.target.elements[1].value)
+    } else {
+        login(e.target.elements[0].value + '@gm.com', e.target.elements[1].value)
+    }
 })
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         // User is signed in.
-        if (user.photoURL !== null) {
-            document.getElementById('accimg').src = user.photoURL;
-        }
-        document.getElementById('accname').innerText = user.displayName;
 
         localStorage.setItem('UID: ', user.uid)
         loggedIn()
@@ -32,10 +32,7 @@ function loggedIn() {
         document.getElementById('account-menu').style.padding = '22px 22px'
 
         // profile pic
-        if (user.photoURL !== null) {
-            document.getElementsByClassName('accimg-container')[0].style.display = 'inline-block'
-            document.getElementById('accimg_p').src = user.photoURL;
-        }
+        document.getElementById('accimg_p').src = user.photoURL;
 
         // menu on landing page
         document.getElementById('accname').innerText = user.displayName;

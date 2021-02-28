@@ -27,12 +27,13 @@ li.sidebar-item:hover {
 }
 
 .accimg-ui-container {
-    height: auto;
+    height: 48px;
     position: relative;
     border-radius: 50%;
-    width: auto;
+    width: 48px;
     pointer-events: none;
     overflow: hidden;
+    margin: 6px 0px 6px 12px;
 }
 
 #accname-ui {
@@ -104,7 +105,6 @@ span.monthTAG {
     position: relative;
     margin: 6px 0px 0px 0px;
     padding: 12px;
-    box-shadow: 2px 2px 4px 2px #0000001a;
     color: #d5d5d5;
     overflow: hidden;
 }
@@ -182,6 +182,13 @@ span.statusPP:hover {
     font-size: 20px;
 }
 
+#credentials .month {
+    display: inline-block;
+    margin: 10px 0px 16px 10px;
+    padding: 0px 0px 16px 0px;
+    border-bottom: solid 1px #252525;
+}
+
 #credentials h3 {
     margin: 0px 0px 10px 10px;
     color: #d8d8d8;
@@ -203,6 +210,93 @@ p#credentials-password {
     border-radius: 4px;
 }
 
+/* settings */
+
+#settings {
+    font-family: 'Lexend Deca';
+    grid-column: 2;
+    display: none;
+}
+
+#settings .title {
+    margin: 20px 0px 0px 10px;
+    color: #dadada;
+    font-size: 20px;
+}
+
+#settings .month {
+    display: inline-block;
+}
+
+#settings h3 {
+    margin: 14px 0px 10px 0px;
+    color: #ababab;
+    font-size: 15px;
+}
+
+#settings p {
+    margin: 0px 0px 20px 0px;
+    color: #888888;
+    font-size: 15px;
+    user-select: all;
+}
+
+#settings form {
+    border-top: 1px solid #252525;
+    margin: 0px 0px 0px 0px;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    transition: all 0.6s;
+}
+
+p#settings-password {
+    display: inline-block;
+    background: #313131;
+    color: #313131;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+#settings input {
+    background: #181818;
+    border: 1px solid #242424;
+    padding: 8px 10px;
+    height: 36px;
+    display: block;
+    border-radius: 6px;
+    outline: none;
+    color: #c0c0c0;
+    transition: filter 0.3s;
+}
+
+#settings input:focus {
+    filter: brightness(1.3);
+}
+
+#settings button {
+    background: #242424;
+    border: 1px solid #242424;
+    padding: 6px 14px;
+    margin: 10px 0px 0px 0px;
+    display: block;
+    border-radius: 6px;
+    color: #d0d0d0;
+    font-family: 'Lexend Deca';
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+#settings button:hover {
+    filter: brightness(1.3);
+}
+
+form#change-password-form {
+    border-top: 1px solid #252525;
+    margin: 20px 0px 0px 0px;
+    display: inline-block;
+}
+
 @keyframes openMonthPP {
     0% {
         transform: translateY(-20px);
@@ -218,7 +312,31 @@ p#credentials-password {
     }
 }
 
+@media screen and (max-width: 1700px) {
+    .body2 {
+        padding: 0px 12%;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .body2 {
+        grid-template-columns: 22% auto;
+        padding: 0px 12%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .body2 {
+        grid-template-columns: 22% auto;
+        padding: 0px 6%;
+    }
+}
+
 @media screen and (max-width: 1000px) {
+    .body2 {
+        grid-template-columns: 22% auto;
+        padding: 0px 10px;
+    }
     .week-table {
         grid-column: 3;
         grid-row: 1;

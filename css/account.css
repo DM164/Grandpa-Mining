@@ -106,6 +106,13 @@ button#log-in:hover, #sign-out:hover {
 	overflow: hidden;
 }
 
+.accimg_p_container {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
 #accname {
 	pointer-events: none;
 }
