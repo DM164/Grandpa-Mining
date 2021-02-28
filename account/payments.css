@@ -362,6 +362,50 @@ form#change-password-form {
     }
 }
 
+@media screen and (max-width: 860px) {
+    .body2 {
+        grid-template-columns: auto;
+        padding: 0px;
+        grid-gap: 0px;
+    }
+    li.sidebar-item {
+        background: #181818;
+        margin: 20px 0px 0px 10px;
+        padding: 10px 16px;
+        border-radius: 6px 6px 0px 0px;
+        font-family: 'Lexend Deca';
+        color: #b9b9b9;
+        transition: filter 0.3s;
+        display: inline-block;
+        position: relative;
+        top: 57px;
+    }
+    .account-ui {
+        position: absolute;
+    }
+    #sidebar {
+        grid-row: 1;
+        grid-column: 1;
+        border-right: 0px;
+        border-bottom: 1px solid #252525;
+        overflow: scroll;
+        width: 100%;
+        height: 114px;
+        white-space: nowrap;
+    }
+    #payment, #settings, #credentials {
+        grid-row: 2;
+        grid-column: 1;
+        padding: 0px 2%;
+    }
+
+}
+
+@media screen and (max-width: 660px) {
+
+}
+
+
 @media (prefers-color-scheme: light) {
     #sidebar {
         border-right: 1px solid #e0e0e0;
