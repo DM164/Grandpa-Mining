@@ -214,7 +214,6 @@ document.addEventListener('click', (e) => {
 let servicesOpen = false
 document.getElementsByClassName('open-services')[0].addEventListener('click', () => {
     firebase.analytics().logEvent('opened_service_statuses');
-    if (paymentsOpen) { togglePayments() }
     toggleServices()
 })
 function toggleServices() {
