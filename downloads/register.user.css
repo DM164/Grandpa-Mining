@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dark Digitales Register
 @namespace      github.com/openstyles/stylus
-@version        1.5.0
+@version        1.5.1
 @description    Style for the register YEET
 @author         Denis Mignanelli (DM164)
 ==/UserStyle== */
@@ -606,8 +606,7 @@
         .student-dashboard-list .item-status {
             background: #303030;
         }
-<<<<<<< Updated upstream
-=======
+
         .cs-flex-table.cs-row-marker:nth-child(odd) .cs-flex-row {
             background: #232323;
         }
@@ -622,7 +621,11 @@
             color: #ffffff;
             background: #407d7d;
         }
->>>>>>> Stashed changes
+        .cs-flex-table.cs-row-marker:nth-child(odd) .cs-flex-row {
+    background: #252525;
+    border-top: 1px solid #303030;
+    border-bottom: 1px solid #303030;
+}
     }
     }
     
