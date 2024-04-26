@@ -140,10 +140,10 @@ function retrieveData() {
 
             itemStatusDot.setAttribute('title', new Date(element.updateTimeStamp))
 
-            if (seconds > 240 && seconds < 300) {
+            if (seconds > 300 && seconds < 360) {
                 itemStatusDot.style.background = '#fbd23e'
                 itemStatusDot.style.boxShadow = '0px 0px 8px 0px #ffe10b'
-            } else if (seconds < 240) {
+            } else if (seconds < 300) {
                 itemStatusDot.style.background = '#3efb4d'
                 itemStatusDot.style.boxShadow = '0px 0px 8px 0px #31ff0b'
             }
