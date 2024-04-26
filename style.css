@@ -152,7 +152,6 @@ a {
     grid-template-columns: min-content auto min-content;
     align-items: center;
     color: #dadada;
-    gap: 20px;
     font-family: "Lexend Deca";
 }
 
@@ -175,12 +174,14 @@ a {
 
 #instances li img {
     height: 32px;
+    margin-right: 20px;
 }
 
 #instances li .content {
     display: flex;
     gap: 0px 20px;
     justify-content: space-between;
+    align-items: center;
 }
 
 #instances li .content .right {
@@ -191,7 +192,7 @@ a {
 }
 
 #instances .service-status-indicator {
-    margin: 0;
+    margin: 0px 0px 0px 20px;
 }
 
 #instances .ip-items, #instances .port-items {
@@ -204,6 +205,7 @@ a {
 #instances .ip-items img, #instances .port-items img {
     height: 14px;
     cursor: pointer;
+    margin-right: 0px;
     transition: filter 0.3s;
 }
 
@@ -755,13 +757,16 @@ div#warnings {
     }
 
     #instances li h2 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     #instances li p {
         font-size: 12px;
     }
 
+    #instances li .map {
+        display: none;
+    }
 
     #discord-widget {
         margin: 10px 10px 0px 10px;
