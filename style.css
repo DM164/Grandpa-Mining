@@ -12,6 +12,9 @@ body {
     display: grid;
     overflow: hidden;
     margin-bottom: 20px;
+    grid-template-columns: 2fr 1fr;
+    padding: 20px 20px 0px 20px;
+    gap: 20px;
 }
 
 h2 {
@@ -19,13 +22,8 @@ h2 {
 }
 
 .title {
-    margin: 30px 0px 0px 0px;
     color: #dadada;
     font-size: 30px;
-}
-
-h2.title.platform {
-    margin: 20px 0px 0px 0px;
 }
 
 div#weekT h2 {
@@ -137,6 +135,84 @@ a {
     color: white;
 }
 
+.left {
+    animation: fadein 0.5s forwards;
+    animation-play-state: paused;
+}
+
+/* instances */
+
+#instances li {
+    background-color: #181818;
+    box-shadow: 2px 2px 4px 2px #00000005;
+    padding: 10px 25px;
+    border-radius: 6px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: min-content auto min-content;
+    align-items: center;
+    color: #dadada;
+    gap: 20px;
+    font-family: "Lexend Deca";
+}
+
+#instances h2 {
+    color: #dadada;
+    font-size: 22px;
+}
+
+#instances p {
+    font-family: 'Lexend Deca';
+    line-height: 22px;
+    color: #797979;
+    font-size: 14px;
+}
+
+#instances p.map {
+    line-height: 14px;
+    font-size: 10px;
+}
+
+#instances li img {
+    height: 32px;
+}
+
+#instances li .content {
+    display: flex;
+    gap: 0px 20px;
+    justify-content: space-between;
+}
+
+#instances li .content .right {
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#instances .service-status-indicator {
+    margin: 0;
+}
+
+#instances .ip-items, #instances .port-items {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 6px;
+}
+
+#instances .ip-items img, #instances .port-items img {
+    height: 14px;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+#instances .ip-items img:hover, #instances .port-items img:hover {
+    filter: brightness(1.5);
+}
+
+/* instances END */
+
 /*news container*/
 
 .container {
@@ -156,9 +232,9 @@ a {
     font-family: 'Nunito';
     display: inline-block;
     height: 100%;
-    animation: fadein 0.5s forwards;
+    opacity: 0;
+    animation: fadein 0.5s 0.1s forwards;
     animation-play-state: paused;
-    padding: 0px 20px 0px 30px;
 }
 
 .newscontainer p {
@@ -236,9 +312,9 @@ a {
 .platform-container {
     grid-column: 2;
     width: 350px;
-    animation: fadein 0.5s forwards;
+    opacity: 0;
+    animation: fadein 0.5s 0.1s forwards;
     animation-play-state: paused;
-    padding-right: 10px;
 }
 
 .platform-card {
@@ -256,10 +332,12 @@ a {
     height: 75px;
     width: 100%;
     margin: 10px 0px 0px 0px;
-    z-index: 1;
     border: 2px solid transparent;
     transition-property: background, color, box-shadow;
     transition: 0.3s;
+    opacity: 0;
+    animation: fadein 0.5s 0.1s forwards;
+    animation-play-state: paused;
 }
 
 .platform-card h2 {
@@ -323,6 +401,7 @@ a {
         opacity: 0;
         height: 0px;
     }
+
     100% {
         transform: translateY(0px);
         opacity: 1;
@@ -336,6 +415,7 @@ a {
         opacity: 0;
         height: 0px;
     }
+
     100% {
         transform: translateY(0px);
         opacity: 1;
@@ -368,6 +448,10 @@ a {
     border-radius: 10px;
     margin: 0px 10px 1px 0px;
     box-shadow: 0 0 8px 0px #5dff36f7;
+}
+
+.join-w2g {
+    margin-bottom: 20px;
 }
 
 .open-reddit:hover {
@@ -410,6 +494,9 @@ a {
 .calendar-container {
     color: #d5d5d5;
     grid-column: 3;
+    opacity: 0;
+    animation: fadein 0.5s 0.1s forwards;
+    animation-play-state: paused;
 }
 
 .calendarContainer li {
@@ -486,7 +573,8 @@ h1.maintenance {
     color: #d5d5d5;
     grid-column: 4;
     margin: 0px 0px 10px 10px;
-    animation: fadein 0.5s forwards;
+    opacity: 0;
+    animation: fadein 0.5s 0.1s forwards;
     animation-play-state: paused;
 }
 
@@ -528,7 +616,8 @@ h1.maintenance {
     color: #515467;
 }
 
-h6.time, h6.platform {
+h6.time,
+h6.platform {
     background: #232323;
     padding: 4px 8px;
     display: inline-block;
@@ -558,12 +647,6 @@ a.listLink:hover {
 }
 
 /* Warnings */
-
-.title {
-    margin: 20px 0px 0px 0px;
-    color: #dadada;
-    font-size: 30px;
-}
 
 .warnings-table ul {
     background: #181818;
@@ -662,92 +745,71 @@ div#warnings {
 }
 
 @media screen and (max-width: 1000px) {
-    .newscontainer {
-        grid-column: 1;
-        grid-row: 1;
-        margin: 0px 10px 0px 10px;
+    .body2 {
+        grid-template-columns: 1fr;
+        padding: 0px 10px;
     }
-    .platform-container {
-        grid-column: 1;
-        grid-row: 2;
-        margin: 0px 10px 0px 10px;
+
+    #instances li img {
+        height: 24px;
     }
+
+    #instances li h2 {
+        font-size: 18px;
+    }
+
+    #instances li p {
+        font-size: 12px;
+    }
+
+
     #discord-widget {
         margin: 10px 10px 0px 10px;
     }
-    .platform-card {
-        width: 96%;
-    }
-    .calendar-container {
-        grid-column: 1;
-        grid-row: 3;
-        margin: 0px 10px 0px 10px;
-    }
-    .week-table {
-        grid-column: 1 !important;
-        grid-row: 4 !important;
-        margin: 0px 10px 0px 10px;
-    }
+
     .payment {
         right: 0px !important;
     }
+
     h1.GMLogoText {
         display: none;
     }
-    .newscontainer {
-        font-family: 'Nunito';
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        animation: fadein 0.5s forwards;
-        animation-play-state: paused;
-        padding: 0px 20px 0px 0px;
-    }
-    .title, h2.title.platform {
+
+    .title,
+    h2.title.platform {
         margin: 16px 0px 0px 10px !important;
     }
+
     .platform-container .title {
         margin: 20px 0px 0px 0px !important;
     }
+
     .month {
         padding: 0px 4px 10px 4px !important;
     }
+
     .container {
         margin-left: 0px;
         grid-column: 1;
         width: 100%;
     }
-    .event-card, .platform-card, .discord-card, .discordVC-count {
-        width: 100%;
-        margin-left: 10px;
-    }
-    .platform-container {
-        margin-top: 0px;
-        margin-left: 0px;
-        width: 100%;
-        grid-column: 1;
-        grid-row: 2;
-        padding-right: 20px;
-    }
-    .calendar-container {
-        margin-top: 0px;
-        margin-left: 10px;
-        grid-column: 1;
-        width: 100%;
-    }
+
     .calendar-container li {
         margin: 2px 0px 0px 0px;
         border-radius: 0px 0px 6px 6px;
     }
+
     .week-table-container li {
         margin: 4px 10px 0px 0px;
     }
+
     #eventsA .date {
         margin: 8px 0px 0px 0px;
         padding: 4px 10px;
         background: #242424;
         border-radius: 6px 6px 0px 0px;
     }
+
     .calendarContainer {
         border: 0;
         padding: 0;
@@ -758,14 +820,17 @@ div#warnings {
     .navElements {
         margin: 20px 15px 0px 14px;
     }
+
     .GMLogo {
         height: 50px;
         width: 50px;
         margin: 6px 0px 0px 14px;
     }
+
     .header {
         height: 62px;
     }
+
     .payment {
         position: fixed !important;
         animation: mobilePayments 0.6s forwards !important;
@@ -779,6 +844,7 @@ div#warnings {
         margin: 0px 10px 40px 10px !important;
         padding: 0px 10px 10px 10px !important;
     }
+
     .service {
         position: fixed !important;
         animation: mobilePayments 0.6s forwards !important;
@@ -794,26 +860,35 @@ div#warnings {
         margin: 0px 10px 40px 10px !important;
         overflow: scroll !important;
     }
+
     h2.title.platform {
         margin: 16px 0px 0px 8px !important;
     }
+
     .service p {
         padding: 0px 0px 10px 10px !important;
     }
+
     .navElements p {
         margin: -2px 4px;
     }
-    .open-payments, .open-services, .account-menu {
+
+    .open-payments,
+    .open-services,
+    .account-menu {
         padding: 8px 14px !important;
         font-size: 15px;
     }
+
     .payment li {
         margin: 6px auto !important;
         max-width: unset !important;
     }
+
     .open-home {
         display: none !important;
     }
+
     a.listLink {
         display: inline-block;
         right: 0;
@@ -826,112 +901,158 @@ div#warnings {
     body {
         background: #f3f3f3;
     }
+
     .header {
         border-bottom: 1px solid #ffffff;
         background: #ffffff;
     }
-    .container, .platform-card {
+
+    .container,
+    .platform-card {
         border: 1px solid #ffffff;
         background: #ffffff;
     }
-    .newscontainer p, .platform-card h2 {
+
+    .newscontainer p,
+    .platform-card h2 {
         color: #060606;
     }
+
     .postdate {
         color: #c5c5c5;
     }
-    .week-table-container li, .calendarContainer li {
+
+    .week-table-container li,
+    .calendarContainer li {
         border: solid 1px #ffffff !important;
         background: #ffffff !important;
         color: #060606 !important;
     }
+
     h3.date {
         color: #383838 !important;
     }
-    h6.time, h6.platform, a.listLink {
+
+    h6.time,
+    h6.platform,
+    a.listLink {
         background: #f9f9f9;
         border: 1px solid #dedede;
     }
-    .title, .newscontainer h2 {
+
+    .title,
+    .newscontainer h2 {
         color: #252525;
     }
+
     .discordVC-count {
         background: #fbfbfb;
         color: #3c3c3c;
     }
+
     .navSelected {
         color: #1f1f1f;
     }
+
     a {
         color: #424242;
     }
+
     .open-home {
         color: #d8d8d8;
     }
+
     .warnings-table ul {
         background: #ffffff;
         color: #0a0a0a;
         box-shadow: 0 0 6px #00000024;
     }
-    .join-discord, .open-reddit, .open-lb, .join-discord, .join-w2g, .join-gmc, .open-insta {
+
+    .join-discord,
+    .open-reddit,
+    .open-lb,
+    .join-discord,
+    .join-w2g,
+    .join-gmc,
+    .open-insta {
         background: #ffffff;
         color: black;
         border: 2px solid #ffffff;
     }
+
     .open-reddit:hover {
         background-color: #ffa081;
         border: solid 2px #FF4500;
         box-shadow: 0px 3px 9px #0000003d;
     }
+
     .join-w2g:hover {
         background-color: #ffedb0;
         border: solid 2px #FACD3B;
         box-shadow: 0px 3px 9px #0000003d;
     }
+
     .open-lb:hover {
         background-color: #b9ecff;
         border: solid 2px #60D1F6;
         box-shadow: 0px 3px 9px #0000003d;
     }
+
     .open-insta:hover {
         background-color: #ff95b1;
         border: solid 2px #D32553;
         box-shadow: 0px 3px 9px #0000003d;
     }
+
     .navDiv {
         background: #00000017;
     }
+
     .open-payments {
         background: #292929;
     }
+
     .dot {
         background: #21d021;
         box-shadow: 0 0 8px 1px #3fff10f7;
     }
+
     .warnings-table ul:first-of-type .wTypeYellow {
         background: white;
         color: black;
     }
+
     .warnings-table ul:first-of-type {
         border-bottom: 1.5px solid #dedede;
     }
-    .open-payments, .open-services, .open-home {
+
+    .open-payments,
+    .open-services,
+    .open-home {
         background: #f9f9f9;
         border: 1px solid #dedede;
         color: #222222;
     }
-    .open-payments:hover, .open-services:hover, .open-home:hover {
+
+    .open-payments:hover,
+    .open-services:hover,
+    .open-home:hover {
         background: #ebebeb;
         border: 1px solid #ebebeb;
         color: #000000;
     }
+
     @media screen and (max-width: 1000px) {
-        #eventsA .date, h3.date {
+
+        #eventsA .date,
+        h3.date {
             color: #e4e4e4;
         }
+
         #navIcon {
             filter: invert(1);
         }
+
         h3.date {
             color: #383838 !important;
             margin: 8px 0px 0px 0px;
@@ -948,6 +1069,7 @@ div#warnings {
     0% {
         transform: translateX(100px);
     }
+
     100% {
         transform: translateX(0px);
     }
@@ -958,6 +1080,7 @@ div#warnings {
         transform: translateY(40px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0px);
         opacity: 1;
@@ -969,10 +1092,12 @@ div#warnings {
         transform: translateY(200px);
         opacity: 0;
     }
+
     50% {
         transform: translateY(-10px);
         opacity: 1;
     }
+
     100% {
         transform: translateY(0px);
         opacity: 1;
@@ -984,6 +1109,7 @@ div#warnings {
         transform: translateY(-10px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0px);
         opacity: 1;
@@ -996,6 +1122,7 @@ div#warnings {
         transform: translateY(-50px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0px);
         opacity: 1;
@@ -1007,6 +1134,7 @@ div#warnings {
         transform: translateY(0px);
         opacity: 1;
     }
+
     100% {
         transform: translateY(-50px);
         opacity: 0;

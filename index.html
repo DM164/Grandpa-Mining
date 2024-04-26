@@ -38,8 +38,8 @@
         <!-- <img id="navIcon" src="files/images/mobileMenu.png" alt="Navigation Menu" style="display: none;"> -->
 
         <div class="navElements">
-            <a href="./warnings.html">
-                <p class="open-home">Warnings</p>
+            <a href="https://mee6.xyz/leaderboard/401404642468036608">
+                <p class="open-home open-lb">Leaderboard</p>
             </a>
             <p class="open-services">Services</p>
             <p id="accname" class="account-menu">Account</p>
@@ -135,17 +135,38 @@
     </div>
 
     <div class="body2">
-        <div id="newsA" class="newscontainer">
-            <!-- Retrieved through Firebase -->
 
-            <h2>News</h2>
-            <div class="container loading">
-                <p>Loading...</p>
-                <h6 class="postdate">Loading...</h6>
-            </div>
+        <div class="left">
+            <h2 class="title platform">Game Servers</h2>
+
+            <ul id="instances">
+
+            </ul>
         </div>
 
-        <div class="platform-container">
+        <div class="right">
+
+            <div class="platform-card">
+                <h2>Discord</h2> <!-- Don't move -->
+                <p>Join our Discord Server</p>
+                <!-- <a href="https://discord.gg/m6B2EXu"> -->
+                <div class="join-discord">Widget</div>
+                <!-- </a> -->
+                <div class="discordVC-count" style="display: none;">
+                    <div class="dot"></div><span id="VC-count">0</span> Users in Voice Chat
+                    <!-- <span id="openWidget">Widget</span> -->
+                </div>
+                <iframe id="discord-widget" src="" width="100%" height="500" allowtransparency="true"
+                    frameborder="0"></iframe>
+            </div>
+
+            <a href="https://w2g.tv/rooms/grandpamining-xe2g2esl3nd0vrq62y?lang=en">
+                <div class="platform-card join-w2g">
+                    <h2>Watch2Gether</h2> <!-- Don't move -->
+                    <p>Join our W2G room!</p>
+                </div>
+            </a>
+
             <div id="eventsA" class="calendar-container">
                 <!-- Retrieved through Firebase -->
                 <h2>Events</h2>
@@ -156,65 +177,17 @@
                     </ul>
                 </div>
             </div>
-            <h2 class="title platform">More</h2>
-            <div class="platform-card">
-                <h2>Discord</h2> <!-- Don't move -->
-                <p>Join our Discord Server</p>
-                <!-- <a href="https://discord.gg/m6B2EXu"> -->
-                <div class="join-discord">Widget</div>
-                <!-- </a> -->
-            </div>
-            <div class="discordVC-count" style="display: none;">
-                <div class="dot"></div><span id="VC-count">0</span> Users in Voice Chat
-                <!-- <span id="openWidget">Widget</span> -->
-            </div>
-            <iframe id="discord-widget" src="" width="100%" height="500" allowtransparency="true"
-                frameborder="0"></iframe>
+            <div id="newsA" class="newscontainer">
+                <!-- Retrieved through Firebase -->
 
-            <a href="https://mee6.xyz/leaderboard/401404642468036608">
-                <div class="platform-card open-lb">
-                    <h2>Leaderboard</h2> <!-- Don't move -->
-                    <p>Discord server leaderboard</p>
+                <h2>News</h2>
+                <div class="container loading">
+                    <p>Loading...</p>
+                    <h6 class="postdate">Loading...</h6>
                 </div>
-            </a>
-
-            <a href="https://w2g.tv/rooms/grandpamining-xe2g2esl3nd0vrq62y?lang=en">
-                <div class="platform-card join-w2g">
-                    <h2>Watch2Gether</h2> <!-- Don't move -->
-                    <p>Join our W2G room!</p>
-                </div>
-            </a>
-
-            <a href="https://www.instagram.com/grandpamining/">
-                <div class="platform-card open-insta">
-                    <h2>Instagram</h2> <!-- Don't move -->
-                    <p>Check our Instagram!</p>
-                </div>
-            </a>
-            <a href="https://www.youtube.com/channel/UCWEHu7HDrsaRAez87CiaCwA">
-                <div class="platform-card open-youtube">
-                    <h2>YouTube</h2> <!-- Don't move -->
-                    <p>Check our YouTube channel!</p>
-                </div>
-            </a>
-            <a href="https://www.reddit.com/r/GrandpaMining/">
-                <div class="platform-card open-reddit">
-                    <h2>Reddit</h2> <!-- Don't move -->
-                    <p>Check our subreddit!</p>
-                </div>
-            </a>
-        </div>
-
-        <div id="weekT" class="week-table">
-            <h2 class="title">Simulcasts</h2>
-
-            <h3 class="date">Loading...</h3>
-            <div class="week-table-container">
-                <ul>
-                    <li>Loading...</li>
-                </ul>
             </div>
         </div>
+
         <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
 

@@ -38,6 +38,8 @@ function retrieveData() {
             const listText = document.createElement('p')
             const listDate = document.createElement('h6')
 
+            if (element.hidden) { return }
+
             listText.innerHTML = element.title
             listDate.innerText = element.date
             listElement.appendChild(listDate)
@@ -86,89 +88,152 @@ function retrieveData() {
         document.getElementById('eventsA').prepend(listDate)
 
         document.getElementsByClassName('newscontainer')[0].style.animationPlayState = "running";
-        document.getElementsByClassName('platform-container')[0].style.animationPlayState = "running";
+        document.getElementsByClassName('calendar-container')[0].style.animationPlayState = "running";
+
+        document.getElementsByClassName('platform-card')[0].style.animationPlayState = "running";
+        document.getElementsByClassName('platform-card')[1].style.animationPlayState = "running";
+    })
+
+    firebase.database().ref('/beammp/').once('value').then(function (snapshot) {
+        let beammp = snapshot.val()
+
+        let loadingElement = document.getElementById('instances')
+        while (loadingElement.firstChild) {
+            loadingElement.removeChild(loadingElement.firstChild)
+        }
+
+        for (let key in beammp) {
+            console.log(beammp[key])
+
+            element = beammp[key];
+
+            const item = document.createElement('li')
+
+            const itemIcon = document.createElement('img')
+            itemIcon.setAttribute('src', `./files/images/${element.game}.png`)
+
+            item.appendChild(itemIcon)
+
+            const itemTitle = document.createElement('h2')
+            const itemDesc = document.createElement('p')
+
+            const itemMap = document.createElement('p')
+            itemMap.setAttribute('class', 'map');
+
+            const itemPort = document.createElement('p')
+            const itemCopyPort = document.createElement('img')
+            const itemIp = document.createElement('p')
+            const itemCopyIp = document.createElement('img')
+            const itemUpdateTime = document.createElement('p')
+
+            const itemPing = document.createElement('p')
+
+            ping(element.ip, element.port, (ping) => {
+                itemPing.innerText = ping + 'ms';
+            })
+
+            const itemStatusDot = document.createElement('div')
+            itemStatusDot.setAttribute('class', 'service-status-indicator');
+
+            let timestamp = element.updateTimeStamp
+            let seconds = (Date.now() - timestamp) / 1000
+
+            itemStatusDot.setAttribute('title', new Date(element.updateTimeStamp))
+
+            if (seconds > 240 && seconds < 300) {
+                itemStatusDot.style.background = '#fbd23e'
+                itemStatusDot.style.boxShadow = '0px 0px 8px 0px #ffe10b'
+            } else if (seconds < 240) {
+                itemStatusDot.style.background = '#3efb4d'
+                itemStatusDot.style.boxShadow = '0px 0px 8px 0px #31ff0b'
+            }
+
+            const itemContent = document.createElement('div')
+            itemContent.setAttribute('class', 'content')
+
+            const itemContentLeft = document.createElement('div')
+            const itemContentRight = document.createElement('div')
+            itemContentRight.setAttribute('class', 'right')
+
+            itemTitle.innerText = element.name
+            itemDesc.innerHTML = element.description
+            itemMap.innerHTML = element.map
+            itemIp.innerHTML = element.ip
+            itemPort.innerHTML = element.port
+
+            const ipItemsContainer = document.createElement('div');
+            ipItemsContainer.setAttribute('class', 'ip-items')
+
+            itemCopyIp.setAttribute('src', './files/images/clipboard2-fill.svg')
+            itemCopyIp.onclick = () => {
+                navigator.clipboard.writeText(element.ip);
+            }
+
+            ipItemsContainer.appendChild(itemIp)
+            ipItemsContainer.appendChild(itemCopyIp)
+            
+            const portItemsContainer = document.createElement('div');
+            portItemsContainer.setAttribute('class', 'port-items')
+
+            itemCopyPort.setAttribute('src', './files/images/clipboard2-fill.svg')
+            itemCopyPort.onclick = () => {
+                navigator.clipboard.writeText(element.port);
+            }
+
+            portItemsContainer.appendChild(itemPort)
+            portItemsContainer.appendChild(itemCopyPort)
+
+            itemContentLeft.appendChild(itemTitle)
+            itemContentLeft.appendChild(itemDesc)
+            itemContentLeft.appendChild(itemMap)
+            itemContentRight.appendChild(ipItemsContainer)
+            itemContentRight.appendChild(portItemsContainer)
+            itemContentRight.appendChild(itemUpdateTime)
+            itemContentRight.appendChild(itemPing)
+
+            itemContent.appendChild(itemContentLeft)
+            itemContent.appendChild(itemContentRight)
+
+            item.appendChild(itemContent)
+            item.appendChild(itemStatusDot)
+
+            document.getElementById('instances').appendChild(item)
+        }
+
+        document.getElementsByClassName('left')[0].style.animationPlayState = "running";
     })
 
     firebase.database().ref('/voiceActivity/').once('value').then(function (snapshot) {
         let users = snapshot.val()
         setcount(users)
     })
-
-    firebase.database().ref('/anime/').once('value').then(function (snapshot) {
-        let animeArray = snapshot.val()
-
-        let loadingElement = document.getElementById('weekT')
-        while (loadingElement.firstChild) {
-            loadingElement.removeChild(loadingElement.firstChild)
-        }
-
-        // get weekday
-        let d = new Date
-
-        let i = 0
-        animeArray.forEach(element => {
-            const listElement = document.createElement('div')
-            const listDescContainer = document.createElement('ul')
-            const listDiv = document.createElement('div')
-            const listDate = document.createElement('h3')
-
-            listDate.innerText = element.day
-            element.anime.forEach(element => {
-                if (element.title === 'No anime scheduled for this day') {
-                    let listDesc = document.createElement('li')
-                    listDesc.innerText = element.title
-                    listDesc.setAttribute('id', 'no-data')
-
-                    listDescContainer.appendChild(listDesc)
-                } else {
-                    const listDesc = document.createElement('li')
-                    listDesc.innerText = element.title
-                    listDesc.setAttribute('id', element.link)
-
-                    const listTime = document.createElement('h6')
-                    listTime.innerText = element.time
-                    listTime.setAttribute('class', 'time')
-
-                    const listPlatform = document.createElement('h6')
-                    listPlatform.innerText = element.platform
-                    listPlatform.setAttribute('class', 'platform')
-
-                    listDesc.appendChild(document.createElement('br'))
-                    listDesc.appendChild(listTime)
-                    listDesc.appendChild(listPlatform)
-                    listDescContainer.appendChild(listDesc)
-                }
-            })
-            listDiv.appendChild(listDescContainer)
-            listElement.append(listDate)
-            listElement.appendChild(listDiv)
-            listDate.setAttribute('class', 'date')
-            i++
-            listElement.setAttribute('class', `week-table-container c${i}`)
-            document.getElementById('weekT').append(listElement)
-        });
-
-        const listDate = document.createElement('h2')
-        listDate.innerText = 'Simulcasts'
-        listDate.setAttribute('class', 'title')
-        document.getElementById('weekT').prepend(listDate)
-
-        let dateIndex = d.getDay()
-        if (dateIndex === 0) { dateIndex = 7 }
-        document.getElementsByClassName('c' + dateIndex)[0].style.borderLeft = '3px solid #e0c53e'
-        document.getElementsByClassName('c' + dateIndex)[0].style.padding = '0px 0px 0px 6px'
-
-        document.getElementsByClassName('week-table')[0].style.animationPlayState = "running";
-    })
 }
 
-// Open anime
-document.getElementById('weekT').addEventListener('click', e => {
-    if (e.target.nodeName.toLowerCase() === 'li') {
-        if (e.target.id === 'no-data') { return }
-        window.open(e.target.id)
+function ping(host, port, pong) {
+
+    var started = new Date().getTime();
+
+    var http = new XMLHttpRequest();
+
+    http.open("GET", "http://" + host + ":" + port, /*async*/true);
+    http.onreadystatechange = function () {
+        console.log(http)
+        if (http.readyState = 4) {
+            var ended = new Date().getTime();
+
+            var milliseconds = ended - started;
+
+            if (pong != null) {
+                pong(milliseconds);
+            }
+        }
+    };
+    try {
+        http.send(null);
+    } catch (exception) {
+        // this is expected
     }
-})
+}
 
 function addEvent(id, desc, date) {
     firebase.database().ref('events/' + id).set({
@@ -266,12 +331,6 @@ document.getElementsByClassName('open-lb')[0].addEventListener('click', () => {
 })
 document.getElementsByClassName('join-w2g')[0].addEventListener('click', () => {
     firebase.analytics().logEvent('navTo_w2g');
-})
-document.getElementsByClassName('open-insta')[0].addEventListener('click', () => {
-    firebase.analytics().logEvent('navTo_instagram');
-})
-document.getElementsByClassName('open-reddit')[0].addEventListener('click', () => {
-    firebase.analytics().logEvent('navTo_reddit');
 })
 
 setInterval(() => {
