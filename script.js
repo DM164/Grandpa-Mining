@@ -165,9 +165,11 @@ function retrieveData() {
             ipItemsContainer.setAttribute('class', 'ip-items')
 
             itemCopyIp.setAttribute('src', './files/images/clipboard2-fill.svg')
-            itemCopyIp.onclick = () => {
-                navigator.clipboard.writeText(element.ip);
-            }
+            itemCopyIp.onclick = function(ip) {
+                return function() {
+                    navigator.clipboard.writeText(ip);
+                };
+            }(element.ip);
 
             ipItemsContainer.appendChild(itemIp)
             ipItemsContainer.appendChild(itemCopyIp)
@@ -176,9 +178,11 @@ function retrieveData() {
             portItemsContainer.setAttribute('class', 'port-items')
 
             itemCopyPort.setAttribute('src', './files/images/clipboard2-fill.svg')
-            itemCopyPort.onclick = () => {
-                navigator.clipboard.writeText(element.port);
-            }
+            itemCopyPort.onclick = function(port) {
+                return function() {
+                    navigator.clipboard.writeText(port);
+                };
+            }(element.port);
 
             portItemsContainer.appendChild(itemPort)
             portItemsContainer.appendChild(itemCopyPort)
